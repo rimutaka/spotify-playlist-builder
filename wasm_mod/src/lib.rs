@@ -1,3 +1,4 @@
+#[macro_use]
 mod utils;
 
 use wasm_bindgen::prelude::*;
@@ -26,4 +27,9 @@ pub fn hello_content () {
 #[wasm_bindgen]
 pub fn hello_background () {
     log("Hello from the background script!");
+}
+
+#[wasm_bindgen]
+pub async fn fetch_playlist(auth_header_value: &str, token_header_value: &str) {
+    utils::fetch_playlist(auth_header_value, token_header_value).await;
 }
