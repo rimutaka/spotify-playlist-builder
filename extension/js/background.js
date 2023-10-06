@@ -15,8 +15,15 @@ function onError(error) {
     console.error(`B/g error: ${error}`);
 }
 
+chrome.action.onClicked.addListener(() => {
+    console.log("Button clicked");
+});
+
+
+
 // a temp flag to stop multiple fetches
 let fetching = false;
+
 
 // get Spotify request headers to extract creds
 chrome.webRequest.onBeforeSendHeaders.addListener(async function (details) {
@@ -64,3 +71,28 @@ chrome.webRequest.onBeforeSendHeaders.addListener(async function (details) {
 //       console.log('Can\'t get cookie! Check the name!');
 //     }
 //   });
+
+// Uplifted from https://developer.chrome.com/docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
+// requires declarativeContent permission
+chrome.runtime.onInstalled.addListener(() => {
+    // Page actions are disabled by default and enabled on select tabs
+    chrome.action.disable();
+
+    // Clear all rules to ensure only our expected rules are set
+    chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
+        // Declare a rule to enable the action on example.com pages
+        let playlistPageRule = {
+            conditions: [
+                new chrome.declarativeContent.PageStateMatcher({
+                    pageUrl: { hostSuffix: '.spotify.com', pathContains: 'playlist' },
+                })
+            ],
+            actions: [new chrome.declarativeContent.ShowAction()],
+        };
+
+        // Finally, apply our new array of rules
+        let rules = [playlistPageRule];
+        chrome.declarativeContent.onPageChanged.addRules(rules);
+        console.log("Button rule added")
+    });
+});
