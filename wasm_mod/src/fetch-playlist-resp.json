@@ -1,0 +1,266 @@
+{
+  "data": {
+    "playlistV2": {
+      "__typename": "Playlist",
+      "revisionId": "AAACXoShKLDE1xST2BWmBgJjXAGCIubR",
+      "uri": "spotify:playlist:3h9rkMXa434AeAIDdA5Dd2",
+      "name": "Focus time for writing words and code",
+      "description": "An eclectic selection of music without lyrics in English for coding, writing and reading activities.",
+      "ownerV2": {
+        "data": {
+          "__typename": "User",
+          "uri": "spotify:user:onebro.me",
+          "username": "onebro.me",
+          "name": "rimutaka",
+          "avatar": {
+            "sources": [
+              {
+                "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                "width": 64,
+                "height": 64
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                "width": 300,
+                "height": 300
+              }
+            ]
+          }
+        }
+      },
+      "images": {
+        "items": [
+          {
+            "extractedColors": {
+              "colorRaw": {
+                "hex": "#4868A8",
+                "isFallback": false
+              }
+            },
+            "sources": [
+              {
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e021df566656536bf8087ffd42aab67616d00001e02262cc1b7df8dfd3cdc2445c3ab67616d00001e022ad1e80d245c43423f525874ab67616d00001e02ce16be88c22fca4152036ff5",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e021df566656536bf8087ffd42aab67616d00001e02262cc1b7df8dfd3cdc2445c3ab67616d00001e022ad1e80d245c43423f525874ab67616d00001e02ce16be88c22fca4152036ff5",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e021df566656536bf8087ffd42aab67616d00001e02262cc1b7df8dfd3cdc2445c3ab67616d00001e022ad1e80d245c43423f525874ab67616d00001e02ce16be88c22fca4152036ff5",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          }
+        ]
+      },
+      "collaborative": false,
+      "followers": 6,
+      "format": "",
+      "attributes": [],
+      "sharingInfo": {
+        "shareUrl": "https://open.spotify.com/playlist/3h9rkMXa434AeAIDdA5Dd2?si=DxQd2F9jQKeLMzi1cBQ7kA"
+      },
+      "content": {
+        "__typename": "PlaylistItemsPage",
+        "totalCount": 5012,
+        "pagingInfo": {
+          "offset": 0,
+          "limit": 25
+        },
+        "items": [
+          {
+            "uid": "b7ba08bda4cbbd8e",
+            "addedAt": {
+              "isoString": "2021-09-27T23:30:13Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:46WtLgKPo8b2vVMPh0CjpE",
+                "name": "Relief",
+                "trackDuration": {
+                  "totalMilliseconds": 389546
+                },
+                "playcount": "45323",
+                "albumOfTrack": {
+                  "uri": "spotify:album:7xT9SSM2i87w4GFH6BEqnZ",
+                  "name": "Inside",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:2UoQ7789hmVaRwnM5p36gR",
+                        "profile": {
+                          "name": "Flipside"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e022ad1e80d245c43423f525874",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048512ad1e80d245c43423f525874",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2732ad1e80d245c43423f525874",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2UoQ7789hmVaRwnM5p36gR",
+                      "profile": {
+                        "name": "Flipside"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "24c7534745609da8",
+            "addedAt": {
+              "isoString": "2021-09-27T23:30:13Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:6IqL3kTVLsBTjmmfEpJRHT",
+                "name": "Unwind",
+                "trackDuration": {
+                  "totalMilliseconds": 406893
+                },
+                "playcount": "24094",
+                "albumOfTrack": {
+                  "uri": "spotify:album:7xT9SSM2i87w4GFH6BEqnZ",
+                  "name": "Inside",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:2UoQ7789hmVaRwnM5p36gR",
+                        "profile": {
+                          "name": "Flipside"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e022ad1e80d245c43423f525874",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048512ad1e80d245c43423f525874",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2732ad1e80d245c43423f525874",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2UoQ7789hmVaRwnM5p36gR",
+                      "profile": {
+                        "name": "Flipside"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 2,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {}
+}
