@@ -1,0 +1,10 @@
+Liked Songs
+
+
+https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchLibraryTracks&variables=%7B%22offset%22%3A0%2C%22limit%22%3A50%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%228474ec383b530ce3e54611fca2d8e3da57ef5612877838b8dbf00bd9fc692dfb%22%7D%7D
+
+operationName: fetchLibraryTracks
+
+variables: {"offset":0,"limit":50}
+
+extensions: {"persistedQuery":{"version":1,"sha256Hash":"8474ec383b530ce3e54611fca2d8e3da57ef5612877838b8dbf00bd9fc692dfb"}}

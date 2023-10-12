@@ -1,0 +1,10 @@
+Get album and its tracks
+
+https://api-partner.spotify.com/pathfinder/v1/query?operationName=getAlbum&variables=%7B%22uri%22%3A%22spotify%3Aalbum%3A7h5qFidHM4sqhcCHSbiMzL%22%2C%22locale%22%3A%22%22%2C%22offset%22%3A0%2C%22limit%22%3A50%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2246ae954ef2d2fe7732b4b2b4022157b2e18b7ea84f70591ceb164e4de1b5d5d3%22%7D%7D
+
+operationName: getAlbum
+
+variables: {"uri":"spotify:album:7h5qFidHM4sqhcCHSbiMzL","locale":"","offset":0,"limit":50}
+
+extensions: {"persistedQuery":{"version":1,"sha256Hash":"46ae954ef2d2fe7732b4b2b4022157b2e18b7ea84f70591ceb164e4de1b5d5d3"}}
+

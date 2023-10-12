@@ -1,0 +1,2397 @@
+{
+  "data": {
+    "playlistV2": {
+      "__typename": "Playlist",
+      "revisionId": "AAAtfa6BZ/MvV08JCBRL7OleC5wH2DI+",
+      "uri": "spotify:playlist:60C3LAHXga4hw73HeyU7U0",
+      "name": "Hatchlings - New Kiwi Singles",
+      "description": "A collection of new Kiwi singles - want us to add yours? Email a link to your song on Spotify to editorial@nzmusician.co.nz.",
+      "ownerV2": {
+        "data": {
+          "__typename": "User",
+          "uri": "spotify:user:nzmusicianmagazine",
+          "username": "nzmusicianmagazine",
+          "name": "nzmusicianmagazine",
+          "avatar": {
+            "sources": [
+              {
+                "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                "width": 64,
+                "height": 64
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                "width": 300,
+                "height": 300
+              }
+            ]
+          }
+        }
+      },
+      "images": {
+        "items": [
+          {
+            "extractedColors": {
+              "colorRaw": {
+                "hex": "#F0F088",
+                "isFallback": false
+              }
+            },
+            "sources": [
+              {
+                "url": "https://i.scdn.co/image/ab67706c0000da8415d032a7fc01c45d52040ccf",
+                "width": null,
+                "height": null
+              }
+            ]
+          }
+        ]
+      },
+      "collaborative": false,
+      "followers": 1711,
+      "format": "",
+      "attributes": [],
+      "sharingInfo": {
+        "shareUrl": "https://open.spotify.com/playlist/60C3LAHXga4hw73HeyU7U0?si=xf9PU19xSlaBo9rwk6e2ng"
+      },
+      "content": {
+        "__typename": "PlaylistItemsPage",
+        "totalCount": 253,
+        "pagingInfo": {
+          "offset": 0,
+          "limit": 25
+        },
+        "items": [
+          {
+            "uid": "d2b73e56947ca6da",
+            "addedAt": {
+              "isoString": "2022-11-17T22:06:29Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "NotFound"
+              }
+            }
+          },
+          {
+            "uid": "f8ff7b99393e0e74",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:0tpZIPW5LXXtg6YgKr4q48",
+                "name": "Libra",
+                "trackDuration": {
+                  "totalMilliseconds": 221434
+                },
+                "playcount": "4229",
+                "albumOfTrack": {
+                  "uri": "spotify:album:6o7guSiuFyVSxM5ZUsrbAv",
+                  "name": "Libra",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:5QQ2NN3TkFG49NTnHvg8oT",
+                        "profile": {
+                          "name": "Danica Bryant"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e021428ffdde92a76afb6dfc14f",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048511428ffdde92a76afb6dfc14f",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2731428ffdde92a76afb6dfc14f",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5QQ2NN3TkFG49NTnHvg8oT",
+                      "profile": {
+                        "name": "Danica Bryant"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "c05e90b0792be042",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:0uSfUZrGHvuqm1Yz4I51qC",
+                "name": "This Love",
+                "trackDuration": {
+                  "totalMilliseconds": 255006
+                },
+                "playcount": "5955",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1CQNzjeDFVKqUeveRH9Tar",
+                  "name": "The Pink Chapter",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:2lZ09YCpdWMMmBTSdDqspr",
+                        "profile": {
+                          "name": "Cassie Henderson"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e024fd3f50765b3912b1b8985c1",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048514fd3f50765b3912b1b8985c1",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2734fd3f50765b3912b1b8985c1",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2lZ09YCpdWMMmBTSdDqspr",
+                      "profile": {
+                        "name": "Cassie Henderson"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 3,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "8cfe7588cfea2ce6",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:68CFmjw8xUSiiRvJvWR3SV",
+                "name": "Doesn't Really Matter (feat. BEXY)",
+                "trackDuration": {
+                  "totalMilliseconds": 203062
+                },
+                "playcount": "15485",
+                "albumOfTrack": {
+                  "uri": "spotify:album:0a0Trgb4aUfCgsmlwJcPNR",
+                  "name": "The Lovers",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:716EJp7f6iFYHsCywzgE1i",
+                        "profile": {
+                          "name": "MACEY"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e028621af4da6268b6747bd1b33",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048518621af4da6268b6747bd1b33",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2738621af4da6268b6747bd1b33",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:716EJp7f6iFYHsCywzgE1i",
+                      "profile": {
+                        "name": "MACEY"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:4TQghEqEIHPNw2xDSSqnpP",
+                      "profile": {
+                        "name": "BEXY"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 2,
+                "trackNumber": 5,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "9ea891878acf721e",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:5U6SC9XsJ4Jr6Ht68i1o3l",
+                "name": "AI, E KŌ",
+                "trackDuration": {
+                  "totalMilliseconds": 148314
+                },
+                "playcount": "33650",
+                "albumOfTrack": {
+                  "uri": "spotify:album:04IIWq1rvAhSZGQK11ABDN",
+                  "name": "AI, E KŌ",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6U5CUX0APXFzqcfpoXxEyb",
+                        "profile": {
+                          "name": "Mikey Dam"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:6SBZ3XblxACQRrZK4olxhH",
+                        "profile": {
+                          "name": "TAWAZ"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:33jhdrAHX9sSFzdKpYd2ke",
+                        "profile": {
+                          "name": "Jackson Owens"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e0285bb3f1f50d324228387bd05",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000485185bb3f1f50d324228387bd05",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b27385bb3f1f50d324228387bd05",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6U5CUX0APXFzqcfpoXxEyb",
+                      "profile": {
+                        "name": "Mikey Dam"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:6SBZ3XblxACQRrZK4olxhH",
+                      "profile": {
+                        "name": "TAWAZ"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:33jhdrAHX9sSFzdKpYd2ke",
+                      "profile": {
+                        "name": "Jackson Owens"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "c00c0ed0d028ed3f",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:67CM4b7wCUnFU3NKW10jw7",
+                "name": "Te Piringa",
+                "trackDuration": {
+                  "totalMilliseconds": 236158
+                },
+                "playcount": "10070",
+                "albumOfTrack": {
+                  "uri": "spotify:album:44J3SmTmKwvAblYcWZdz5W",
+                  "name": "Te Piringa",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:1OeefDyjCBqteZJTmb3PJ7",
+                        "profile": {
+                          "name": "Len Blake"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:1NcvyN544YZpDO2ig9N0vi",
+                        "profile": {
+                          "name": "Casual Healing"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e0297ce0cb592b9e534af13d250",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000485197ce0cb592b9e534af13d250",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b27397ce0cb592b9e534af13d250",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1OeefDyjCBqteZJTmb3PJ7",
+                      "profile": {
+                        "name": "Len Blake"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:1NcvyN544YZpDO2ig9N0vi",
+                      "profile": {
+                        "name": "Casual Healing"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "9646a24731fbc087",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:7evuSa4SWrFSDzR5ZXQnse",
+                "name": "Black Gleam",
+                "trackDuration": {
+                  "totalMilliseconds": 253197
+                },
+                "playcount": "12128",
+                "albumOfTrack": {
+                  "uri": "spotify:album:2qEIe58oO3sD7IGDkoY3vs",
+                  "name": "Grief Sessions",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:5wxQox4p6Q0KpR6RGyyJKf",
+                        "profile": {
+                          "name": "K'shore"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02c0c93b5e23da97f277c26a5f",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851c0c93b5e23da97f277c26a5f",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273c0c93b5e23da97f277c26a5f",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5wxQox4p6Q0KpR6RGyyJKf",
+                      "profile": {
+                        "name": "K'shore"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:724Bei6TsAHJYvnLHGdEAF",
+                      "profile": {
+                        "name": "Arjuna Oakes"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:3mdRkSmrkUaSbVf4pT6qan",
+                      "profile": {
+                        "name": "Silas Futura"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "1e6a9820fccce0f8",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:2b8HXdCOw96FHzRAIx8Kps",
+                "name": "Porcelain",
+                "trackDuration": {
+                  "totalMilliseconds": 129776
+                },
+                "playcount": "18546",
+                "albumOfTrack": {
+                  "uri": "spotify:album:2pEMwAZNzrG1LP66stCLQH",
+                  "name": "Porcelain",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:41azuh0IUq4g2UPySoYp8A",
+                        "profile": {
+                          "name": "Hans."
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e021ddef3b5b14e30c2ec8d9f47",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048511ddef3b5b14e30c2ec8d9f47",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2731ddef3b5b14e30c2ec8d9f47",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:41azuh0IUq4g2UPySoYp8A",
+                      "profile": {
+                        "name": "Hans."
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "EXPLICIT"
+                }
+              }
+            }
+          },
+          {
+            "uid": "ba1564b31127e543",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:4UZyTnJ1cwZEhI1LhEX36b",
+                "name": "Holding On",
+                "trackDuration": {
+                  "totalMilliseconds": 214000
+                },
+                "playcount": "11449",
+                "albumOfTrack": {
+                  "uri": "spotify:album:4wvYsUv7UouJgPf6InQxiq",
+                  "name": "Holding On",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7dURglfKbeSd5WoF28mdWs",
+                        "profile": {
+                          "name": "JARNA"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02e1150d230fe0c8e5c1a6eca9",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851e1150d230fe0c8e5c1a6eca9",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273e1150d230fe0c8e5c1a6eca9",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7dURglfKbeSd5WoF28mdWs",
+                      "profile": {
+                        "name": "JARNA"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "ed127660aa98dc63",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:4RI98h52sAV0x4rUulR7ZD",
+                "name": "Party for 1",
+                "trackDuration": {
+                  "totalMilliseconds": 190325
+                },
+                "playcount": "16269",
+                "albumOfTrack": {
+                  "uri": "spotify:album:2RuYTWi6PiYkwGHwBHj5ry",
+                  "name": "Party for 1",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:5GIaRpKCtzquc5UUicqe50",
+                        "profile": {
+                          "name": "Olivia Foa'i"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e029b80e3cfcdf34bb4b92809d6",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048519b80e3cfcdf34bb4b92809d6",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2739b80e3cfcdf34bb4b92809d6",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5GIaRpKCtzquc5UUicqe50",
+                      "profile": {
+                        "name": "Olivia Foa'i"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "288b29f3efec51dd",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:2jSF8hLDzITdZlN8INZGUB",
+                "name": "Kids On The Internet",
+                "trackDuration": {
+                  "totalMilliseconds": 258545
+                },
+                "playcount": "1762",
+                "albumOfTrack": {
+                  "uri": "spotify:album:4eiqIfgP2cUYGqTwlm6ACO",
+                  "name": "Kids On The Internet",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6dZ4QAnMixFvkgZxDV6JP3",
+                        "profile": {
+                          "name": "Amber Carly Williams"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02fda7eacef8b19b5c0cdd9f40",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851fda7eacef8b19b5c0cdd9f40",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273fda7eacef8b19b5c0cdd9f40",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6dZ4QAnMixFvkgZxDV6JP3",
+                      "profile": {
+                        "name": "Amber Carly Williams"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "d3ac903ab5bdd0a8",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3nEwIeZniK0TzhJK3JoEFx",
+                "name": "Stuck In My Brain",
+                "trackDuration": {
+                  "totalMilliseconds": 226263
+                },
+                "playcount": "0",
+                "albumOfTrack": {
+                  "uri": "spotify:album:56K6CTshSmwJYSGxe5QOow",
+                  "name": "Stuck In My Brain",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:62jisprUCD0SY64T3m4mpq",
+                        "profile": {
+                          "name": "Pipsy"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02e3af115ad809684e5ee1473b",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851e3af115ad809684e5ee1473b",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273e3af115ad809684e5ee1473b",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:62jisprUCD0SY64T3m4mpq",
+                      "profile": {
+                        "name": "Pipsy"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "b7f10dcc449990f2",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:18XLCHJyigRomG7MU4DOGD",
+                "name": "Antidote",
+                "trackDuration": {
+                  "totalMilliseconds": 237933
+                },
+                "playcount": "2300",
+                "albumOfTrack": {
+                  "uri": "spotify:album:5jSK4jeCpxMxhuySk8EOBI",
+                  "name": "Spiel",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:1Jcg0RFzOa8f1VwmdWNEr5",
+                        "profile": {
+                          "name": "Office Dog"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02c6fa9735f5cd9d68bc9e21ed",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851c6fa9735f5cd9d68bc9e21ed",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273c6fa9735f5cd9d68bc9e21ed",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1Jcg0RFzOa8f1VwmdWNEr5",
+                      "profile": {
+                        "name": "Office Dog"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 2,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "9bb1cb7febc7e687",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:0R5xVGvCw6niL1LYGhpeB1",
+                "name": "no one thinks we're cool",
+                "trackDuration": {
+                  "totalMilliseconds": 215016
+                },
+                "playcount": "1859",
+                "albumOfTrack": {
+                  "uri": "spotify:album:06yikpY7RH29H75XMarJbk",
+                  "name": "no one thinks we're cool",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:246TlwOtP9izhfSclihbPx",
+                        "profile": {
+                          "name": "First Reserve"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02da2a27133f5cc10d3bb7e173",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851da2a27133f5cc10d3bb7e173",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273da2a27133f5cc10d3bb7e173",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:246TlwOtP9izhfSclihbPx",
+                      "profile": {
+                        "name": "First Reserve"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "38ca457c943c699a",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:7b5d6F5DiGv4U6KrW0wS4W",
+                "name": "I Like You (feat. MOHI)",
+                "trackDuration": {
+                  "totalMilliseconds": 180613
+                },
+                "playcount": "6773",
+                "albumOfTrack": {
+                  "uri": "spotify:album:3ujbxrGo90P3VxXi9hwYFQ",
+                  "name": "I Like You (feat. MOHI)",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0ggYTxkFUAl6DmRMBpxM6w",
+                        "profile": {
+                          "name": "YAHYAH"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e0268ba38d4f837cd0a30d4d5cd",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000485168ba38d4f837cd0a30d4d5cd",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b27368ba38d4f837cd0a30d4d5cd",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0ggYTxkFUAl6DmRMBpxM6w",
+                      "profile": {
+                        "name": "YAHYAH"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:7Js2UhLghB9qaiZRfK275R",
+                      "profile": {
+                        "name": "MOHI"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "85c63762fd006808",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:42Oaq8G5o8uKvokfH8HTLw",
+                "name": "Me",
+                "trackDuration": {
+                  "totalMilliseconds": 249655
+                },
+                "playcount": "11376",
+                "albumOfTrack": {
+                  "uri": "spotify:album:4TCQKvzbFb4eGdViwObpdd",
+                  "name": "Me",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0lOJphTNZDTSLVf7UNu2n0",
+                        "profile": {
+                          "name": "IA"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02e23c1096347f090e1b806e77",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851e23c1096347f090e1b806e77",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273e23c1096347f090e1b806e77",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0lOJphTNZDTSLVf7UNu2n0",
+                      "profile": {
+                        "name": "IA"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "fc50a79a2dd090fe",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3xYliLqPbE6khHrsKRDAtW",
+                "name": "He Rei Niho",
+                "trackDuration": {
+                  "totalMilliseconds": 185882
+                },
+                "playcount": "8384",
+                "albumOfTrack": {
+                  "uri": "spotify:album:5BkxRsUkTwdalVpSgBbZQ4",
+                  "name": "He Rei Niho",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0s8nR7CgGqe7L9oZtAJSdT",
+                        "profile": {
+                          "name": "Jordyn with a Why"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02e1c82b11b25ed9d65f888104",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851e1c82b11b25ed9d65f888104",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273e1c82b11b25ed9d65f888104",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0s8nR7CgGqe7L9oZtAJSdT",
+                      "profile": {
+                        "name": "Jordyn with a Why"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "257b135af33e9c7e",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:2foKYP7aI9PyDHN4HMOypN",
+                "name": "Te Aroha Mōu",
+                "trackDuration": {
+                  "totalMilliseconds": 208311
+                },
+                "playcount": "12377",
+                "albumOfTrack": {
+                  "uri": "spotify:album:6rwGit56vQzUX1rnhGhAMo",
+                  "name": "Te Aroha Mōu",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6mLG8h9CeWZ2QsuHIgka3c",
+                        "profile": {
+                          "name": "Georgia Lines"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e0200ee89a842305070fd7dd65b",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000485100ee89a842305070fd7dd65b",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b27300ee89a842305070fd7dd65b",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6mLG8h9CeWZ2QsuHIgka3c",
+                      "profile": {
+                        "name": "Georgia Lines"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "74309dd5b06dd4a4",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:7wBWcOC52UDk3OEejLKHAJ",
+                "name": "So True / Koia Ko Koe",
+                "trackDuration": {
+                  "totalMilliseconds": 232680
+                },
+                "playcount": "58074",
+                "albumOfTrack": {
+                  "uri": "spotify:album:6NoNRr7Wh8J7WBEdRdhclH",
+                  "name": "So True / Koia Ko Koe",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0Q35wRRhdsU8EbsJ1eouCY",
+                        "profile": {
+                          "name": "The Black Seeds"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e020f3602f7d6a2d38f237def77",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048510f3602f7d6a2d38f237def77",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2730f3602f7d6a2d38f237def77",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0Q35wRRhdsU8EbsJ1eouCY",
+                      "profile": {
+                        "name": "The Black Seeds"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "d45b525afff512bd",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:5AYkAs5GQvVFpOVP62xoD7",
+                "name": "Would That Be The Best",
+                "trackDuration": {
+                  "totalMilliseconds": 177792
+                },
+                "playcount": "0",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1z8vcepivZZoO7l5BEjWVM",
+                  "name": "Would That Be The Best",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:2Eh0Mfa8jiw9540B3o5P0N",
+                        "profile": {
+                          "name": "Lévyne"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02f91174c231e5b7a16a0f4eb3",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851f91174c231e5b7a16a0f4eb3",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273f91174c231e5b7a16a0f4eb3",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2Eh0Mfa8jiw9540B3o5P0N",
+                      "profile": {
+                        "name": "Lévyne"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 5,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "6812bdbe2e71ea23",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:7qXFevvP8lzK9qzTzbkiMV",
+                "name": "KEEP IT DOWN",
+                "trackDuration": {
+                  "totalMilliseconds": 206750
+                },
+                "playcount": "8222",
+                "albumOfTrack": {
+                  "uri": "spotify:album:2IzHypRU47VdIC3gsaVCwk",
+                  "name": "KEEP IT DOWN",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3iRQU5nfA9uLRPgmXXhbCy",
+                        "profile": {
+                          "name": "Swiss"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02f2abb05239fea2bb60123036",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851f2abb05239fea2bb60123036",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273f2abb05239fea2bb60123036",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:3iRQU5nfA9uLRPgmXXhbCy",
+                      "profile": {
+                        "name": "Swiss"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "a767ae8e0f03f45b",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:15SqfVDeINiOECY9juEzVo",
+                "name": "BAGS",
+                "trackDuration": {
+                  "totalMilliseconds": 156322
+                },
+                "playcount": "16668",
+                "albumOfTrack": {
+                  "uri": "spotify:album:34LwUoS9efY6wm7QWoFEUO",
+                  "name": "BAGS",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:09eBKIxIhMym3kxJyDnVXh",
+                        "profile": {
+                          "name": "Rei"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02685a289f60c4379356153795",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851685a289f60c4379356153795",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273685a289f60c4379356153795",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:09eBKIxIhMym3kxJyDnVXh",
+                      "profile": {
+                        "name": "Rei"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "699a3d3e4e71eca5",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:2NV0xEWJNdaMzdP94pksrl",
+                "name": "Leave In The Morning",
+                "trackDuration": {
+                  "totalMilliseconds": 168751
+                },
+                "playcount": "444298",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1gRQl5tQu5KTWyvs3zdd2p",
+                  "name": "Leave In The Morning",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:1fUcXY3KcnNvCP2dnF7XCh",
+                        "profile": {
+                          "name": "Will Swinton"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02802b17e797f896072fff62c3",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851802b17e797f896072fff62c3",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273802b17e797f896072fff62c3",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1fUcXY3KcnNvCP2dnF7XCh",
+                      "profile": {
+                        "name": "Will Swinton"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "8aea2e16a1f272f6",
+            "addedAt": {
+              "isoString": "2023-09-17T21:55:03Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3D5LghvT205B3ZUNZEXDgx",
+                "name": "Out of the Night",
+                "trackDuration": {
+                  "totalMilliseconds": 240580
+                },
+                "playcount": "17771",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1sfilQ6DOJPZcP8sq8ITh5",
+                  "name": "Out of the Night",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:2Oj8zbFMdWvJtkCRH7sgI6",
+                        "profile": {
+                          "name": "Racing"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e020bee6f82abe60342afd95926",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048510bee6f82abe60342afd95926",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2730bee6f82abe60342afd95926",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2Oj8zbFMdWvJtkCRH7sgI6",
+                      "profile": {
+                        "name": "Racing"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "082c18e3d2723668",
+            "addedAt": {
+              "isoString": "2023-09-17T21:59:54Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:nzmusicianmagazine",
+                "username": "nzmusicianmagazine",
+                "name": "nzmusicianmagazine",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b829fc3afc39f21afc9e6a097da",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee859fc3afc39f21afc9e6a097da",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3pvmXIfvYDBloKJFrWAEdL",
+                "name": "Driftwood",
+                "trackDuration": {
+                  "totalMilliseconds": 260000
+                },
+                "playcount": "0",
+                "albumOfTrack": {
+                  "uri": "spotify:album:43QJfbeqtB3O1daSvIuQg8",
+                  "name": "Driftwood",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:00hVUes8aDcCcdWnf98anr",
+                        "profile": {
+                          "name": "Erin G"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e0284c0651859303dab4f4e8228",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000485184c0651859303dab4f4e8228",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b27384c0651859303dab4f4e8228",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:00hVUes8aDcCcdWnf98anr",
+                      "profile": {
+                        "name": "Erin G"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {}
+}

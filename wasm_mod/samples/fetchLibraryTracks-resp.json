@@ -1,0 +1,3471 @@
+{
+  "data": {
+    "me": {
+      "library": {
+        "tracks": {
+          "__typename": "UserLibraryTrackPage",
+          "pagingInfo": {
+            "offset": 0,
+            "limit": 50
+          },
+          "items": [
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2022-05-26T00:13:44Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0VDl9zuwZANYlvY5XmYDc5",
+                "data": {
+                  "__typename": "Track",
+                  "name": "La ballata di Sacco e Vanzetti (From \"Sacco e Vanzetti\") - Version 1",
+                  "duration": {
+                    "totalMilliseconds": 303453
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7KSUIul94BlpUjmKx188o5",
+                    "name": "Ennio Morricone Greatest Hits 2017 (Spotify Exclusive)",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:1nIUhcKHnK6iyumRyoV68C",
+                          "profile": {
+                            "name": "Ennio Morricone"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0269de079ec1bb7790a5892521",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485169de079ec1bb7790a5892521",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27369de079ec1bb7790a5892521",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:1nIUhcKHnK6iyumRyoV68C",
+                        "profile": {
+                          "name": "Ennio Morricone"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:1EevBGfUh3RSQSGpluxgBm",
+                        "profile": {
+                          "name": "Joan Baez"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 17,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2022-01-20T01:12:13Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5NJHbwe1uTIWkKsNWi3aYf",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Patria (Encore)",
+                  "duration": {
+                    "totalMilliseconds": 420087
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:3iptT1nxZTR7fX4Cf8KHbJ",
+                    "name": "Una Noche Con Rubén Blades",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6MnWA8xVW1sEzV9s7wXpQb",
+                          "profile": {
+                            "name": "Jazz At Lincoln Center Orchestra"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:375zxMmh2cSgUzFFnva0O7",
+                          "profile": {
+                            "name": "Wynton Marsalis"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:5BwMgvRwlq61SmknvsVIQj",
+                          "profile": {
+                            "name": "Rubén Blades"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e022eda29fc32a3354bb84f6c59",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048512eda29fc32a3354bb84f6c59",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2732eda29fc32a3354bb84f6c59",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6MnWA8xVW1sEzV9s7wXpQb",
+                        "profile": {
+                          "name": "Jazz At Lincoln Center Orchestra"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:375zxMmh2cSgUzFFnva0O7",
+                        "profile": {
+                          "name": "Wynton Marsalis"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:5BwMgvRwlq61SmknvsVIQj",
+                        "profile": {
+                          "name": "Rubén Blades"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 11,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2021-06-08T01:29:39Z"
+              },
+              "track": {
+                "_uri": "spotify:track:6BglxxRxlx3R3Xa3jIklAx",
+                "data": {
+                  "__typename": "Track",
+                  "name": "You're Gonna Get Love",
+                  "duration": {
+                    "totalMilliseconds": 213269
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:1LA73HQojPrdbPH9HnP4gq",
+                    "name": "You're Gonna Get Love",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:4v1YZL83eLyemlt32wWAoA",
+                          "profile": {
+                            "name": "Keren Ann"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02d5af871acae07f059b7b26dc",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851d5af871acae07f059b7b26dc",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273d5af871acae07f059b7b26dc",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:4v1YZL83eLyemlt32wWAoA",
+                        "profile": {
+                          "name": "Keren Ann"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-07-14T07:33:11Z"
+              },
+              "track": {
+                "_uri": "spotify:track:61OitIPidMNkiYzfiWnwb8",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Queen",
+                  "duration": {
+                    "totalMilliseconds": 377186
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7M8R4LWA6DtPcOtSYWPTcs",
+                    "name": "Touch and Flee",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:1aHiF3ESIMQtH7PGzhi6fl",
+                          "profile": {
+                            "name": "Neil Cowley Trio"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02cbcc9bc1a97d63cbecc54eca",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851cbcc9bc1a97d63cbecc54eca",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273cbcc9bc1a97d63cbecc54eca",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:1aHiF3ESIMQtH7PGzhi6fl",
+                        "profile": {
+                          "name": "Neil Cowley Trio"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:029gOMgBELt6VPHcRtyDpw",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Dreaming of 4000",
+                  "duration": {
+                    "totalMilliseconds": 301773
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0qfSskG727QTpvW82a7LEW",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ma-Ma-Ma Belle",
+                  "duration": {
+                    "totalMilliseconds": 232426
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 7,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4ApI99h2gMfWtV6jowsPVA",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Daybreaker",
+                  "duration": {
+                    "totalMilliseconds": 230400
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 6,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5OzaJSoZhre3ZP7BCx4FFr",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ocean Breakup / King of the Universe",
+                  "duration": {
+                    "totalMilliseconds": 246026
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5WF811F2kkHIrF3MixNxDo",
+                "data": {
+                  "__typename": "Track",
+                  "name": "New World Rising / Ocean Breakup Reprise",
+                  "duration": {
+                    "totalMilliseconds": 243800
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 4,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5xAZDlzqvI1wflhB4mzYoz",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Showdown",
+                  "duration": {
+                    "totalMilliseconds": 249226
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 5,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:6C5f4vqI7k4U7Z2G8uoo60",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Bluebird Is Dead",
+                  "duration": {
+                    "totalMilliseconds": 262466
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 2,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:6MiUU7uPIjcFGGKnCstmaQ",
+                "data": {
+                  "__typename": "Track",
+                  "name": "In the Hall of the Mountain King",
+                  "duration": {
+                    "totalMilliseconds": 392693
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 9,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-19T02:53:58Z"
+              },
+              "track": {
+                "_uri": "spotify:track:6Vx361XKw3Nh5ZU5UeMZPz",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Oh No Not Susan",
+                  "duration": {
+                    "totalMilliseconds": 207533
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:7cuUWuHoLgx9SzUONHSg89",
+                    "name": "On the Third Day",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                          "profile": {
+                            "name": "Electric Light Orchestra"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a17f657c12d5fa3543452d61",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a17f657c12d5fa3543452d61",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a17f657c12d5fa3543452d61",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7jefIIksOi1EazgRTfW2Pk",
+                        "profile": {
+                          "name": "Electric Light Orchestra"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 3,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0MsJNBcfNoIcf868I2MOHo",
+                "data": {
+                  "__typename": "Track",
+                  "name": "I Can't See Myself Leaving You",
+                  "duration": {
+                    "totalMilliseconds": 181466
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 10,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0cFXBak7fflKewgGUyhjCO",
+                "data": {
+                  "__typename": "Track",
+                  "name": "I Take What I Want",
+                  "duration": {
+                    "totalMilliseconds": 153293
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 7,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0iZk0jnDp3JDE8etYCzKcC",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Hello Sunshine",
+                  "duration": {
+                    "totalMilliseconds": 183906
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0rCj9YU5bVUHP94Hg67MRa",
+                "data": {
+                  "__typename": "Track",
+                  "name": "You're a Sweet Sweet Man",
+                  "duration": {
+                    "totalMilliseconds": 139106
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 6,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1vrJWHhhDQ5JcB9xtF2VMq",
+                "data": {
+                  "__typename": "Track",
+                  "name": "See Saw",
+                  "duration": {
+                    "totalMilliseconds": 166360
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 3,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:3NfxSdJnVdon1axzloJgba",
+                "data": {
+                  "__typename": "Track",
+                  "name": "I Say a Little Prayer",
+                  "duration": {
+                    "totalMilliseconds": 216773
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 2,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4VijLEUxHEzbWKYL5u9wuN",
+                "data": {
+                  "__typename": "Track",
+                  "name": "You Send Me",
+                  "duration": {
+                    "totalMilliseconds": 149626
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 5,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4yQw7FR9lcvL6RHtegbJBh",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Think",
+                  "duration": {
+                    "totalMilliseconds": 139733
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5r0j6rl0VeTrcfZ9UJtOKv",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Night Time Is the Right Time",
+                  "duration": {
+                    "totalMilliseconds": 290106
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 4,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-16T01:39:38Z"
+              },
+              "track": {
+                "_uri": "spotify:track:7pgTQJwvgeqyq7EINgoLn5",
+                "data": {
+                  "__typename": "Track",
+                  "name": "A Change",
+                  "duration": {
+                    "totalMilliseconds": 147333
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:55HZ2ectg1mMTEKDqIq3kC",
+                    "name": "Aretha Now",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                          "profile": {
+                            "name": "Aretha Franklin"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0246c31f64babcbfca6e061b6b",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485146c31f64babcbfca6e061b6b",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27346c31f64babcbfca6e061b6b",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok",
+                        "profile": {
+                          "name": "Aretha Franklin"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 9,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:01Xh69x5oCaVjoIB6odY6j",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Mouneïssa",
+                  "duration": {
+                    "totalMilliseconds": 343093
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 2,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:05CF4ATpqROLTQVYABNZ3W",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Laidu",
+                  "duration": {
+                    "totalMilliseconds": 386973
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1d4iUCALHa79DRyRjAEtDe",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Dianguina",
+                  "duration": {
+                    "totalMilliseconds": 321200
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 4,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:21YGnLoitwImNs6PdIha8d",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Finini",
+                  "duration": {
+                    "totalMilliseconds": 310106
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 3,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:2Ac01oc2gtcPBOSgfdZ3IP",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Tchiwara",
+                  "duration": {
+                    "totalMilliseconds": 225440
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 6,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4GV6q4kp3y8SpGtgXYAOOz",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Sé",
+                  "duration": {
+                    "totalMilliseconds": 336533
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 9,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4HGBN3YT56aVuUXUkrUZIC",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Sakanto",
+                  "duration": {
+                    "totalMilliseconds": 272160
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:4oA5weCkztLLsRdcawlvMF",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Sabali",
+                  "duration": {
+                    "totalMilliseconds": 308360
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 5,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:12:49Z"
+              },
+              "track": {
+                "_uri": "spotify:track:6n2BTV6j1bZL7vXDbJ6oqZ",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Fatalité",
+                  "duration": {
+                    "totalMilliseconds": 284133
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:21Tj95e18stlS6SetlwqAa",
+                    "name": "Mouneïssa",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                          "profile": {
+                            "name": "Rokia Traoré"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0274b49c9e1e89ac0113ad3e3a",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485174b49c9e1e89ac0113ad3e3a",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27374b49c9e1e89ac0113ad3e3a",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:6sz0k1q2aEtG5dxEgr4YWV",
+                        "profile": {
+                          "name": "Rokia Traoré"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 7,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1Yp9aF6Q7LfB7XQvdUHfZe",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Toumaranke",
+                  "duration": {
+                    "totalMilliseconds": 422413
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1mz72BbXtZoMIEiDgh4lbo",
+                "data": {
+                  "__typename": "Track",
+                  "name": "La Rebellion",
+                  "duration": {
+                    "totalMilliseconds": 478400
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 10,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:2HGICiTxVhWvcCvUOGuege",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ledi Ndieme M'bodj",
+                  "duration": {
+                    "totalMilliseconds": 538760
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 3,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:2c6vl961AKOsiMoz4K2hpV",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Coumba",
+                  "duration": {
+                    "totalMilliseconds": 465386
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 2,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:2tKqgQjnGgcPNTDViorQyU",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Utrus Horas",
+                  "duration": {
+                    "totalMilliseconds": 523453
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:3UXV9Mg5vxkicX0VEFQGZe",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ndiaga Niaw",
+                  "duration": {
+                    "totalMilliseconds": 466413
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 11,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:3xyCVdU7UmwE0f4ShLAgN2",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Soldadi",
+                  "duration": {
+                    "totalMilliseconds": 483400
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 6,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:47Elqv3YIYaVOwWYNQRQIj",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ray M'bele",
+                  "duration": {
+                    "totalMilliseconds": 421346
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 5,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:53Bm5w6hReVx25ETaETdl4",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Ngalam",
+                  "duration": {
+                    "totalMilliseconds": 573653
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 7,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5OdBA3HRzCCst30RoMYVzj",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Foire Internationale",
+                  "duration": {
+                    "totalMilliseconds": 465080
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 9,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:5c5Ibh23QxD1G75i9FVvDm",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Werente Serigne",
+                  "duration": {
+                    "totalMilliseconds": 408213
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 4,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T08:04:16Z"
+              },
+              "track": {
+                "_uri": "spotify:track:7exU259myxEjluOJXQcwtg",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Balla Daffe",
+                  "duration": {
+                    "totalMilliseconds": 438720
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:2BHnjJOJuuwg5JGMgsEsND",
+                    "name": "Pirates Choice",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                          "profile": {
+                            "name": "Orchestra Baobab"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02170d739aaeef75d9548d87e9",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851170d739aaeef75d9548d87e9",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273170d739aaeef75d9548d87e9",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:7xT0arvCDupDU1YYy0BNv9",
+                        "profile": {
+                          "name": "Orchestra Baobab"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 12,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:078fshJOmFWMXcE5CpjXnm",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Djotna",
+                  "duration": {
+                    "totalMilliseconds": 228307
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 8,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:0SLzoayjPIXtLWEQLpqWTa",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Rêveries",
+                  "duration": {
+                    "totalMilliseconds": 352972
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 3,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:15vMHbYbW6IAQP7gS4ezUa",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Traversées",
+                  "duration": {
+                    "totalMilliseconds": 252117
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 1,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:18MLF01Dklsea3nTahClRc",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Serigne / Bi Signare",
+                  "duration": {
+                    "totalMilliseconds": 343124
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 9,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1hk0kLxZ9RVwpJxtsyR9uE",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Recercada Quinta",
+                  "duration": {
+                    "totalMilliseconds": 218560
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 7,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            },
+            {
+              "__typename": "UserLibraryTrackResponse",
+              "addedAt": {
+                "isoString": "2019-06-02T07:50:01Z"
+              },
+              "track": {
+                "_uri": "spotify:track:1lmJ2lzkQ1CJ4nYmZekHXf",
+                "data": {
+                  "__typename": "Track",
+                  "name": "Maryama",
+                  "duration": {
+                    "totalMilliseconds": 246403
+                  },
+                  "albumOfTrack": {
+                    "uri": "spotify:album:43WCef1Rxtbe6G80H0HI27",
+                    "name": "Traversées",
+                    "artists": {
+                      "items": [
+                        {
+                          "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                          "profile": {
+                            "name": "Constantinople"
+                          }
+                        },
+                        {
+                          "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                          "profile": {
+                            "name": "Ablaye Cissoko"
+                          }
+                        }
+                      ]
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02fd6e79cbeae25cacd9fe305c",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851fd6e79cbeae25cacd9fe305c",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273fd6e79cbeae25cacd9fe305c",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    }
+                  },
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:3ORXfLCNfO785thdsmtM8X",
+                        "profile": {
+                          "name": "Constantinople"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:7F6474dJ7eusD2MkXm2Lwx",
+                        "profile": {
+                          "name": "Ablaye Cissoko"
+                        }
+                      }
+                    ]
+                  },
+                  "discNumber": 1,
+                  "trackNumber": 4,
+                  "contentRating": {
+                    "label": "NONE"
+                  },
+                  "playability": {
+                    "playable": true
+                  }
+                }
+              }
+            }
+          ],
+          "totalCount": 8908
+        }
+      }
+    }
+  },
+  "extensions": {}
+}

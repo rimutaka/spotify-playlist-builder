@@ -1,0 +1,880 @@
+{
+  "data": {
+    "albumUnion": {
+      "__typename": "Album",
+      "uri": "spotify:album:7h5qFidHM4sqhcCHSbiMzL",
+      "name": "Fandango",
+      "artists": {
+        "totalCount": 1,
+        "items": [
+          {
+            "id": "0Rus0e2zrkY6T4E5IYFNsA",
+            "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+            "profile": {
+              "name": "The Phoenix Foundation"
+            },
+            "visuals": {
+              "avatarImage": {
+                "sources": [
+                  {
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebbcd611f52b3efdf9966dbca0",
+                    "width": 640,
+                    "height": 640
+                  },
+                  {
+                    "url": "https://i.scdn.co/image/ab6761610000f178bcd611f52b3efdf9966dbca0",
+                    "width": 160,
+                    "height": 160
+                  },
+                  {
+                    "url": "https://i.scdn.co/image/ab67616100005174bcd611f52b3efdf9966dbca0",
+                    "width": 320,
+                    "height": 320
+                  }
+                ]
+              }
+            },
+            "sharingInfo": {
+              "shareUrl": "https://open.spotify.com/artist/0Rus0e2zrkY6T4E5IYFNsA?si=-Y1nEUwlSaymionn7ov75A"
+            }
+          }
+        ]
+      },
+      "coverArt": {
+        "extractedColors": {
+          "colorRaw": {
+            "hex": "#E02818"
+          },
+          "colorLight": {
+            "hex": "#E52919"
+          },
+          "colorDark": {
+            "hex": "#E02818"
+          }
+        },
+        "sources": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02a7343b4df7329f11c2ba5835",
+            "width": 300,
+            "height": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a7343b4df7329f11c2ba5835",
+            "width": 64,
+            "height": 64
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273a7343b4df7329f11c2ba5835",
+            "width": 640,
+            "height": 640
+          }
+        ]
+      },
+      "discs": {
+        "totalCount": 2,
+        "items": [
+          {
+            "number": 1,
+            "tracks": {
+              "totalCount": 7
+            }
+          },
+          {
+            "number": 2,
+            "tracks": {
+              "totalCount": 5
+            }
+          }
+        ]
+      },
+      "releases": {
+        "totalCount": 1,
+        "items": [
+          {
+            "uri": "spotify:album:7q1Q7Ma02h8RM2pa06zSl6",
+            "name": "Fandango"
+          }
+        ]
+      },
+      "type": "ALBUM",
+      "date": {
+        "isoString": "2013-01-01T00:00:00Z",
+        "precision": "DAY"
+      },
+      "playability": {
+        "playable": true,
+        "reason": "PLAYABLE"
+      },
+      "label": "Universal Music New Zealand & Australia (Distribution)",
+      "copyright": {
+        "totalCount": 2,
+        "items": [
+          {
+            "type": "C",
+            "text": "© 2013 The Phoenix Foundation"
+          },
+          {
+            "type": "P",
+            "text": "℗ 2013 The Phoenix Foundation"
+          }
+        ]
+      },
+      "courtesyLine": "",
+      "saved": true,
+      "sharingInfo": {
+        "shareUrl": "https://open.spotify.com/album/7h5qFidHM4sqhcCHSbiMzL?si=hVuku6rQS9C8htKM0kS0LQ",
+        "shareId": "hVuku6rQS9C8htKM0kS0LQ"
+      },
+      "tracks": {
+        "totalCount": 12,
+        "items": [
+          {
+            "uid": "5800f1e8b0ce53266814",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:1iVM8aOM4wPNMoTWkFWpvj",
+              "name": "Black Mould",
+              "playcount": "221627",
+              "discNumber": 1,
+              "trackNumber": 1,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 330240
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "fb96990a1397054905a4",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:5PSlvvPHJZqno9t27khWWU",
+              "name": "Modern Rock",
+              "playcount": "131326",
+              "discNumber": 1,
+              "trackNumber": 2,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 369280
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "98949c9f523347801947",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:3FIx2i9BGcE4gxc32EewNK",
+              "name": "The Captain",
+              "playcount": "1280152",
+              "discNumber": 1,
+              "trackNumber": 3,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 217560
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "a8660bba008efbafada6",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:4U2yldTijzQUhWnn5fdRPw",
+              "name": "Thames Soup",
+              "playcount": "214187",
+              "discNumber": 1,
+              "trackNumber": 4,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 303893
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "f7edc1e3c75dabedaf96",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:3xTv314gaB8zTtaDAKWpcc",
+              "name": "Evolution Did",
+              "playcount": "119626",
+              "discNumber": 1,
+              "trackNumber": 5,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 225853
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "f16d3f13c4895f5d4bc7",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:6ksdWVbnLOAF04ssqReysK",
+              "name": "Inside Me Dead",
+              "playcount": "87915",
+              "discNumber": 1,
+              "trackNumber": 6,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 355733
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "4d1e897c755e9f511470",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:6mGj7aynI7xVMos9JR986C",
+              "name": "Corale",
+              "playcount": "99771",
+              "discNumber": 1,
+              "trackNumber": 7,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 459066
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "4f5cecbf274a991b232d",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:1Gb2xAWNemgLXxufBy5qvE",
+              "name": "Supernatural",
+              "playcount": "119073",
+              "discNumber": 2,
+              "trackNumber": 1,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 367640
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "fefc313054d8bdb492c2",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:2L9qfIJJwtsuECgOYkeV3U",
+              "name": "Walls",
+              "playcount": "69654",
+              "discNumber": 2,
+              "trackNumber": 2,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 224626
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "816f9d77067048e15301",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:60heRuKf3O1JUwvyjxnpGF",
+              "name": "Morning Riff",
+              "playcount": "92356",
+              "discNumber": 2,
+              "trackNumber": 3,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 272613
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "38ec334e000d660ac43a",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:1zxvASRrwXbmjQOBsL0UP3",
+              "name": "Sideways Glance",
+              "playcount": "105051",
+              "discNumber": 2,
+              "trackNumber": 4,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 418426
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "uid": "822317e9b1607c15c641",
+            "track": {
+              "saved": true,
+              "uri": "spotify:track:2Snu7B4g2IgH86h8dWYbXA",
+              "name": "Friendly Society",
+              "playcount": "58096",
+              "discNumber": 2,
+              "trackNumber": 5,
+              "contentRating": {
+                "label": "NONE"
+              },
+              "relinkingInformation": null,
+              "duration": {
+                "totalMilliseconds": 1060733
+              },
+              "playability": {
+                "playable": true
+              },
+              "artists": {
+                "items": [
+                  {
+                    "uri": "spotify:artist:0Rus0e2zrkY6T4E5IYFNsA",
+                    "profile": {
+                      "name": "The Phoenix Foundation"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "moreAlbumsByArtist": {
+        "items": [
+          {
+            "discography": {
+              "popularReleasesAlbums": {
+                "items": [
+                  {
+                    "id": "6Jg3s0wbVuysMIPnrZuOsB",
+                    "uri": "spotify:album:6Jg3s0wbVuysMIPnrZuOsB",
+                    "name": "Buffalo",
+                    "date": {
+                      "year": 2010
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e028f4b90171dbf3ee7e6a0fe99",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048518f4b90171dbf3ee7e6a0fe99",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2738f4b90171dbf3ee7e6a0fe99",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "UvdPEB5QT3m5CMzjHcgd4w",
+                      "shareUrl": "https://open.spotify.com/album/6Jg3s0wbVuysMIPnrZuOsB?si=UvdPEB5QT3m5CMzjHcgd4w"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "6LfrYGUxVYJLFbUu6Bqxru",
+                    "uri": "spotify:album:6LfrYGUxVYJLFbUu6Bqxru",
+                    "name": "Pegasus",
+                    "date": {
+                      "year": 2005
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02907b13a60c79af2f94e066a6",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851907b13a60c79af2f94e066a6",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273907b13a60c79af2f94e066a6",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "JPeE8CJsRqSXGrt63VNz9Q",
+                      "shareUrl": "https://open.spotify.com/album/6LfrYGUxVYJLFbUu6Bqxru?si=JPeE8CJsRqSXGrt63VNz9Q"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "2Ar5rYZBAnaJIwIxIhp6qp",
+                    "uri": "spotify:album:2Ar5rYZBAnaJIwIxIhp6qp",
+                    "name": "Horse Power",
+                    "date": {
+                      "year": 2003
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02b73298c09f0285ec05116cbb",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851b73298c09f0285ec05116cbb",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273b73298c09f0285ec05116cbb",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "8eNhVrW8RRSpPOxm-GpY3g",
+                      "shareUrl": "https://open.spotify.com/album/2Ar5rYZBAnaJIwIxIhp6qp?si=8eNhVrW8RRSpPOxm-GpY3g"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "0Cyhrk2ONAnNBxa0T7A5Ae",
+                    "uri": "spotify:album:0Cyhrk2ONAnNBxa0T7A5Ae",
+                    "name": "Happy Ending",
+                    "date": {
+                      "year": 2007
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e027debb0e5d80472028c8ff6bc",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048517debb0e5d80472028c8ff6bc",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2737debb0e5d80472028c8ff6bc",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "mOFcZl0HRnWEcDT9gg3WfQ",
+                      "shareUrl": "https://open.spotify.com/album/0Cyhrk2ONAnNBxa0T7A5Ae?si=mOFcZl0HRnWEcDT9gg3WfQ"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "022vT9l16orgkxCpVLfmNn",
+                    "uri": "spotify:album:022vT9l16orgkxCpVLfmNn",
+                    "name": "Give Up Your Dreams",
+                    "date": {
+                      "year": 2015
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e025006db70f3dc01f9bb3afc2e",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048515006db70f3dc01f9bb3afc2e",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2735006db70f3dc01f9bb3afc2e",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "4Ecq5EioR5W8TAuD3oBOfQ",
+                      "shareUrl": "https://open.spotify.com/album/022vT9l16orgkxCpVLfmNn?si=4Ecq5EioR5W8TAuD3oBOfQ"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "7oRrwHtHyn0C8KFvtVtcpb",
+                    "uri": "spotify:album:7oRrwHtHyn0C8KFvtVtcpb",
+                    "name": "Friend Ship",
+                    "date": {
+                      "year": 2020
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02b3c8ba454b333346d190cbd1",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851b3c8ba454b333346d190cbd1",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273b3c8ba454b333346d190cbd1",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "i3ZROTFfTj6RPXiJhgZvgg",
+                      "shareUrl": "https://open.spotify.com/album/7oRrwHtHyn0C8KFvtVtcpb?si=i3ZROTFfTj6RPXiJhgZvgg"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "7h5qFidHM4sqhcCHSbiMzL",
+                    "uri": "spotify:album:7h5qFidHM4sqhcCHSbiMzL",
+                    "name": "Fandango",
+                    "date": {
+                      "year": 2013
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e02a7343b4df7329f11c2ba5835",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00004851a7343b4df7329f11c2ba5835",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b273a7343b4df7329f11c2ba5835",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "hVuku6rQS9C8htKM0kS0LQ",
+                      "shareUrl": "https://open.spotify.com/album/7h5qFidHM4sqhcCHSbiMzL?si=hVuku6rQS9C8htKM0kS0LQ"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "0Uy9dR4NoRt7tNSqS6UA34",
+                    "uri": "spotify:album:0Uy9dR4NoRt7tNSqS6UA34",
+                    "name": "Buffalo (10 Year Anniversary Edition)",
+                    "date": {
+                      "year": 2020
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e022680dd1eacf8329a602846ee",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048512680dd1eacf8329a602846ee",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2732680dd1eacf8329a602846ee",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "P1tgBl2QRs-moPY4cj_pBQ",
+                      "shareUrl": "https://open.spotify.com/album/0Uy9dR4NoRt7tNSqS6UA34?si=P1tgBl2QRs-moPY4cj_pBQ"
+                    },
+                    "type": "ALBUM"
+                  },
+                  {
+                    "id": "28PlYG6fhRwM83mwnaNbnF",
+                    "uri": "spotify:album:28PlYG6fhRwM83mwnaNbnF",
+                    "name": "Merry Kriskmass - EP",
+                    "date": {
+                      "year": 2009
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e025dd3f910029fe6b02b3cc152",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d000048515dd3f910029fe6b02b3cc152",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b2735dd3f910029fe6b02b3cc152",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "9v6bkeXrSN-Gk0m1KbKg9Q",
+                      "shareUrl": "https://open.spotify.com/album/28PlYG6fhRwM83mwnaNbnF?si=9v6bkeXrSN-Gk0m1KbKg9Q"
+                    },
+                    "type": "EP"
+                  },
+                  {
+                    "id": "1lay3u77la2rj63AoMtroJ",
+                    "uri": "spotify:album:1lay3u77la2rj63AoMtroJ",
+                    "name": "Life Boat",
+                    "date": {
+                      "year": 2021
+                    },
+                    "coverArt": {
+                      "sources": [
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d00001e0235c333017759dac9320216d6",
+                          "width": 300,
+                          "height": 300
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000485135c333017759dac9320216d6",
+                          "width": 64,
+                          "height": 64
+                        },
+                        {
+                          "url": "https://i.scdn.co/image/ab67616d0000b27335c333017759dac9320216d6",
+                          "width": 640,
+                          "height": 640
+                        }
+                      ]
+                    },
+                    "playability": {
+                      "playable": true,
+                      "reason": "PLAYABLE"
+                    },
+                    "sharingInfo": {
+                      "shareId": "abhqVWIdQLO9MLUfurLIvA",
+                      "shareUrl": "https://open.spotify.com/album/1lay3u77la2rj63AoMtroJ?si=abhqVWIdQLO9MLUfurLIvA"
+                    },
+                    "type": "SINGLE"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {}
+}

@@ -1,0 +1,9 @@
+Fetching a playlist by other user
+
+https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylist&variables=%7B%22uri%22%3A%22spotify%3Aplaylist%3A60C3LAHXga4hw73HeyU7U0%22%2C%22offset%22%3A0%2C%22limit%22%3A25%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2273a3b3470804983e4d55d83cd6cc99715019228fd999d51429cc69473a18789d%22%7D%7D
+
+operationName: fetchPlaylist
+
+variables: {"uri":"spotify:playlist:60C3LAHXga4hw73HeyU7U0","offset":0,"limit":25}
+
+extensions: {"persistedQuery":{"version":1,"sha256Hash":"73a3b3470804983e4d55d83cd6cc99715019228fd999d51429cc69473a18789d"}}
