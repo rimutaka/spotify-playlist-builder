@@ -1,5 +1,6 @@
 #[macro_use]
 mod utils;
+mod models;
 
 use wasm_bindgen::prelude::*;
 
@@ -38,3 +39,16 @@ pub async fn fetch_playlist(
 ) {
     utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
+
+
+/// All error handling in this crate is based on either retrying a request after some time
+/// or exiting gracefully.
+#[derive(Debug, Clone)]
+pub enum RetryAfter {
+    Seconds(i64),
+    Never
+}
+
+/// The result type that should be used in place of std::Result
+/// throughout the app
+pub type Result<T> = std::result::Result<T, RetryAfter>;
