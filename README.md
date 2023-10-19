@@ -1,26 +1,19 @@
-# Rust Web Assembly Chrome Extension Example
+# Chrome plugin for generating a random playlist from your library tracks, albums and playlists 
 
-## Setup
-1. Install [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/):
+Spotify used to have a play button inside My Library. It would play all the tracks from anything that was in the library, including albums and playlists.
 
-   ```
-   cargo install wasm-pack
-   ```
-2. Go to ```/wasm_mod``` and run ```build.bat```. <br/>
-   It will compile the ```.wasm``` module and ```.js```-wrapper for it and put them in the ```extension/js/wasm```
-3. Go to Chrome extensions page and load unpacked extension from ```/extension```
+This feature is only available for Liked Songs.
 
-## Notes 
-- ```extension/js/content.js``` demonstrates how to load wasm into the content script <br/>
-  **Important:** in the content script, the module can only be loaded for those sites whose Content Security Policy does not prohibit it
-- ```extension/js/background.js``` demonstrates how to load wasm into the background worker script
-- For ```wasm-pack``` always use ```--target web```
-- ```manifest.json```:
-    - To load the wasm module into the content script, you should list ```.wasm``` and corresponding ```.js``` in the ```web_accessible_resources.resources``` section of manifest
-    - To load the wasm module into the background worker script, you should specify ```wasm-unsafe-eval``` in the ```content_security_policy.extension_pages``` section of manifest
+This plugin rebuilds a playlist of your choosing with random tracks from not just Like Songs, but also Albums and Playlists you liked.
 
-## Tested with
-- Chrome 114 (extension manifest v3)
-- Rust 1.70 (edition 2021)
-- wasm-bindgen 0.2.86
-- wasm-pack 0.11.1
+It is an early prototype and is not intended for use anyone other than me, the developer - it's just too early.
+
+## How it works
+
+The plugin intercepts the session token from Spotify requests and impersonates the Spotify client to:
+* read the contents of the user library
+* add random tracks to the current playlist
+
+It does not transmit any of your data to any third party. All requests go to Spotify.
+
+Most of the work is done by the WASM module built in Rust.
