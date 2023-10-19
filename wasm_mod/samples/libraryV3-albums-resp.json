@@ -1,0 +1,3037 @@
+{
+  "data": {
+    "me": {
+      "libraryV3": {
+        "__typename": "LibraryPage",
+        "availableFilters": [],
+        "selectedFilters": [
+          {
+            "id": "Albums",
+            "name": "Albums"
+          }
+        ],
+        "availableSortOrders": [
+          {
+            "id": "Recents",
+            "name": "Recents"
+          },
+          {
+            "id": "Recently Added",
+            "name": "Recently Added"
+          },
+          {
+            "id": "Alphabetical",
+            "name": "Alphabetical"
+          },
+          {
+            "id": "Creator",
+            "name": "Creator"
+          }
+        ],
+        "selectedSortOrder": {
+          "id": "Recently Added",
+          "name": "Recently Added"
+        },
+        "breadcrumbs": [],
+        "items": [
+          {
+            "addedAt": {
+              "isoString": "2023-10-14T08:44:24Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-14T08:42:01.998Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5Zah4fLbDN48as0KGmywh1",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5Zah4fLbDN48as0KGmywh1",
+                "name": "Ride On",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:3Ebn7mKYzD0L3DaUB1gNJZ",
+                      "profile": {
+                        "name": "Christy Moore"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#6E7C52",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02680a4c3b1b4825868a110f05",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851680a4c3b1b4825868a110f05",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273680a4c3b1b4825868a110f05",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1984-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-14T07:14:44Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-14T07:58:08.933Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4kWmZoSHYtMxvejnCwv3ID",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4kWmZoSHYtMxvejnCwv3ID",
+                "name": "Movin' On",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2KV4sKhTlyrtxaJWZTPj8r",
+                      "profile": {
+                        "name": "Steffen Morrison"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02bca4f6712ef7015e34a01361",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851bca4f6712ef7015e34a01361",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273bca4f6712ef7015e34a01361",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2018-03-30T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-14T07:14:24Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": null,
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4qF4sSfF0dHMUdTkqF5yn8",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4qF4sSfF0dHMUdTkqF5yn8",
+                "name": "Soul Revolution",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2KV4sKhTlyrtxaJWZTPj8r",
+                      "profile": {
+                        "name": "Steffen Morrison"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02cc39e263a872451e7a91bd00",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851cc39e263a872451e7a91bd00",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273cc39e263a872451e7a91bd00",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2020-10-09T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-10T20:06:39Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-10T20:02:03.632Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:10BQatSMJm9bjbSAQfVukj",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:10BQatSMJm9bjbSAQfVukj",
+                "name": "Stories from the Sea (Original Soundtrack)",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2YJXo1ERQAO7r4hQtu2vFc",
+                      "profile": {
+                        "name": "Julia Kent"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02ca12c3957d380f3b3a84c5be",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851ca12c3957d380f3b3a84c5be",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273ca12c3957d380f3b3a84c5be",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2021-10-15T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-10T18:59:20Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-10T19:23:13.231Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5E7fIzAOnhdt3mSyjUYb1j",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5E7fIzAOnhdt3mSyjUYb1j",
+                "name": "Delay",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2YJXo1ERQAO7r4hQtu2vFc",
+                      "profile": {
+                        "name": "Julia Kent"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7B7676",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e024fb4434d2ae84080d9ab06f4",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048514fb4434d2ae84080d9ab06f4",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2734fb4434d2ae84080d9ab06f4",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2007-01-01T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-05T00:48:25Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-05T00:20:57.690Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:38vdzwOSCNDvh81G0QmGfk",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:38vdzwOSCNDvh81G0QmGfk",
+                "name": "Faithful Man",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:3MAzDpqE01xyUmzNsc0Ee0",
+                      "profile": {
+                        "name": "Lee Fields"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:2bToe6WyGvADJftreuXh2K",
+                      "profile": {
+                        "name": "Lee Fields & The Expressions"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#385060",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02277c2d41d377309eadb129fb",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851277c2d41d377309eadb129fb",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273277c2d41d377309eadb129fb",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2012-03-13T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-10-04T08:41:03Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-13T09:07:08.826Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7ElHdWPD6YbkbltJQgCiDc",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7ElHdWPD6YbkbltJQgCiDc",
+                "name": "My World",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2bToe6WyGvADJftreuXh2K",
+                      "profile": {
+                        "name": "Lee Fields & The Expressions"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:3MAzDpqE01xyUmzNsc0Ee0",
+                      "profile": {
+                        "name": "Lee Fields"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#72777B",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e025c3ca0a711ccc10f37950046",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048515c3ca0a711ccc10f37950046",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2735c3ca0a711ccc10f37950046",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2009-06-02T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-28T07:49:15Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": null,
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:6iAOkTDFRiWHVNNUjBqIxT",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:6iAOkTDFRiWHVNNUjBqIxT",
+                "name": "No No No",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6pmxr66tMAePxzOLfjGNcX",
+                      "profile": {
+                        "name": "Beirut"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#567D7D",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e026ea90d600e3fe13b8064af9e",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048516ea90d600e3fe13b8064af9e",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2736ea90d600e3fe13b8064af9e",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2015-09-11T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-28T07:49:10Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": null,
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:26G7PfSLTyLiIcITVl7GAK",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:26G7PfSLTyLiIcITVl7GAK",
+                "name": "Artifacts",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6pmxr66tMAePxzOLfjGNcX",
+                      "profile": {
+                        "name": "Beirut"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#401000",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02d34ab0a2566efc1bcab2d090",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851d34ab0a2566efc1bcab2d090",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273d34ab0a2566efc1bcab2d090",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2022-01-28T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-27T23:29:52Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-15T23:04:38.577Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:71udkw2yxFqNK4SNSYcCce",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:71udkw2yxFqNK4SNSYcCce",
+                "name": "The Flying Club Cup",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6pmxr66tMAePxzOLfjGNcX",
+                      "profile": {
+                        "name": "Beirut"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02a5818379975d1815f7f4e1b2",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851a5818379975d1815f7f4e1b2",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273a5818379975d1815f7f4e1b2",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2007-10-08T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-26T02:57:12Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-26T04:11:47.711Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:2R3vf7T7vG4culGQyEt7vU",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:2R3vf7T7vG4culGQyEt7vU",
+                "name": "To Dream is to Forget",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4Rj2COYs5hQsw8rYIxSviz",
+                      "profile": {
+                        "name": "Hidden Orchestra"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7D7666",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02e1b0522db8dcb352688b2e00",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851e1b0522db8dcb352688b2e00",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273e1b0522db8dcb352688b2e00",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-09-22T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-26T02:57:01Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-26T03:35:29.164Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:0YOJpgi09ivDUTlgXyUmJH",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:0YOJpgi09ivDUTlgXyUmJH",
+                "name": "Rarities 2",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2L3kwZFd16zjHz9a5kEPAm",
+                      "profile": {
+                        "name": "Ane Brun"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#847276",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e027512b757b79b7a6ec1a82c46",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048517512b757b79b7a6ec1a82c46",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2737512b757b79b7a6ec1a82c46",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-09-22T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-26T02:54:44Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-26T03:06:47.398Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4Q9LDRGNMa9KFULcXANcw5",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4Q9LDRGNMa9KFULcXANcw5",
+                "name": "Where We Are Gathered",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4uwfFCC17JI4YD2jVHixXp",
+                      "profile": {
+                        "name": "Opium Moon"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#882018",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e029a774bc6002127cbdf54ced3",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048519a774bc6002127cbdf54ced3",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2739a774bc6002127cbdf54ced3",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-09-15T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-21T18:20:46Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-24T07:14:04.199Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1CuAcz0JFL9Te3RMU6hHgS",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1CuAcz0JFL9Te3RMU6hHgS",
+                "name": "Libertango",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7dsugSamBB7enWE2IrlbFg",
+                      "profile": {
+                        "name": "Astor Piazzolla"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#904040",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02368373b7e40f53ed1aaf6aa0",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851368373b7e40f53ed1aaf6aa0",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273368373b7e40f53ed1aaf6aa0",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1974-01-01T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-07T01:23:13Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-14T04:10:09.836Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4los7PtuzVpPj17oqRZg7N",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4los7PtuzVpPj17oqRZg7N",
+                "name": "Night + Day",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4uwfFCC17JI4YD2jVHixXp",
+                      "profile": {
+                        "name": "Opium Moon"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#088299",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0259bf1bdb35ed125666c3d496",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485159bf1bdb35ed125666c3d496",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27359bf1bdb35ed125666c3d496",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2021-08-27T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-07T00:47:15Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-14T04:43:29.675Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3d7aKIo0oTdVeFHJUgRJe7",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3d7aKIo0oTdVeFHJUgRJe7",
+                "name": "Opium Moon",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4uwfFCC17JI4YD2jVHixXp",
+                      "profile": {
+                        "name": "Opium Moon"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#B81810",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e025c5262e8f1fdf02712bb413c",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048515c5262e8f1fdf02712bb413c",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2735c5262e8f1fdf02712bb413c",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2018-07-13T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-04T23:46:42Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-04T23:36:44.072Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5xXnza2rWQdubjKhTWoF9h",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5xXnza2rWQdubjKhTWoF9h",
+                "name": "Salt Sand Sea",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:79jL5ERrCS1qVXk3aWYshj",
+                      "profile": {
+                        "name": "Ebony Lamb"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#E81000",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02fcd6fa2cf6d6f0e5786c4373",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851fcd6fa2cf6d6f0e5786c4373",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273fcd6fa2cf6d6f0e5786c4373",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-08-17T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-04T23:30:03Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-27T22:40:13.897Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4hWsxhUeX0h8QzMEvJcmqD",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4hWsxhUeX0h8QzMEvJcmqD",
+                "name": "Silence Loud",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5wKMe0NPv5nsl5dYRnCkiC",
+                      "profile": {
+                        "name": "Michel Bisceglia"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:0QMgOp0gF1fxA5egCXg96G",
+                      "profile": {
+                        "name": "Marc Lehan"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:2C1BWNF1DxuGqLifFqyh4U",
+                      "profile": {
+                        "name": "Werner Lauscher"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02e585faddb1c5517e8ec5639f",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851e585faddb1c5517e8ec5639f",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273e585faddb1c5517e8ec5639f",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-09-01T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-04T00:29:13Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-04T09:44:58.592Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3M3fs6GZZ3sbGTifYfIN0B",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3M3fs6GZZ3sbGTifYfIN0B",
+                "name": "Joy Unlimited",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4qotTgckiMsh9fjHLXSRyC",
+                      "profile": {
+                        "name": "Harry Beckett"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7E7474",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02051d8c7fc0c5b750350a93f1",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851051d8c7fc0c5b750350a93f1",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273051d8c7fc0c5b750350a93f1",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2020-08-07T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-04T00:28:58Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-09T01:26:09.588Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:0WC92AW7cmFwCwb6hBYSLp",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:0WC92AW7cmFwCwb6hBYSLp",
+                "name": "The Modern Sound Of Harry Beckett",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4qotTgckiMsh9fjHLXSRyC",
+                      "profile": {
+                        "name": "Harry Beckett"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02bf97520d8b0001570514d4bc",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851bf97520d8b0001570514d4bc",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273bf97520d8b0001570514d4bc",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2008-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-03T07:25:16Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-03T09:05:57.719Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:00jalpLLeWNB3mdvN4DipA",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:00jalpLLeWNB3mdvN4DipA",
+                "name": "The Turn Of A Friendly Card (Expanded Edition)",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2m62cc253Xvd9qYQ8d2X3d",
+                      "profile": {
+                        "name": "The Alan Parsons Project"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#982830",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02ca801a675abef0d6269fde09",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851ca801a675abef0d6269fde09",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273ca801a675abef0d6269fde09",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1980-11-01T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-09-03T05:35:17Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-09T01:23:58.914Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:4BGd9BmpePqeSfHLeYiCDr",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:4BGd9BmpePqeSfHLeYiCDr",
+                "name": "Eye In The Sky (Expanded Edition)",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2m62cc253Xvd9qYQ8d2X3d",
+                      "profile": {
+                        "name": "The Alan Parsons Project"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#43835D",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02182cfcd0cc42013557f64c89",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851182cfcd0cc42013557f64c89",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273182cfcd0cc42013557f64c89",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1982-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-29T23:00:40Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-09-20T09:47:54.921Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:11qEWtxwrKQUgOBPsff4op",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:11qEWtxwrKQUgOBPsff4op",
+                "name": "The Wonderful World Of Sam Cooke",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6hnWRPzGGKiapVX1UCdEAC",
+                      "profile": {
+                        "name": "Sam Cooke"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#727963",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e024fc6dd310e78dcdbf6130b2b",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048514fc6dd310e78dcdbf6130b2b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2734fc6dd310e78dcdbf6130b2b",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1960-02-01T00:00:00Z",
+                  "precision": "MONTH"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-29T09:53:48Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-29T22:51:13.191Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:6C9NWuw1M1aFd633eMyNXd",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:6C9NWuw1M1aFd633eMyNXd",
+                "name": "En Français",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5dHfLBNU8zoypgKefzEB1c",
+                      "profile": {
+                        "name": "Pomplamoose"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#936C7A",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02aad467674d8abb9f20720fb4",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851aad467674d8abb9f20720fb4",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273aad467674d8abb9f20720fb4",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2020-04-17T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-24T03:54:38Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-24T03:21:47.374Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3QOXA8bqsml8CslUdgHXrW",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3QOXA8bqsml8CslUdgHXrW",
+                "name": "Painted Ruins",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2Jv5eshHtLycR6R8KQCdc4",
+                      "profile": {
+                        "name": "Grizzly Bear"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e025ffc636c233a725727db58de",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048515ffc636c233a725727db58de",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2735ffc636c233a725727db58de",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2017-08-18T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-24T02:28:26Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-06T23:59:23.756Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3XQMgEnLQnOMkFaJA9w6sZ",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3XQMgEnLQnOMkFaJA9w6sZ",
+                "name": "Veckatimest",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2Jv5eshHtLycR6R8KQCdc4",
+                      "profile": {
+                        "name": "Grizzly Bear"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#B45A6F",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02aaa83532a319c37f1fb4180c",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851aaa83532a319c37f1fb4180c",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273aaa83532a319c37f1fb4180c",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2009-05-24T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-14T06:25:45Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-24T03:55:01.274Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3lDLnElZehSq7Vbs9T2hSR",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3lDLnElZehSq7Vbs9T2hSR",
+                "name": "Changing Of The Seasons",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2L3kwZFd16zjHz9a5kEPAm",
+                      "profile": {
+                        "name": "Ane Brun"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#535353",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02453f7a6ef0fdde3663c7d8b9",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851453f7a6ef0fdde3663c7d8b9",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273453f7a6ef0fdde3663c7d8b9",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2008-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-13T23:44:27Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-15T09:40:41.787Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7cvGvQ4o2mWFLMfyqhLtT2",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7cvGvQ4o2mWFLMfyqhLtT2",
+                "name": "How Beauty Holds The Hand Of Sorrow",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2L3kwZFd16zjHz9a5kEPAm",
+                      "profile": {
+                        "name": "Ane Brun"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0225dc4bb36b4f12cd1b0c9954",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485125dc4bb36b4f12cd1b0c9954",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27325dc4bb36b4f12cd1b0c9954",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2020-11-27T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-13T23:08:10Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-17T03:32:03.852Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:2uvAHzxbTkKJUc8s0k38xP",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:2uvAHzxbTkKJUc8s0k38xP",
+                "name": "Songs 2013 - 2023",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2L3kwZFd16zjHz9a5kEPAm",
+                      "profile": {
+                        "name": "Ane Brun"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#787859",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02deb8348eda771dd50d936245",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851deb8348eda771dd50d936245",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273deb8348eda771dd50d936245",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-05-12T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-13T21:34:18Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-13T23:07:52.937Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1bvAlOqMbnWLwTcp65kSAP",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1bvAlOqMbnWLwTcp65kSAP",
+                "name": "Rarities",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:2L3kwZFd16zjHz9a5kEPAm",
+                      "profile": {
+                        "name": "Ane Brun"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#535353",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e029a11993d6b640c685e3ec61d",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048519a11993d6b640c685e3ec61d",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2739a11993d6b640c685e3ec61d",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2013-10-04T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-11T08:52:53Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-17T22:12:45.870Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1QneuYN3b0JteZNmLse2uA",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1QneuYN3b0JteZNmLse2uA",
+                "name": "Fragments of Freedom",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6bWxFw65IEJzBYjx3SxUXd",
+                      "profile": {
+                        "name": "Morcheeba"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#A81008",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02b7b9e596d4836113a4b2d8ed",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851b7b9e596d4836113a4b2d8ed",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273b7b9e596d4836113a4b2d8ed",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2000-07-10T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-11T08:52:38Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T07:58:31.148Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1ILnMWNKUXzcXug4Tq2JRP",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1ILnMWNKUXzcXug4Tq2JRP",
+                "name": "Big Calm",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6bWxFw65IEJzBYjx3SxUXd",
+                      "profile": {
+                        "name": "Morcheeba"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#C7503C",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0237ee51bfb9ad12746d1df5a6",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485137ee51bfb9ad12746d1df5a6",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27337ee51bfb9ad12746d1df5a6",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1998-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-10T09:50:54Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-17T23:54:59.684Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5ZJsAgXbWQnzCoDI2BNC0u",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5ZJsAgXbWQnzCoDI2BNC0u",
+                "name": "Corazón y Hueso",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7oEBXFf9TDKulnNMFKU0FI",
+                      "profile": {
+                        "name": "Melingo"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#404040",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02980f12b889494b6b8e1e5e76",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851980f12b889494b6b8e1e5e76",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273980f12b889494b6b8e1e5e76",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2011-11-08T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-10T09:50:47Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T00:49:39.551Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3lqGBKTp87k7kJ7VeR76r1",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3lqGBKTp87k7kJ7VeR76r1",
+                "name": "Maldito Tango",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7oEBXFf9TDKulnNMFKU0FI",
+                      "profile": {
+                        "name": "Melingo"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#607A87",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02415404ce9a1544e388637bec",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851415404ce9a1544e388637bec",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273415404ce9a1544e388637bec",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2007-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-10T09:47:43Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T05:26:30.266Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:6ue90WBmmhq34xe8qJByq1",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:6ue90WBmmhq34xe8qJByq1",
+                "name": "UFA!",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7oEBXFf9TDKulnNMFKU0FI",
+                      "profile": {
+                        "name": "Melingo"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#8C7440",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e022f80e417369a0ab299f8e4a4",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048512f80e417369a0ab299f8e4a4",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2732f80e417369a0ab299f8e4a4",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2021-12-23T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-10T09:47:33Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T06:30:43.274Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3nHT1PR1zwcImDMnCsgovU",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3nHT1PR1zwcImDMnCsgovU",
+                "name": "S’Il Vous Plaît (Remastered 2022)",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7oEBXFf9TDKulnNMFKU0FI",
+                      "profile": {
+                        "name": "Melingo"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#383020",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e027e2a76ef8293c5da51b2d698",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048517e2a76ef8293c5da51b2d698",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2737e2a76ef8293c5da51b2d698",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2022-04-08T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-10T09:47:10Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": null,
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1lJUJPZlthSOH02ANyOeRn",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1lJUJPZlthSOH02ANyOeRn",
+                "name": "TANGOS BAJOS",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:7oEBXFf9TDKulnNMFKU0FI",
+                      "profile": {
+                        "name": "Melingo"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#767676",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02277eda35222901ce85fc044f",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851277eda35222901ce85fc044f",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273277eda35222901ce85fc044f",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2021-12-23T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-08T23:53:32Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T08:20:56.668Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:09zQi0yad2kbB6LzEBv8L7",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:09zQi0yad2kbB6LzEBv8L7",
+                "name": "Caro Diario un Film Di Nanni Moretti",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:11XlNd1KqePugYImzM1ZKJ",
+                      "profile": {
+                        "name": "Nicola Piovani"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#D93C3C",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0264d20c99ff7a1b6993daaf9f",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485164d20c99ff7a1b6993daaf9f",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27364d20c99ff7a1b6993daaf9f",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2006-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-07T04:10:12Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T08:36:33.782Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5uxGxcXAwY8ixyPQmU33ZA",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5uxGxcXAwY8ixyPQmU33ZA",
+                "name": "The Transformer Session",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1jdUu8RsoIhTGLeJvzoACP",
+                      "profile": {
+                        "name": "Henrik Lindstrand"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:4h3yhZkLL3xHuEoLlH3jwV",
+                      "profile": {
+                        "name": "Halvcirkel"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#76767A",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02b827f22cd34b98f453482435",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851b827f22cd34b98f453482435",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273b827f22cd34b98f453482435",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-08-04T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-07T04:09:58Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-08T03:04:29.647Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7anMdHhXwfjIvlGXBVyg3Z",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7anMdHhXwfjIvlGXBVyg3Z",
+                "name": "Carnegie 25",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:11kBu957KTYoAltZHDm8gW",
+                      "profile": {
+                        "name": "Buena Vista Social Club"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#D84030",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02306a8aef8f828b2c2ec184f2",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851306a8aef8f828b2c2ec184f2",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273306a8aef8f828b2c2ec184f2",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-08-04T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-07T04:08:57Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-10-06T21:31:33.816Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:174iSOJd9FlJ8RYuj81GVQ",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:174iSOJd9FlJ8RYuj81GVQ",
+                "name": "Easy To Love",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5Wx29PEKBUtWOiTA3kOOXq",
+                      "profile": {
+                        "name": "Bobby Hackett"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#A16D05",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0268fce2f2400db532662a70a6",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485168fce2f2400db532662a70a6",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27368fce2f2400db532662a70a6",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-07-28T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-03T02:16:40Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-09T01:09:21.454Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7KJruqiZwhVmnfW3CfvIPu",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7KJruqiZwhVmnfW3CfvIPu",
+                "name": "Amansara",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:6E8vZ5lkpXbXlkgHhbVJSl",
+                      "profile": {
+                        "name": "Chancha Via Circuito"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#006088",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02da7c80f8e769ca8869ed1438",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851da7c80f8e769ca8869ed1438",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273da7c80f8e769ca8869ed1438",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2008-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-03T00:26:32Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-23T00:52:24.916Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7Bbr1kphzvv9LEUoAFMmkj",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7Bbr1kphzvv9LEUoAFMmkj",
+                "name": "Mambo Sinuendo",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1CPwHx5lgVxv0rfcp7UXLx",
+                      "profile": {
+                        "name": "Ry Cooder"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:5uG50qso5XAfxs6BeXdnld",
+                      "profile": {
+                        "name": "Manuel Galbán"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#D83830",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02427c8e00de57abf4c51bcfd5",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851427c8e00de57abf4c51bcfd5",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273427c8e00de57abf4c51bcfd5",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2003-01-27T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-03T00:26:03Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-06T08:26:10.383Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:0gLaTb6BP8pySUWwkiZjdD",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:0gLaTb6BP8pySUWwkiZjdD",
+                "name": "Music by Ry Cooder",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:1CPwHx5lgVxv0rfcp7UXLx",
+                      "profile": {
+                        "name": "Ry Cooder"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#B05008",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e0229d2d8f2b5eb4acb68392ccd",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000485129d2d8f2b5eb4acb68392ccd",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b27329d2d8f2b5eb4acb68392ccd",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1995-01-01T00:00:00Z",
+                  "precision": "YEAR"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-02T22:58:02Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-18T08:57:30.923Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:2MSgPFGGgIn5EqLezjLpt9",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:2MSgPFGGgIn5EqLezjLpt9",
+                "name": "Talking Timbuktu (with Ry Cooder)",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:3mNygoyrEKLgo6sx0MzwOL",
+                      "profile": {
+                        "name": "Ali Farka Touré"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#0F885B",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e024209569110ce50ca88e1dc46",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048514209569110ce50ca88e1dc46",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2734209569110ce50ca88e1dc46",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1994-03-28T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-02T22:57:30Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-10T01:10:33.327Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:5LYY9AkRt5DewwnfQt63Dz",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:5LYY9AkRt5DewwnfQt63Dz",
+                "name": "Perdido",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0UI6s6uva6Ozm7VlICnFmc",
+                      "profile": {
+                        "name": "Alegre All Stars"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#E80860",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e025f6e51509e694d9274a09003",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048515f6e51509e694d9274a09003",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2735f6e51509e694d9274a09003",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "1977-01-01T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-02T22:57:03Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-09T08:48:21.609Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:3tYPqlL7hg3M69e0gPBGai",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:3tYPqlL7hg3M69e0gPBGai",
+                "name": "Lost And Found, Vol. 3",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0UI6s6uva6Ozm7VlICnFmc",
+                      "profile": {
+                        "name": "Alegre All Stars"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#E81850",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e028ec21e614359e7a89711e6d2",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048518ec21e614359e7a89711e6d2",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2738ec21e614359e7a89711e6d2",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2000-05-15T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-08-01T23:04:17Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-23T01:38:01.003Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:14lE3ETMvVNjuB40hgDAHA",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:14lE3ETMvVNjuB40hgDAHA",
+                "name": "Salento in dub",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:72CoIB17925mESZcHkXmMA",
+                      "profile": {
+                        "name": "Insintesi"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e020dedeeb6a5ef0160e2a6d05c",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048510dedeeb6a5ef0160e2a6d05c",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2730dedeeb6a5ef0160e2a6d05c",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2010-06-09T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-07-27T23:26:32Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-23T01:39:50.553Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:1oRvZVVJ1rjzPysCr3B2k7",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:1oRvZVVJ1rjzPysCr3B2k7",
+                "name": "I Will Not Stand Alone",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5sarhkyrBmQFnOJe2HrMBH",
+                      "profile": {
+                        "name": "Kayhan Kalhor"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:1qslPgYPREuoJG8b6xjUfp",
+                      "profile": {
+                        "name": "Ali Bahrami Fard"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#188576",
+                      "isFallback": false
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e025e2fcdb6de04d38784c057a0",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d000048515e2fcdb6de04d38784c057a0",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b2735e2fcdb6de04d38784c057a0",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2012-02-14T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          },
+          {
+            "addedAt": {
+              "isoString": "2023-07-27T23:25:42Z"
+            },
+            "pinnable": true,
+            "pinned": false,
+            "depth": 0,
+            "playedAt": {
+              "isoString": "2023-08-23T02:20:03.333Z"
+            },
+            "item": {
+              "__typename": "AlbumResponseWrapper",
+              "_uri": "spotify:album:7JuHeqiRIGEkyXVqpdfKQi",
+              "data": {
+                "__typename": "Album",
+                "uri": "spotify:album:7JuHeqiRIGEkyXVqpdfKQi",
+                "name": "The Sky Is the Same Colour Everywhere",
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5sarhkyrBmQFnOJe2HrMBH",
+                      "profile": {
+                        "name": "Kayhan Kalhor"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:2nCACYdIndYchzX4bxLcTW",
+                      "profile": {
+                        "name": "Toumani Diabaté"
+                      }
+                    }
+                  ]
+                },
+                "coverArt": {
+                  "extractedColors": {
+                    "colorDark": {
+                      "hex": "#7F7F7F",
+                      "isFallback": true
+                    }
+                  },
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00001e02b4c963d1787662b9342b0777",
+                      "width": 300,
+                      "height": 300
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d00004851b4c963d1787662b9342b0777",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab67616d0000b273b4c963d1787662b9342b0777",
+                      "width": 640,
+                      "height": 640
+                    }
+                  ]
+                },
+                "date": {
+                  "isoString": "2023-05-05T00:00:00Z",
+                  "precision": "DAY"
+                }
+              }
+            }
+          }
+        ],
+        "pagingInfo": {
+          "offset": 0,
+          "limit": 50
+        },
+        "totalCount": 1449
+      }
+    }
+  },
+  "extensions": {}
+}

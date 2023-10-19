@@ -31,13 +31,14 @@ pub fn hello_background() {
 }
 
 #[wasm_bindgen]
-pub async fn fetch_playlist(
+pub async fn rebuild_playlist(
     auth_header_value: &str,
     token_header_value: &str,
-    playlist_id: &str,
-    user_uri: &str,
+    _playlist_id: &str,
+    _user_uri: &str,
 ) {
-    utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
+    utils::fetch_all_albums (auth_header_value, token_header_value).await;
+    // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
 
 

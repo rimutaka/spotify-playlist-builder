@@ -1,9 +1,15 @@
 // use std::time::Duration;
-use super::{models, Result, RetryAfter};
+use super::{models, models::Variables, Result, RetryAfter};
+use hex;
 use serde_wasm_bindgen;
+use sha2::{Digest, Sha256};
+use urlencoding;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::JsFuture;
 use web_sys::{Request, RequestInit, RequestMode, Response, WorkerGlobalScope};
+
+/// Number of items (albums, tracks) per page for Spotify requests
+const ITEMS_PER_PAGE: u64 = 50;
 
 #[allow(dead_code)]
 pub fn set_panic_hook() {
@@ -39,11 +45,14 @@ macro_rules! log {
 
 /// Prepares and executes an HTTP request to spotify,
 /// including token and other headers.
-pub(crate) async fn execute_http_request(
+async fn execute_http_request<T>(
     auth_header_value: &str,
     token_header_value: &str,
     url: &str,
-) -> Result<JsValue> {
+) -> Result<T>
+where
+    T: for<'de> serde::Deserialize<'de>,
+{
     log!("prepare_http_request entered");
     // set request params
     let mut opts = RequestInit::new();
@@ -142,10 +151,23 @@ pub(crate) async fn execute_http_request(
     // log!("Resp as string:");
     // log!("{:?}", resp.as_string().unwrap());
 
-    return Ok(resp);
+    // convert into a rust struct
+    let playlist = match serde_wasm_bindgen::from_value::<T>(resp) {
+        Ok(v) => v,
+        Err(e) => {
+            log!("Cannot deser spotify response into rust struct");
+            log!("{:?}", e);
+            return Err(RetryAfter::Never);
+        }
+    };
+
+    return Ok(playlist);
 }
 
-pub(crate) async fn fetch_playlist(
+/**
+/// Fetches details of the specified playlist, including its list of tracks.
+/// Nothing is returned yet - the data is logged for debugging.
+async fn _fetch_playlist(
     auth_header_value: &str,
     token_header_value: &str,
     playlist_id: &str,
@@ -161,23 +183,19 @@ pub(crate) async fn fetch_playlist(
 
     log!("{url}");
 
-    let resp = match execute_http_request(auth_header_value, token_header_value, url).await {
+    let playlist = match execute_http_request::<models::playlist::PlaylistRoot>(
+        auth_header_value,
+        token_header_value,
+        url,
+    )
+    .await
+    {
         Ok(v) => v,
         Err(e) if matches!(e, RetryAfter::Never) => {
             return;
         }
         Err(_) => {
             unimplemented!("Retries are not implemented");
-        }
-    };
-
-    // convert into a rust struct
-    let playlist = match serde_wasm_bindgen::from_value::<models::PlaylistRoot>(resp) {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Cannot deser playlist");
-            log!("{:?}", e);
-            return;
         }
     };
 
@@ -191,4 +209,101 @@ pub(crate) async fn fetch_playlist(
     } else {
         log!("User does not own the playlist");
     }
+}
+
+*/
+
+fn build_url(operation_name: &str, variables: Variables) -> Result<String> {
+    let variables = match serde_json::to_string(&variables) {
+        Ok(v) => v,
+        Err(e) => {
+            log!("Failed to serialize variables for {:?}", variables);
+            log!("{e}");
+            return Err(RetryAfter::Never);
+        }
+    };
+
+    let variables = urlencoding::encode(&variables).to_string();
+
+    let url = &[
+        "https://api-partner.spotify.com/pathfinder/v1/query?operationName=",
+        operation_name,
+        "&variables=",
+        &variables,
+    ]
+    .concat();
+
+    // hash the URL for using as a cache key
+    let mut hasher = Sha256::new();
+    hasher.update(url);
+    let _hashed_url = hex::encode(hasher.finalize());
+
+    // this is a temp plug because I could not get Spotify to accept my hash
+    let hashed_url = "17d801ba80f3a3d7405966641818c334fe32158f97e9e8b38f1a92f764345df9";
+
+    let persisted_query = [
+        r#"{"persistedQuery":{"version":1,"sha256Hash":""#,
+        &hashed_url,
+        r#""}}""#,
+    ]
+    .concat();
+
+    let url = &[
+        url,
+        "&extensions=",
+        &urlencoding::encode(&persisted_query).to_string(),
+    ]
+    .concat();
+
+    log!("URL:");
+    log!("{url}");
+
+    return Ok(url.to_owned());
+}
+
+/// Saves IDs of all albums into the local storage
+pub(crate) async fn fetch_all_albums(auth_header_value: &str, token_header_value: &str) {
+    log!("fetch_all_albums entered");
+
+    // https://api-partner.spotify.com/pathfinder/v1/query?operationName=libraryV3&variables=%7B%22filters%22%3A%5B%22Albums%22%5D%2C%22order%22%3Anull%2C%22textFilter%22%3A%22%22%2C%22features%22%3A%5B%22LIKED_SONGS%22%2C%22YOUR_EPISODES%22%5D%2C%22limit%22%3A50%2C%22offset%22%3A0%2C%22flatten%22%3Afalse%2C%22expandedFolders%22%3A%5B%5D%2C%22folderUri%22%3Anull%2C%22includeFoldersWhenFlattening%22%3Atrue%2C%22withCuration%22%3Afalse%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2217d801ba80f3a3d7405966641818c334fe32158f97e9e8b38f1a92f764345df9%22%7D%7D
+
+
+    // https://api-partner.spotify.com/pathfinder/v1/query?operationName=libraryV3&variables={"filters":["Albums"],"order":null,"textFilter":"","features":["LIKED_SONGS","YOUR_EPISODES"],"limit":50,"offset":0,"flatten":false,"expandedFolders":[],"folderUri":null,"includeFoldersWhenFlattening":true,"withCuration":false}&extensions={"persistedQuery":{"version":1,"sha256Hash":"17d801ba80f3a3d7405966641818c334fe32158f97e9e8b38f1a92f764345df9"}}
+
+    // get the first page of albums to see how many there are
+    let mut variables = Variables::default();
+    variables.filters.push("Albums".to_owned());
+
+    let url = match build_url("libraryV3", variables) {
+        Ok(v) => v,
+        Err(_) => return,
+    };
+
+    let albums = match execute_http_request::<models::albums::Root>(
+        auth_header_value,
+        token_header_value,
+        &url,
+    )
+    .await
+    {
+        Ok(v) => v,
+        Err(e) if matches!(e, RetryAfter::Never) => {
+            return;
+        }
+        Err(_) => {
+            unimplemented!("Retries are not implemented");
+        }
+    };
+
+    // log!("{:?}", albums);
+
+    // get the number of albums and calculate the number of pages that can be downloaded
+    let total_album_count = albums.data.me.library_v3.total_count;
+    let total_pages = total_album_count / ITEMS_PER_PAGE;
+    let total_pages = if total_album_count % ITEMS_PER_PAGE > 0 {
+        total_album_count / ITEMS_PER_PAGE + 1
+    } else {
+        total_pages
+    };
+    log!("Albums: {total_album_count}, pages: {total_pages}");
 }

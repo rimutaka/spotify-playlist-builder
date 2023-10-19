@@ -1,6 +1,6 @@
 // A static import is required in b/g scripts because they are executed in their own env
 // not connected to the content scripts where wasm is loaded automatically
-import initWasmModule, { hello_background, fetch_playlist } from './wasm/wasm_mod.js';
+import initWasmModule, { hello_background, rebuild_playlist } from './wasm/wasm_mod.js';
 
 console.log("Background started v16:42");
 
@@ -33,7 +33,7 @@ chrome.action.onClicked.addListener(async () => {
 
     if (authHeaderValue && tokenHeaderValue && !fetching) {
         fetching = true;
-        await fetch_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
+        await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
         fetching = false;
     }
 });
