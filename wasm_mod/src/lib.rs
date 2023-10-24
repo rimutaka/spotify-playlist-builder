@@ -37,6 +37,7 @@ pub async fn rebuild_playlist(
     _playlist_id: &str,
     _user_uri: &str,
 ) {
+    // TODO: add top level error handling to allow for ? in underlying code
     utils::fetch_all_albums (auth_header_value, token_header_value).await;
     // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }

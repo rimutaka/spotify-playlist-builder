@@ -122,7 +122,7 @@ pub(crate) mod albums {
     }
 
     #[derive(Debug, Deserialize)]
-    pub struct Root {
+    pub struct Albums {
         pub data: RootData,
     }
 }

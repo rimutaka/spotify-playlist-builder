@@ -10,6 +10,8 @@ use web_sys::{Request, RequestInit, RequestMode, Response, WorkerGlobalScope};
 
 /// Number of items (albums, tracks) per page for Spotify requests
 const ITEMS_PER_PAGE: u64 = 50;
+const REQUEST_TYPE_LIBRARY_V3: &str = "libraryV3";
+const ID_PREFIX_ALBUM: &str = "spotify:album:";
 
 #[allow(dead_code)]
 pub fn set_panic_hook() {
@@ -39,7 +41,7 @@ pub fn set_panic_hook() {
 
 macro_rules! log {
     ( $( $t:tt )* ) => {
-        web_sys::console::log_1(&format!( $( $t )* ).into());
+        web_sys::console::log_1(&format!( $( $t )* ).into())
     }
 }
 
@@ -213,8 +215,8 @@ async fn _fetch_playlist(
 
 */
 
-fn build_url(operation_name: &str, variables: Variables) -> Result<String> {
-    let variables = match serde_json::to_string(&variables) {
+fn build_url(operation_name: &str, variables: &Variables) -> Result<String> {
+    let variables = match serde_json::to_string(variables) {
         Ok(v) => v,
         Err(e) => {
             log!("Failed to serialize variables for {:?}", variables);
@@ -267,19 +269,18 @@ pub(crate) async fn fetch_all_albums(auth_header_value: &str, token_header_value
 
     // https://api-partner.spotify.com/pathfinder/v1/query?operationName=libraryV3&variables=%7B%22filters%22%3A%5B%22Albums%22%5D%2C%22order%22%3Anull%2C%22textFilter%22%3A%22%22%2C%22features%22%3A%5B%22LIKED_SONGS%22%2C%22YOUR_EPISODES%22%5D%2C%22limit%22%3A50%2C%22offset%22%3A0%2C%22flatten%22%3Afalse%2C%22expandedFolders%22%3A%5B%5D%2C%22folderUri%22%3Anull%2C%22includeFoldersWhenFlattening%22%3Atrue%2C%22withCuration%22%3Afalse%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2217d801ba80f3a3d7405966641818c334fe32158f97e9e8b38f1a92f764345df9%22%7D%7D
 
-
     // https://api-partner.spotify.com/pathfinder/v1/query?operationName=libraryV3&variables={"filters":["Albums"],"order":null,"textFilter":"","features":["LIKED_SONGS","YOUR_EPISODES"],"limit":50,"offset":0,"flatten":false,"expandedFolders":[],"folderUri":null,"includeFoldersWhenFlattening":true,"withCuration":false}&extensions={"persistedQuery":{"version":1,"sha256Hash":"17d801ba80f3a3d7405966641818c334fe32158f97e9e8b38f1a92f764345df9"}}
 
     // get the first page of albums to see how many there are
     let mut variables = Variables::default();
     variables.filters.push("Albums".to_owned());
 
-    let url = match build_url("libraryV3", variables) {
+    let mut url = match build_url(REQUEST_TYPE_LIBRARY_V3, &variables) {
         Ok(v) => v,
         Err(_) => return,
     };
 
-    let albums = match execute_http_request::<models::albums::Root>(
+    let albums = match execute_http_request::<models::albums::Albums>(
         auth_header_value,
         token_header_value,
         &url,
@@ -306,4 +307,58 @@ pub(crate) async fn fetch_all_albums(auth_header_value: &str, token_header_value
         total_pages
     };
     log!("Albums: {total_album_count}, pages: {total_pages}");
+
+    // a collection of all albums from all pages
+    let mut all_albums = albums
+        .data
+        .me
+        .library_v3
+        .items
+        .into_iter()
+        .map(|v| v.item.data.uri.replace(ID_PREFIX_ALBUM, ""))
+        .collect::<Vec<String>>();
+
+    // allocate enough space for all albums since it is known in advance
+    all_albums.reserve(total_album_count as usize - all_albums.len());
+
+    // the next page will start where the first one ended
+    variables.offset = variables.limit;
+    url = match build_url(REQUEST_TYPE_LIBRARY_V3, &variables) {
+        Ok(v) => v,
+        Err(_) => return,
+    };
+
+    // fetch the rest of the albums pages in a loop
+    // this will end on the first error
+    // TODO: make a more reliable loop when retries are available
+    while let Ok(albums) =
+        execute_http_request::<models::albums::Albums>(auth_header_value, token_header_value, &url)
+            .await
+    {
+        let mut albums = albums
+            .data
+            .me
+            .library_v3
+            .items
+            .into_iter()
+            .map(|v| v.item.data.uri.replace(ID_PREFIX_ALBUM, ""))
+            .collect::<Vec<String>>();
+
+        // add the list of albums to the local collection
+        all_albums.append(&mut albums);
+        // the next page will start where the first one ended
+        variables.offset += variables.limit;
+        url = match build_url(REQUEST_TYPE_LIBRARY_V3, &variables) {
+            Ok(v) => v,
+            Err(_) => return,
+        };
+
+        // for debugging
+        if variables.offset > 200 {
+            break;
+        }
+    }
+
+    log!("{}", all_albums.join("\n"));
+    log!("Total albums: {}", all_albums.len());
 }
