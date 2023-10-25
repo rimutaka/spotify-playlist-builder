@@ -85,7 +85,7 @@ pub(crate) mod playlist {
 
 // data -> me -> libraryV3 -> items -> item -> data -> uri
 
-pub(crate) mod albums {
+pub(crate) mod albums_playlists {
     use serde::Deserialize;
     #[derive(Debug, Deserialize)]
     pub struct Data {
@@ -122,7 +122,7 @@ pub(crate) mod albums {
     }
 
     #[derive(Debug, Deserialize)]
-    pub struct Albums {
+    pub struct LibV3ItemsRoot {
         pub data: RootData,
     }
 }

@@ -38,17 +38,16 @@ pub async fn rebuild_playlist(
     _user_uri: &str,
 ) {
     // TODO: add top level error handling to allow for ? in underlying code
-    utils::fetch_all_albums (auth_header_value, token_header_value).await;
+    utils::fetch_all_albums_and_playlists(auth_header_value, token_header_value).await;
     // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
-
 
 /// All error handling in this crate is based on either retrying a request after some time
 /// or exiting gracefully.
 #[derive(Debug, Clone)]
 pub enum RetryAfter {
     Seconds(i64),
-    Never
+    Never,
 }
 
 /// The result type that should be used in place of std::Result
