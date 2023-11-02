@@ -5,7 +5,7 @@ use serde::Serialize;
 /// {"filters":["Albums"],"order":null,"textFilter":"","features":["LIKED_SONGS","YOUR_EPISODES"],"limit":50,"offset":0,"flatten":false,"expandedFolders":[],"folderUri":null,"includeFoldersWhenFlattening":true,"withCuration":false}
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
-pub(crate) struct Variables {
+pub(crate) struct VariablesV3Items {
     pub filters: Vec<String>,
     pub order: String,
     pub limit: usize,
@@ -13,7 +13,7 @@ pub(crate) struct Variables {
     pub text_filter: String,
 }
 
-impl Default for Variables {
+impl Default for VariablesV3Items {
     fn default() -> Self {
         Self {
             filters: Vec::new(),
@@ -21,6 +21,29 @@ impl Default for Variables {
             limit: 50,
             offset: 0,
             text_filter: String::new(),
+        }
+    }
+}
+
+/// A serializable struct for adding variables to a spotify request
+///
+/// {"uri":"spotify:album:7h5qFidHM4sqhcCHSbiMzL","locale":"","offset":0,"limit":50}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub(crate) struct VariablesAlbumTracks {
+    pub limit: usize,
+    pub offset: usize,
+    pub uri: String,
+    pub locale: String,
+}
+
+impl Default for VariablesAlbumTracks {
+    fn default() -> Self {
+        Self {
+            limit: 50,
+            offset: 0,
+            uri: String::new(),
+            locale: String::new(),
         }
     }
 }
@@ -106,7 +129,7 @@ pub(crate) mod albums_playlists {
     #[serde(rename_all = "camelCase")]
     pub struct LibraryV3 {
         pub items: Vec<Items>,
-        pub total_count: u64,
+        pub total_count: usize,
     }
 
     #[derive(Debug, Deserialize)]
@@ -123,6 +146,52 @@ pub(crate) mod albums_playlists {
 
     #[derive(Debug, Deserialize)]
     pub struct LibV3ItemsRoot {
+        pub data: RootData,
+    }
+}
+
+// data -> albumUnion -> tracks -> items -> [track -> uri]
+// ... tracks -> totalCount
+// ... track -> playability -> playable
+
+pub(crate) mod album_tracks {
+    use serde::Deserialize;
+    #[derive(Debug, Deserialize)]
+    pub struct Playability {
+        pub playable: bool,
+    }
+
+    #[derive(Debug, Deserialize)]
+    pub struct Track {
+        pub uri: String,
+        pub playability: Playability,
+    }
+
+    #[derive(Debug, Deserialize)]
+    pub struct Items {
+        pub track: Track,
+    }
+
+    #[derive(Debug, Deserialize)]
+    #[serde(rename_all = "camelCase")]
+    pub struct Tracks {
+        pub items: Vec<Items>,
+        pub total_count: usize,
+    }
+
+    #[derive(Debug, Deserialize)]
+    pub struct AlbumUnion {
+        pub tracks: Tracks,
+    }
+
+    #[derive(Debug, Deserialize)]
+    #[serde(rename_all = "camelCase")]
+    pub struct RootData {
+        pub album_union: AlbumUnion,
+    }
+
+    #[derive(Debug, Deserialize)]
+    pub struct AlbumTracksRoot {
         pub data: RootData,
     }
 }

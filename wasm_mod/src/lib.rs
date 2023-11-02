@@ -1,5 +1,7 @@
 #[macro_use]
-mod utils;
+mod client;
+mod api_wrappers;
+mod constants;
 mod models;
 
 use wasm_bindgen::prelude::*;
@@ -38,7 +40,7 @@ pub async fn rebuild_playlist(
     _user_uri: &str,
 ) {
     // TODO: add top level error handling to allow for ? in underlying code
-    utils::fetch_all_albums_and_playlists(auth_header_value, token_header_value).await;
+    client::fetch_all_albums_and_playlists(auth_header_value, token_header_value).await;
     // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
 
@@ -53,3 +55,30 @@ pub enum RetryAfter {
 /// The result type that should be used in place of std::Result
 /// throughout the app
 pub type Result<T> = std::result::Result<T, RetryAfter>;
+
+#[allow(dead_code)]
+pub fn set_panic_hook() {
+    // When the `console_error_panic_hook` feature is enabled, we can call the
+    // `set_panic_hook` function at least once during initialization, and then
+    // we will get better error messages if our code ever panics.
+    //
+    // For more details see
+    // https://github.com/rustwasm/console_error_panic_hook#readme
+    #[cfg(feature = "console_error_panic_hook")]
+    console_error_panic_hook::set_once();
+}
+
+// pub async fn sleep(duration: Duration) {
+//     JsFuture::from(Promise::new(&mut |yes, _| {
+//         window()
+//             .unwrap()
+//             .set_timeout_with_callback_and_timeout_and_arguments_0(
+//                 &yes,
+//                 duration.as_millis() as i32,
+//             )
+//             .unwrap();
+//     }))
+//     .await
+//     .unwrap();
+// }
+
