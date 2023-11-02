@@ -5,7 +5,7 @@ use crate::{
     constants,
     constants::log,
     models,
-    models::{VariablesAlbumTracks, VariablesV3Items},
+    models::{VariablesAlbumOrPlaylistTracks, VariablesV3Items},
     Result, RetryAfter,
 };
 use serde_wasm_bindgen;
@@ -227,16 +227,14 @@ where
     return Ok(url.to_owned());
 }
 
-/// Returns IDs of either albums or playlists.
-///
-/// * filter - either Albums or Playlists, goes into request vars
+/// Returns IDs of all album tracks.
 pub(crate) async fn fetch_album_tracks(
     auth_header_value: &str,
     token_header_value: &str,
     album_id: &str,
     max_number_of_tracks: usize,
 ) -> Vec<String> {
-    log!("fetch_album_tracks entered, album: {album_id}");
+    log!("fetch_album_tracks for: {album_id}");
 
     // request examples
     // https://api-partner.spotify.com/pathfinder/v1/query?operationName=getAlbum&variables=%7B%22uri%22%3A%22spotify%3Aalbum%3A4kWmZoSHYtMxvejnCwv3ID%22%2C%22locale%22%3A%22%22%2C%22offset%22%3A0%2C%22limit%22%3A50%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2246ae954ef2d2fe7732b4b2b4022157b2e18b7ea84f70591ceb164e4de1b5d5d3%22%7D%7D
@@ -245,7 +243,7 @@ pub(crate) async fn fetch_album_tracks(
     // extensions: {"persistedQuery":{"version":1,"sha256Hash":"46ae954ef2d2fe7732b4b2b4022157b2e18b7ea84f70591ceb164e4de1b5d5d3"}}
 
     // get the first page of albums to see how many there are
-    let mut variables = VariablesAlbumTracks {
+    let mut variables = VariablesAlbumOrPlaylistTracks {
         uri: [constants::ID_PREFIX_ALBUM, album_id].concat(),
         ..Default::default()
     };
@@ -260,7 +258,7 @@ pub(crate) async fn fetch_album_tracks(
     };
 
     // get the list of album tracks from Spotify
-    let album_tracks = match execute_http_request::<models::album_tracks::AlbumTracksRoot>(
+    let album_tracks = match execute_http_request::<models::album::AlbumTracksRoot>(
         auth_header_value,
         token_header_value,
         &url,
@@ -327,7 +325,7 @@ pub(crate) async fn fetch_album_tracks(
     // fetch the rest of the track pages in a loop
     // this will end on the first error
     // TODO: make a more reliable loop when retries are available
-    while let Ok(items) = execute_http_request::<models::album_tracks::AlbumTracksRoot>(
+    while let Ok(items) = execute_http_request::<models::album::AlbumTracksRoot>(
         auth_header_value,
         token_header_value,
         &url,
@@ -387,6 +385,170 @@ pub(crate) async fn fetch_album_tracks(
 
     log!("Playable tracks in {album_id}: {}", album_tracks.len());
     album_tracks
+}
+
+/// Returns IDs of all playlist tracks.
+pub(crate) async fn fetch_playlist_tracks(
+    auth_header_value: &str,
+    token_header_value: &str,
+    playlist_id: &str,
+    max_number_of_tracks: usize,
+) -> Vec<String> {
+    log!("fetch_playlist_tracks for: {playlist_id}");
+
+    // request examples
+    // https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylist&variables=%7B%22uri%22%3A%22spotify%3Aplaylist%3A60C3LAHXga4hw73HeyU7U0%22%2C%22offset%22%3A0%2C%22limit%22%3A25%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2273a3b3470804983e4d55d83cd6cc99715019228fd999d51429cc69473a18789d%22%7D%7D
+    // operationName: fetchPlaylist
+    // variables: {"uri":"spotify:playlist:60C3LAHXga4hw73HeyU7U0","offset":0,"limit":25}
+    // extensions: {"persistedQuery":{"version":1,"sha256Hash":"73a3b3470804983e4d55d83cd6cc99715019228fd999d51429cc69473a18789d"}}
+
+    // get the first page of albums to see how many there are
+    let mut variables = VariablesAlbumOrPlaylistTracks {
+        uri: [constants::ID_PREFIX_PLAYLIST, playlist_id].concat(),
+        ..Default::default()
+    };
+
+    let mut url = match build_url(
+        constants::operations::PLAYLIST_TRACKS,
+        &variables,
+        constants::persistent_queries::FETCH_PLAYLIST,
+    ) {
+        Ok(v) => v,
+        Err(_) => return Vec::new(),
+    };
+
+    // get the list of album tracks from Spotify
+    let tracks = match execute_http_request::<models::playlist::PlaylistRoot>(
+        auth_header_value,
+        token_header_value,
+        &url,
+    )
+    .await
+    {
+        Ok(v) => v,
+        Err(e) if matches!(e, RetryAfter::Never) => {
+            return Vec::new();
+        }
+        Err(_) => {
+            unimplemented!("Retries are not implemented");
+        }
+    };
+
+    // log!("{:?}", lib_v3_items);
+
+    // get the number of lib_v3_items and calculate the number of pages that can be downloaded
+    let total_track_count = tracks.data.playlist_v2.content.total_count;
+    let total_pages = total_track_count / constants::ITEMS_PER_PAGE;
+    let total_pages = if total_track_count % constants::ITEMS_PER_PAGE > 0 {
+        total_track_count / constants::ITEMS_PER_PAGE + 1
+    } else {
+        total_pages
+    };
+    log!("Tracks: {total_track_count}, pages: {total_pages}");
+
+    // a collection of all albums from all pages
+    let mut tracks = tracks
+        .data
+        .playlist_v2
+        .content
+        .items
+        .into_iter()
+        .filter_map(|v| {
+            // if the track is playable and is actually a track, then it should be included
+            // it may be possible to have other items other than tracks in a playlist (not sure)
+            if v.item_v2.data.playability.playable
+                && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK)
+            {
+                Some(v.item_v2.data.uri.replace(constants::ID_PREFIX_TRACK, ""))
+            } else {
+                None
+            }
+        })
+        .collect::<Vec<String>>();
+
+    // check if there are any more pages to fetch
+    if total_track_count <= constants::ITEMS_PER_PAGE {
+        log!("Playable tracks in {playlist_id}: {}", tracks.len());
+        return tracks;
+    }
+
+    // allocate enough space for all tracks since it is known in advance
+    tracks.reserve(total_track_count as usize - tracks.len());
+
+    // the next page will start where the first one ended
+    variables.offset = variables.limit;
+    url = match build_url(
+        constants::operations::PLAYLIST_TRACKS,
+        &variables,
+        constants::persistent_queries::FETCH_PLAYLIST,
+    ) {
+        Ok(v) => v,
+        Err(_) => return Vec::new(),
+    };
+
+    // fetch the rest of the track pages in a loop
+    // this will end on the first error
+    // TODO: make a more reliable loop when retries are available
+    while let Ok(items) = execute_http_request::<models::playlist::PlaylistRoot>(
+        auth_header_value,
+        token_header_value,
+        &url,
+    )
+    .await
+    {
+        // check if spotify returned any items at all
+        if items.data.playlist_v2.content.items.len() == 0 {
+            log!("Spotify returned empty items list");
+            log!("Playable tracks in {playlist_id}: {}", tracks.len());
+            return tracks;
+        }
+
+        let mut items = items
+            .data
+            .playlist_v2
+            .content
+            .items
+            .into_iter()
+            .filter_map(|v| {
+                if v.item_v2.data.playability.playable && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK) {
+                    Some(v.item_v2.data.uri.replace(constants::ID_PREFIX_TRACK, ""))
+                } else {
+                    None
+                }
+            })
+            .collect::<Vec<String>>();
+
+        // add the list of items to the local collection
+        tracks.append(&mut items);
+        // the next page will start where the first one ended
+        variables.offset += variables.limit;
+        url = match build_url(
+            constants::operations::PLAYLIST_TRACKS,
+            &variables,
+            constants::persistent_queries::FETCH_PLAYLIST,
+        ) {
+            Ok(v) => v,
+            Err(_) => return Vec::new(),
+        };
+
+        // protect against very large playlists
+        if variables.offset >= max_number_of_tracks {
+            log!(
+                "Too many tracks ({}), limit {}",
+                variables.offset,
+                max_number_of_tracks
+            );
+            break;
+        }
+
+        // for debugging
+        if variables.offset > 20 {
+            break;
+        }
+    }
+
+    log!("Playable tracks in {playlist_id}: {}", tracks.len());
+    tracks
 }
 
 /// Returns IDs of either albums or playlists.

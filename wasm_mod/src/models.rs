@@ -1,6 +1,6 @@
 use serde::Serialize;
 
-pub(crate) mod album_tracks;
+pub(crate) mod album;
 pub(crate) mod albums_playlists;
 pub(crate) mod playlist;
 
@@ -34,14 +34,14 @@ impl Default for VariablesV3Items {
 /// {"uri":"spotify:album:7h5qFidHM4sqhcCHSbiMzL","locale":"","offset":0,"limit":50}
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
-pub(crate) struct VariablesAlbumTracks {
+pub(crate) struct VariablesAlbumOrPlaylistTracks {
     pub limit: usize,
     pub offset: usize,
     pub uri: String,
     pub locale: String,
 }
 
-impl Default for VariablesAlbumTracks {
+impl Default for VariablesAlbumOrPlaylistTracks {
     fn default() -> Self {
         Self {
             limit: 50,

@@ -2,7 +2,7 @@ use std::collections::HashSet;
 
 // use std::time::Duration;
 use crate::{
-    api_wrappers::{fetch_album_tracks, fetch_lib_v3_items},
+    api_wrappers::{fetch_album_tracks, fetch_lib_v3_items, fetch_playlist_tracks},
     constants,
     constants::log,
 };
@@ -67,8 +67,10 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         } else if album_tracks.len() <= constants::MIN_TRACKS_PER_ALBUM {
             // the album is too small and all tracks should be added
             log!(
-                "Added all {} tracks from album {album_id}",
-                album_tracks.len()
+                "Sel: {}, stash: {}, adding all {} tracks from album {album_id}",
+                selected_tracks.len(),
+                unselected_tracks.len(),
+                album_tracks.len(),
             );
             let _: Vec<_> = album_tracks
                 .into_iter()
@@ -87,6 +89,68 @@ pub(crate) async fn fetch_all_albums_and_playlists(
                 .into_iter()
                 .map(|v| unselected_tracks.insert(v))
                 .collect();
+            log!(
+                "Sel: {}, stash: {}, added {} tracks from album {album_id}",
+                selected_tracks.len(),
+                unselected_tracks.len(),
+                constants::MIN_TRACKS_PER_ALBUM,
+            );
+        }
+
+        // exit if there are enough tracks for the playlist
+        if selected_tracks.len() >= constants::TARGET_PLAYLIST_SIZE {
+            break;
+        }
+    }
+
+    log!(
+        "Selected tracks: {}, stash tracks: {}",
+        selected_tracks.len(),
+        unselected_tracks.len(),
+    );
+
+    // go thru all playlists
+    // TODO: merge this with the album loop, but I do not know how to do it in terms of priorities and what to pick from where in what order
+    // to make it a more representative sample. Large playlists may dominate and skew the results.
+    for playlist_id in all_playlists {
+        // get album tracks, shuffle and add top N tracks to the selected list
+        let mut tracks =
+            fetch_playlist_tracks(auth_header_value, token_header_value, &playlist_id, 50).await;
+
+        if tracks.is_empty() {
+            log!("Empty playlist {playlist_id}");
+            continue;
+        } else if tracks.len() <= constants::MIN_TRACKS_PER_ALBUM {
+            // the playlist is too small and all tracks should be added
+            log!(
+                "Sel: {}, stash: {}, adding all {} tracks from playlist {playlist_id}",
+                selected_tracks.len(),
+                unselected_tracks.len(),
+                tracks.len(),
+            );
+            let _: Vec<_> = tracks
+                .into_iter()
+                .map(|v| selected_tracks.insert(v))
+                .collect();
+        } else {
+            // select N random tracks
+            tracks.shuffle(&mut rng);
+            let _: Vec<_> = tracks
+                .drain(..constants::MIN_TRACKS_PER_ALBUM)
+                .map(|v| selected_tracks.insert(v))
+                .collect();
+
+            // stash the remaining tracks
+            let _: Vec<_> = tracks
+                .into_iter()
+                .map(|v| unselected_tracks.insert(v))
+                .collect();
+            log!(
+                "Sel: {}, stash: {}, added {} tracks from playlist {playlist_id}",
+                selected_tracks.len(),
+                unselected_tracks.len(),
+                constants::MIN_TRACKS_PER_ALBUM,
+            );
         }
 
         // exit if there are enough tracks for the playlist

@@ -1,8 +1,15 @@
 use serde::Deserialize;
+
+// data -> playlistV2 -> content -> items -> [itemV2 -> data -> uri]
+// ... content -> totalCount
+// ... itemV2 -> data -> playability -> playable
+// ... playlistV2 -> ownerV2 -> data -> uri
+
 // Playlist ownership -------------------------------------
 #[derive(Debug, Deserialize)]
 #[serde(rename(deserialize = "data"))]
 pub struct OwnerV2Data {
+    /// E.g. `spotify:user:nzmusicianmagazine`
     pub uri: String,
 }
 
@@ -14,8 +21,15 @@ pub struct OwnerV2 {
 
 // list of tracks ------------------------------------------
 #[derive(Debug, Deserialize)]
+pub struct Playability {
+    pub playable: bool,
+}
+
+#[derive(Debug, Deserialize)]
 pub struct ItemV2Data {
+    /// E.g. `spotify:track:0tpZIPW5LXXtg6YgKr4q48`
     pub uri: String,
+    pub playability: Playability,
 }
 
 #[derive(Debug, Deserialize)]
@@ -30,8 +44,10 @@ pub struct Item {
 }
 
 #[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Content {
     pub items: Vec<Item>,
+    pub total_count: usize,
 }
 
 #[derive(Debug, Deserialize)]
