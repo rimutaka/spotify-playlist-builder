@@ -17,3 +17,9 @@ The plugin intercepts the session token from Spotify requests and impersonates t
 It does not transmit any of your data to any third party. All requests go to Spotify.
 
 Most of the work is done by the WASM module built in Rust.
+
+## Attributions
+
+The extension stub was taken from https://github.com/theberrigan/rust-wasm-chrome-ext by https://github.com/theberrigan.
+
+The toolbar icon is based on something by https://rawpixel.com
