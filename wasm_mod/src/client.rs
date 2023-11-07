@@ -2,7 +2,9 @@ use std::collections::HashSet;
 
 // use std::time::Duration;
 use crate::{
-    api_wrappers::{fetch_album_tracks, fetch_lib_v3_items, fetch_playlist_tracks},
+    api_wrappers::{
+        add_tracks_to_playlist, fetch_album_tracks, fetch_lib_v3_items, fetch_playlist_tracks,
+    },
     constants,
     constants::log,
 };
@@ -12,8 +14,12 @@ use rand::seq::SliceRandom;
 pub(crate) async fn fetch_all_albums_and_playlists(
     auth_header_value: &str,
     token_header_value: &str,
+    target_playlist_id: &str,
+    user_uri: &str,
 ) {
     log!("fetch_all_albums entered");
+
+    log!("User: {user_uri}");
 
     // collect all album IDs
     let all_albums = fetch_lib_v3_items(auth_header_value, token_header_value, "Albums").await;
@@ -36,10 +42,17 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     let all_playlists =
         fetch_lib_v3_items(auth_header_value, token_header_value, "Playlists").await;
 
-    // remove the repetitive prefix
+    // remove the repetitive prefix and exclude the current playlist
     let mut all_playlists = all_playlists
         .into_iter()
-        .map(|v| v.replace(constants::ID_PREFIX_PLAYLIST, ""))
+        .filter_map(|v| {
+            let v = v.replace(constants::ID_PREFIX_PLAYLIST, "");
+            if v == target_playlist_id {
+                return None;
+            } else {
+                return Some(v);
+            }
+        })
         .collect::<Vec<String>>();
 
     log!("{}", all_playlists.join("\n"));
@@ -114,8 +127,13 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     // to make it a more representative sample. Large playlists may dominate and skew the results.
     for playlist_id in all_playlists {
         // get album tracks, shuffle and add top N tracks to the selected list
-        let mut tracks =
-            fetch_playlist_tracks(auth_header_value, token_header_value, &playlist_id, 50).await;
+        let mut tracks = fetch_playlist_tracks(
+            auth_header_value,
+            token_header_value,
+            &playlist_id,
+            constants::MAX_TRACKS_PER_PLAYLIST,
+        )
+        .await;
 
         if tracks.is_empty() {
             log!("Empty playlist {playlist_id}");
@@ -169,10 +187,54 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     log!(
         "{}",
         selected_tracks
+            .clone()
             .into_iter()
             .collect::<Vec<String>>()
             .join("\n")
     );
 
-    // start getting tracks per album / playlist
+    // fetch all tracks from the target playlist to avoid duplication
+    // TODO: do it earlier in the code and take into account how many we need to collect
+    let target_playlist_tracks = fetch_playlist_tracks(
+        auth_header_value,
+        token_header_value,
+        &target_playlist_id,
+        1000,
+    )
+    .await;
+    let target_playlist_tracks = target_playlist_tracks
+        .into_iter()
+        .collect::<HashSet<String>>();
+    log!(
+        "Found {} tracks in the target playlist",
+        target_playlist_tracks.len()
+    );
+
+    // remove duplicates
+    let duplicate_tracks = target_playlist_tracks
+        .intersection(&selected_tracks)
+        .map(|v| v.clone())
+        .collect::<Vec<String>>();
+    log!(
+        "Removing {} selected tracks already in the target playlist",
+        duplicate_tracks.len()
+    );
+    for duplicate_track in duplicate_tracks {
+        selected_tracks.remove(&duplicate_track);
+    }
+
+    let selected_tracks = selected_tracks
+        .into_iter()
+        .map(|v| v)
+        .collect::<Vec<String>>();
+
+    // add selected tracks to the back of the current playlist
+    add_tracks_to_playlist(
+        auth_header_value,
+        token_header_value,
+        &target_playlist_id,
+        selected_tracks,
+    )
+    .await;
+    //
 }

@@ -1,231 +1,16 @@
-use std::fmt::Debug;
-
-// use std::time::Duration;
 use crate::{
     constants,
     constants::log,
     models,
-    models::{VariablesAlbumOrPlaylistTracks, VariablesV3Items},
-    Result, RetryAfter,
+    models::{
+        IgnoredData, Payload, PayloadExtensions, PersistedQuery, VariablesAddTracksToPlaylist,
+        VariablesAlbumOrPlaylistTracks, VariablesV3Items,
+    },
+    RetryAfter,
 };
-use serde_wasm_bindgen;
-use urlencoding;
-use wasm_bindgen::prelude::*;
-use wasm_bindgen_futures::JsFuture;
-use web_sys::{Request, RequestInit, RequestMode, Response, WorkerGlobalScope};
 
-/// Prepares and executes an HTTP request to spotify,
-/// including token and other headers.
-async fn execute_http_request<T>(
-    auth_header_value: &str,
-    token_header_value: &str,
-    url: &str,
-) -> Result<T>
-where
-    T: for<'de> serde::Deserialize<'de>,
-{
-    log!("prepare_http_request entered");
-    // set request params
-    let mut opts = RequestInit::new();
-    opts.method("GET");
-    opts.mode(RequestMode::Cors);
-
-    log!("{url}");
-
-    // create the request
-    let request = match Request::new_with_str_and_init(&url, &opts) {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Spotify request creation failed");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    log!("Request created");
-
-    // add headers
-    let _ = request.headers().set("Accept", "application/json");
-    // these keys were manually extracted from chrome webdev tools
-    let _ = request.headers().set("authorization", auth_header_value);
-    let _ = request.headers().set("client-token", token_header_value);
-
-    log!("Headers set");
-
-    // WorkerGlobalScope object is needed to perform fetch
-    let worker_global_scope = match js_sys::global().dyn_into::<WorkerGlobalScope>() {
-        Ok(v) => v,
-        Err(e) => {
-            log!("WorkerGlobalScope unavailable");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    // execute the fetch promise using Rust's JsFuture
-    let resp_value = match JsFuture::from(worker_global_scope.fetch_with_request(&request)).await {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Spotify request failed");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    // exit if the response is not of the expected type
-    if !resp_value.is_instance_of::<Response>() {
-        log!("Spotify response in not Response");
-        log!("{:?}", resp_value);
-        // TODO: may be worth a retry
-        return Err(RetryAfter::Never);
-    };
-
-    // this is unlikely to fail because of the previous type check
-    let resp: Response = match resp_value.dyn_into() {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Cannot typecast response to Response");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    // Read the response stream to completion.
-    // In theory, the stream may still be open and the op may take some time to complete
-    let resp = match resp.json() {
-        Ok(v) => JsFuture::from(v).await,
-        Err(e) => {
-            log!("Cannot convert Promise to Future");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    log!("HTTP request completed");
-
-    // Unwrap the response and handle the error
-    let resp = match resp {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Spotify request failed");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    // log!("Resp as string:");
-    // log!("{:?}", resp.as_string().unwrap());
-
-    // convert into a rust struct
-    let playlist = match serde_wasm_bindgen::from_value::<T>(resp) {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Cannot deser spotify response into rust struct");
-            log!("{:?}", e);
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    return Ok(playlist);
-}
-
-/**
-/// Fetches details of the specified playlist, including its list of tracks.
-/// Nothing is returned yet - the data is logged for debugging.
-async fn _fetch_playlist(
-    auth_header_value: &str,
-    token_header_value: &str,
-    playlist_id: &str,
-    user_uri: &str,
-) {
-    log!("fetch_playlist entered");
-
-    // the URL to call
-    // https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylist&variables={"uri":"spotify:playlist:37i9dQZF1DWZeKCadgRdKQ","offset":0,"limit":25}&extensions={"persistedQuery":{"version":1,"sha256Hash":"5534e86cc2181b9e70be86ae26d514abd8d828be2ee56e5f8b7882dd70204c62"}}
-    //         let url = "https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylist&variables=%7B%22uri%22%3A%22spotify%3Aplaylist%3A37i9dQZF1DWZeKCadgRdKQ%22%2C%22offset%22%3A0%2C%22limit%22%3A25%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%225534e86cc2181b9e70be86ae26d514abd8d828be2ee56e5f8b7882dd70204c62%22%7D%7D";
-
-    let url = &["https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylist&variables=%7B%22uri%22%3A%22spotify%3Aplaylist%3A", playlist_id,"%22%2C%22offset%22%3A0%2C%22limit%22%3A25%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%225534e86cc2181b9e70be86ae26d514abd8d828be2ee56e5f8b7882dd70204c62%22%7D%7D"].concat();
-
-    log!("{url}");
-
-    let playlist = match execute_http_request::<models::playlist::PlaylistRoot>(
-        auth_header_value,
-        token_header_value,
-        url,
-    )
-    .await
-    {
-        Ok(v) => v,
-        Err(e) if matches!(e, RetryAfter::Never) => {
-            return;
-        }
-        Err(_) => {
-            unimplemented!("Retries are not implemented");
-        }
-    };
-
-    // log!("{:?}", playlist);
-
-    // compare the playlist owner ID with the user ID to check if the playlist can be modified
-    let owner_uri = &playlist.data.playlist_v2.owner_v2.data.uri;
-    log!("User: {user_uri}, Owner: {owner_uri}");
-    if user_uri == &playlist.data.playlist_v2.owner_v2.data.uri {
-        log!("User owns the playlist");
-    } else {
-        log!("User does not own the playlist");
-    }
-}
-
-*/
-
-fn build_url<T>(operation_name: &str, variables: &T, persisted_query_hash: &str) -> Result<String>
-where
-    T: ?Sized + serde::Serialize + Debug,
-{
-    let variables = match serde_json::to_string(variables) {
-        Ok(v) => v,
-        Err(e) => {
-            log!("Failed to serialize variables for {:?}", variables);
-            log!("{e}");
-            return Err(RetryAfter::Never);
-        }
-    };
-
-    let variables = urlencoding::encode(&variables).to_string();
-
-    let url = &[
-        "https://api-partner.spotify.com/pathfinder/v1/query?operationName=",
-        operation_name,
-        "&variables=",
-        &variables,
-    ]
-    .concat();
-
-    let persisted_query = [
-        r#"{"persistedQuery":{"version":1,"sha256Hash":""#,
-        persisted_query_hash,
-        r#""}}""#,
-    ]
-    .concat();
-
-    let url = &[
-        url,
-        "&extensions=",
-        &urlencoding::encode(&persisted_query).to_string(),
-    ]
-    .concat();
-
-    log!("URL:");
-    log!("{url}");
-
-    return Ok(url.to_owned());
-}
+mod utils;
+use utils::{build_get_url, execute_http_request, BUILD_POST_URL};
 
 /// Returns IDs of all album tracks.
 pub(crate) async fn fetch_album_tracks(
@@ -248,7 +33,7 @@ pub(crate) async fn fetch_album_tracks(
         ..Default::default()
     };
 
-    let mut url = match build_url(
+    let mut url = match build_get_url(
         constants::operations::ALBUM_TRACKS,
         &variables,
         constants::persistent_queries::GET_ALBUM,
@@ -258,11 +43,10 @@ pub(crate) async fn fetch_album_tracks(
     };
 
     // get the list of album tracks from Spotify
-    let album_tracks = match execute_http_request::<models::album::AlbumTracksRoot>(
-        auth_header_value,
-        token_header_value,
-        &url,
-    )
+    let album_tracks = match execute_http_request::<
+        models::album::AlbumTracksRoot,
+        Option<IgnoredData>,
+    >(auth_header_value, token_header_value, &url, None)
     .await
     {
         Ok(v) => v,
@@ -313,7 +97,7 @@ pub(crate) async fn fetch_album_tracks(
 
     // the next page will start where the first one ended
     variables.offset = variables.limit;
-    url = match build_url(
+    url = match build_get_url(
         constants::operations::ALBUM_TRACKS,
         &variables,
         constants::persistent_queries::GET_ALBUM,
@@ -325,12 +109,14 @@ pub(crate) async fn fetch_album_tracks(
     // fetch the rest of the track pages in a loop
     // this will end on the first error
     // TODO: make a more reliable loop when retries are available
-    while let Ok(items) = execute_http_request::<models::album::AlbumTracksRoot>(
-        auth_header_value,
-        token_header_value,
-        &url,
-    )
-    .await
+    while let Ok(items) =
+        execute_http_request::<models::album::AlbumTracksRoot, Option<IgnoredData>>(
+            auth_header_value,
+            token_header_value,
+            &url,
+            None,
+        )
+        .await
     {
         // check if spotify returned any items at all
         if items.data.album_union.tracks.items.len() == 0 {
@@ -358,7 +144,7 @@ pub(crate) async fn fetch_album_tracks(
         album_tracks.append(&mut items);
         // the next page will start where the first one ended
         variables.offset += variables.limit;
-        url = match build_url(
+        url = match build_get_url(
             constants::operations::ALBUM_TRACKS,
             &variables,
             constants::persistent_queries::GET_ALBUM,
@@ -408,7 +194,7 @@ pub(crate) async fn fetch_playlist_tracks(
         ..Default::default()
     };
 
-    let mut url = match build_url(
+    let mut url = match build_get_url(
         constants::operations::PLAYLIST_TRACKS,
         &variables,
         constants::persistent_queries::FETCH_PLAYLIST,
@@ -418,10 +204,11 @@ pub(crate) async fn fetch_playlist_tracks(
     };
 
     // get the list of album tracks from Spotify
-    let tracks = match execute_http_request::<models::playlist::PlaylistRoot>(
+    let tracks = match execute_http_request::<models::playlist::PlaylistRoot, Option<IgnoredData>>(
         auth_header_value,
         token_header_value,
         &url,
+        None,
     )
     .await
     {
@@ -477,7 +264,7 @@ pub(crate) async fn fetch_playlist_tracks(
 
     // the next page will start where the first one ended
     variables.offset = variables.limit;
-    url = match build_url(
+    url = match build_get_url(
         constants::operations::PLAYLIST_TRACKS,
         &variables,
         constants::persistent_queries::FETCH_PLAYLIST,
@@ -489,12 +276,14 @@ pub(crate) async fn fetch_playlist_tracks(
     // fetch the rest of the track pages in a loop
     // this will end on the first error
     // TODO: make a more reliable loop when retries are available
-    while let Ok(items) = execute_http_request::<models::playlist::PlaylistRoot>(
-        auth_header_value,
-        token_header_value,
-        &url,
-    )
-    .await
+    while let Ok(items) =
+        execute_http_request::<models::playlist::PlaylistRoot, Option<IgnoredData>>(
+            auth_header_value,
+            token_header_value,
+            &url,
+            None,
+        )
+        .await
     {
         // check if spotify returned any items at all
         if items.data.playlist_v2.content.items.len() == 0 {
@@ -510,7 +299,9 @@ pub(crate) async fn fetch_playlist_tracks(
             .items
             .into_iter()
             .filter_map(|v| {
-                if v.item_v2.data.playability.playable && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK) {
+                if v.item_v2.data.playability.playable
+                    && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK)
+                {
                     Some(v.item_v2.data.uri.replace(constants::ID_PREFIX_TRACK, ""))
                 } else {
                     None
@@ -522,7 +313,7 @@ pub(crate) async fn fetch_playlist_tracks(
         tracks.append(&mut items);
         // the next page will start where the first one ended
         variables.offset += variables.limit;
-        url = match build_url(
+        url = match build_get_url(
             constants::operations::PLAYLIST_TRACKS,
             &variables,
             constants::persistent_queries::FETCH_PLAYLIST,
@@ -570,7 +361,7 @@ pub(crate) async fn fetch_lib_v3_items(
     let mut variables = VariablesV3Items::default();
     variables.filters.push(filter.to_owned());
 
-    let mut url = match build_url(
+    let mut url = match build_get_url(
         constants::operations::ALBUMS_PLAYLISTS,
         &variables,
         constants::persistent_queries::LIBRARY_V3,
@@ -580,11 +371,10 @@ pub(crate) async fn fetch_lib_v3_items(
     };
 
     // the part of the structure we use for our needs are identical between albums and playlists
-    let lib_v3_items = match execute_http_request::<models::albums_playlists::LibV3ItemsRoot>(
-        auth_header_value,
-        token_header_value,
-        &url,
-    )
+    let lib_v3_items = match execute_http_request::<
+        models::albums_playlists::LibV3ItemsRoot,
+        Option<IgnoredData>,
+    >(auth_header_value, token_header_value, &url, None)
     .await
     {
         Ok(v) => v,
@@ -629,7 +419,7 @@ pub(crate) async fn fetch_lib_v3_items(
 
     // the next page will start where the first one ended
     variables.offset = variables.limit;
-    url = match build_url(
+    url = match build_get_url(
         constants::operations::ALBUMS_PLAYLISTS,
         &variables,
         constants::persistent_queries::LIBRARY_V3,
@@ -641,11 +431,10 @@ pub(crate) async fn fetch_lib_v3_items(
     // fetch the rest of the item pages in a loop
     // this will end on the first error
     // TODO: make a more reliable loop when retries are available
-    while let Ok(items) = execute_http_request::<models::albums_playlists::LibV3ItemsRoot>(
-        auth_header_value,
-        token_header_value,
-        &url,
-    )
+    while let Ok(items) = execute_http_request::<
+        models::albums_playlists::LibV3ItemsRoot,
+        Option<IgnoredData>,
+    >(auth_header_value, token_header_value, &url, None)
     .await
     {
         // check if spotify returned any items at all
@@ -668,7 +457,7 @@ pub(crate) async fn fetch_lib_v3_items(
         all_lib_v3_items.append(&mut items);
         // the next page will start where the first one ended
         variables.offset += variables.limit;
-        url = match build_url(
+        url = match build_get_url(
             constants::operations::ALBUMS_PLAYLISTS,
             &variables,
             constants::persistent_queries::LIBRARY_V3,
@@ -685,4 +474,69 @@ pub(crate) async fn fetch_lib_v3_items(
 
     log!("Total {filter}: {}", all_lib_v3_items.len());
     all_lib_v3_items
+}
+
+/// Returns IDs of all playlist tracks.
+pub(crate) async fn add_tracks_to_playlist(
+    auth_header_value: &str,
+    token_header_value: &str,
+    playlist_id: &str,
+    tracks_to_add: Vec<String>,
+) {
+    log!(
+        "add_tracks_to_playlist for: {playlist_id}, tracks: {}",
+        tracks_to_add.len()
+    );
+
+    // request examples
+    // POST / https://api-partner.spotify.com/pathfinder/v1/query
+    // {"variables":{"uris":["spotify:track:7lcFWApQa0PE2Dw4mT8N1I","spotify:track:1L7mNK7YX1qI42V5lG7kDf","spotify:track:1YbZZIJOBrfTJ56rqEBpIZ","spotify:track:0PV4VX0Oy652WmCA3AstAH","spotify:track:7EknPu06BycAlX2DI6tUnu","spotify:track:3NpxaxQQdRLjYoU5g02iaw"],"playlistUri":"spotify:playlist:70Y4rw4zDsRBvyolsQATni","newPosition":{"moveType":"BOTTOM_OF_PLAYLIST","fromUid":null}},"operationName":"addToPlaylist","extensions":{"persistedQuery":{"version":1,"sha256Hash":"200b7618afd05364c4aafb95e2070249ed87ee3f08fc4d2f1d5d04fdf1a516d9"}}}
+
+    // only the list of tracks will change per request
+    // unlike with GET requests, we need to prepare the entire payload as a struct
+    let mut payload = Payload::<VariablesAddTracksToPlaylist> {
+        variables: VariablesAddTracksToPlaylist {
+            playlist_uri: [constants::ID_PREFIX_PLAYLIST, playlist_id].concat(),
+            ..Default::default()
+        },
+        operation_name: constants::operations::ADD_TO_PLAYLIST.to_owned(),
+        extensions: PayloadExtensions {
+            persisted_query: PersistedQuery {
+                sha256_hash: constants::persistent_queries::ADD_TO_PLAYLIST.to_owned(),
+                ..Default::default()
+            },
+        },
+    };
+
+    // add tracks in lots of 50s
+    for (idx, track) in tracks_to_add.iter().enumerate() {
+        // add the track to the list
+        payload
+            .variables
+            .uris
+            .push([constants::ID_PREFIX_TRACK, track].concat());
+
+        // send the request if the list is big enough to be split in chunks or if it's the end of the tracks
+        if idx == 50 || idx == tracks_to_add.len() - 1 {
+            // ignore the response payload for now
+            let _ = match execute_http_request::<models::IgnoredData, _>(
+                auth_header_value,
+                token_header_value,
+                BUILD_POST_URL,
+                Some(&payload),
+            )
+            .await
+            {
+                Ok(v) => v,
+                Err(e) if matches!(e, RetryAfter::Never) => {
+                    return;
+                }
+                Err(_) => {
+                    unimplemented!("Retries are not implemented");
+                }
+            };
+            log!("Added {} tracks", idx + 1);
+        }
+    }
+    log!("All tracks added");
 }

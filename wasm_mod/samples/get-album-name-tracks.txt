@@ -1,0 +1,17 @@
+
+https://api-partner.spotify.com/pathfinder/v1/query?operationName=getAlbumNameAndTracks&variables=%7B%22uri%22%3A%22spotify%3Aalbum%3A3M3fs6GZZ3sbGTifYfIN0B%22%2C%22offset%22%3A0%2C%22limit%22%3A200%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%223c681d553c1f393b06fcf656b961f8a72d43200fbde9113cb4d20dddfc744fbe%22%7D%7D
+
+operationName: getAlbumNameAndTracks
+variables: %7B%22uri%22%3A%22spotify%3Aalbum%3A3M3fs6GZZ3sbGTifYfIN0B%22%2C%22offset%22%3A0%2C%22limit%22%3A200%7D
+extensions: %7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%223c681d553c1f393b06fcf656b961f8a72d43200fbde9113cb4d20dddfc744fbe%22%7D%7D
+
+
+operationName: getAlbumNameAndTracks
+variables: {"uri":"spotify:album:3M3fs6GZZ3sbGTifYfIN0B","offset":0,"limit":200}
+extensions: {"persistedQuery":{"version":1,"sha256Hash":"3c681d553c1f393b06fcf656b961f8a72d43200fbde9113cb4d20dddfc744fbe"}}
+
+
+
+
+
+

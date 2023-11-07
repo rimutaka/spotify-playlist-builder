@@ -277,18 +277,18 @@ export function hello_background() {
 /**
 * @param {string} auth_header_value
 * @param {string} token_header_value
-* @param {string} _playlist_id
-* @param {string} _user_uri
+* @param {string} playlist_id
+* @param {string} user_uri
 * @returns {Promise<void>}
 */
-export function rebuild_playlist(auth_header_value, token_header_value, _playlist_id, _user_uri) {
+export function rebuild_playlist(auth_header_value, token_header_value, playlist_id, user_uri) {
     const ptr0 = passStringToWasm0(auth_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len0 = WASM_VECTOR_LEN;
     const ptr1 = passStringToWasm0(token_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len1 = WASM_VECTOR_LEN;
-    const ptr2 = passStringToWasm0(_playlist_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr2 = passStringToWasm0(playlist_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len2 = WASM_VECTOR_LEN;
-    const ptr3 = passStringToWasm0(_user_uri, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    const ptr3 = passStringToWasm0(user_uri, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len3 = WASM_VECTOR_LEN;
     const ret = wasm.rebuild_playlist(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
@@ -702,8 +702,8 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2579 = function() { return logError(function (arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 116, __wbg_adapter_44);
+    imports.wbg.__wbindgen_closure_wrapper2734 = function() { return logError(function (arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 126, __wbg_adapter_44);
         return addHeapObject(ret);
     }, arguments) };
 

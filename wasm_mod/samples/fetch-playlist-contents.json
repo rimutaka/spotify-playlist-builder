@@ -1,0 +1,507 @@
+{
+  "data": {
+    "playlistV2": {
+      "__typename": "Playlist",
+      "content": {
+        "__typename": "PlaylistItemsPage",
+        "totalCount": 5,
+        "pagingInfo": {
+          "offset": 0,
+          "limit": 50
+        },
+        "items": [
+          {
+            "uid": "2bd88e35e5464b21",
+            "addedAt": {
+              "isoString": "2023-03-08T22:15:58Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:6pH7PPXivQ9aiv8GQSzLOm",
+                "name": "Rhapsody on a Theme of Paganini, Op. 43: Variation 18: Andante cantabile",
+                "trackDuration": {
+                  "totalMilliseconds": 156893
+                },
+                "playcount": "2976",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1rcwGsWwcHtrZULTXkWXuj",
+                  "name": "Rachmaninov: Rhapsody On A Theme of Paganini / the Isle of the Dead",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0Kekt6CKSo0m5mivKcoH51",
+                        "profile": {
+                          "name": "Sergei Rachmaninoff"
+                        }
+                      },
+                      {
+                        "uri": "spotify:artist:6eWxsljdL6lbmL3PemSoSU",
+                        "profile": {
+                          "name": "Howard Williams"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e025705a208d7e801a18fa81ceb",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048515705a208d7e801a18fa81ceb",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2735705a208d7e801a18fa81ceb",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0Kekt6CKSo0m5mivKcoH51",
+                      "profile": {
+                        "name": "Sergei Rachmaninoff"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:4YwG4hDeSXGqjuzxQ5oWvZ",
+                      "profile": {
+                        "name": "Ilona Prunyi"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:49DbU27DmMO7h366qAGSoF",
+                      "profile": {
+                        "name": "Pecs Symphony Orchestra"
+                      }
+                    },
+                    {
+                      "uri": "spotify:artist:6eWxsljdL6lbmL3PemSoSU",
+                      "profile": {
+                        "name": "Howard Williams"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 21,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "b9619c61f37c9fe3",
+            "addedAt": {
+              "isoString": "2023-03-08T22:17:43Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:1qHrF4XOI6Pliy7atNjLds",
+                "name": "Isfahan",
+                "trackDuration": {
+                  "totalMilliseconds": 245880
+                },
+                "playcount": "3718208",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1JJIAHF3S3R7j6OzVw3fsw",
+                  "name": "Far East Suite",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:4F7Q5NV6h5TSwCainz8S5A",
+                        "profile": {
+                          "name": "Duke Ellington"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e028c494f09ad5e084c1e02b82f",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048518c494f09ad5e084c1e02b82f",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2738c494f09ad5e084c1e02b82f",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:4F7Q5NV6h5TSwCainz8S5A",
+                      "profile": {
+                        "name": "Duke Ellington"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 3,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "ef45aa6b1d01733b",
+            "addedAt": {
+              "isoString": "2023-03-08T22:18:55Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:1nH3hLQz058PT54UkSbK4t",
+                "name": "Time After Time - Alternate",
+                "trackDuration": {
+                  "totalMilliseconds": 353493
+                },
+                "playcount": "41625",
+                "albumOfTrack": {
+                  "uri": "spotify:album:2mwZpszzkV5EzChG04oDWv",
+                  "name": "That's What Happened 1982-1985: The Bootleg Series, Vol. 7",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:0kbYTNQb4Pb1rPbbaF0pT4",
+                        "profile": {
+                          "name": "Miles Davis"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02f835419ef534c6a65f8cee7f",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851f835419ef534c6a65f8cee7f",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273f835419ef534c6a65f8cee7f",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:0kbYTNQb4Pb1rPbbaF0pT4",
+                      "profile": {
+                        "name": "Miles Davis"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 2,
+                "trackNumber": 1,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "a4bebc51dc23ad73",
+            "addedAt": {
+              "isoString": "2023-03-08T22:22:00Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:6Zv2VNLvldu0NmQbghXPus",
+                "name": "Gnossienne No. 3",
+                "trackDuration": {
+                  "totalMilliseconds": 264866
+                },
+                "playcount": "240397",
+                "albumOfTrack": {
+                  "uri": "spotify:album:1k2n9VELfCoGY4kF4O6NCn",
+                  "name": "Gymnopedies & Gnossiennes",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:5LS9IzpE6W6Aw25KverdM9",
+                        "profile": {
+                          "name": "Jacques Loussier Trio"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e020ba0539f3aca103e2a20dd38",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d000048510ba0539f3aca103e2a20dd38",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b2730ba0539f3aca103e2a20dd38",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:5LS9IzpE6W6Aw25KverdM9",
+                      "profile": {
+                        "name": "Jacques Loussier Trio"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 3,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          },
+          {
+            "uid": "9216ff1754cabd4d",
+            "addedAt": {
+              "isoString": "2023-03-12T09:02:15Z"
+            },
+            "addedBy": {
+              "data": {
+                "__typename": "User",
+                "uri": "spotify:user:onebro.me",
+                "username": "onebro.me",
+                "name": "rimutaka",
+                "avatar": {
+                  "sources": [
+                    {
+                      "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                      "width": 64,
+                      "height": 64
+                    },
+                    {
+                      "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                      "width": 300,
+                      "height": 300
+                    }
+                  ]
+                }
+              }
+            },
+            "attributes": [],
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3iZ5twPwvFeOUQA4Deu8tP",
+                "name": "Albatross",
+                "trackDuration": {
+                  "totalMilliseconds": 190106
+                },
+                "playcount": "73891602",
+                "albumOfTrack": {
+                  "uri": "spotify:album:6UQyg4DOgAGfKnjSciPKBe",
+                  "name": "English Rose",
+                  "artists": {
+                    "items": [
+                      {
+                        "uri": "spotify:artist:08GQAI4eElDnROBrJRGE0X",
+                        "profile": {
+                          "name": "Fleetwood Mac"
+                        }
+                      }
+                    ]
+                  },
+                  "coverArt": {
+                    "sources": [
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00001e02f66822e32a6f77adf31ccc1b",
+                        "width": 300,
+                        "height": 300
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d00004851f66822e32a6f77adf31ccc1b",
+                        "width": 64,
+                        "height": 64
+                      },
+                      {
+                        "url": "https://i.scdn.co/image/ab67616d0000b273f66822e32a6f77adf31ccc1b",
+                        "width": 640,
+                        "height": 640
+                      }
+                    ]
+                  }
+                },
+                "artists": {
+                  "items": [
+                    {
+                      "uri": "spotify:artist:08GQAI4eElDnROBrJRGE0X",
+                      "profile": {
+                        "name": "Fleetwood Mac"
+                      }
+                    }
+                  ]
+                },
+                "discNumber": 1,
+                "trackNumber": 12,
+                "playability": {
+                  "playable": true,
+                  "reason": "PLAYABLE"
+                },
+                "contentRating": {
+                  "label": "NONE"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {}
+}

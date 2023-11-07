@@ -1,0 +1,8 @@
+{
+  "data": {
+      "addItemsToPlaylist": {
+          "__typename": "AddItemsToPlaylistPayload"
+      }
+  },
+  "extensions": {}
+}

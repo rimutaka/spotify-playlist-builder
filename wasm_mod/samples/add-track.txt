@@ -1,0 +1,29 @@
+Request URL:
+https://api-partner.spotify.com/pathfinder/v1/query
+Request Method:
+POST
+
+{"variables":{"uris":["spotify:track:1KxO3MDB1mNUm4AHvxeRPF"],"playlistUri":"spotify:playlist:70Y4rw4zDsRBvyolsQATni","newPosition":{"moveType":"BOTTOM_OF_PLAYLIST","fromUid":null}},"operationName":"addToPlaylist","extensions":{"persistedQuery":{"version":1,"sha256Hash":"200b7618afd05364c4aafb95e2070249ed87ee3f08fc4d2f1d5d04fdf1a516d9"}}}
+
+{
+  "variables": {
+    "uris": [
+      "spotify:track:1KxO3MDB1mNUm4AHvxeRPF"
+    ],
+    "playlistUri": "spotify:playlist:70Y4rw4zDsRBvyolsQATni",
+    "newPosition": {
+      "moveType": "BOTTOM_OF_PLAYLIST",
+      "fromUid": null
+    }
+  },
+  "operationName": "addToPlaylist",
+  "extensions": {
+    "persistedQuery": {
+      "version": 1,
+      "sha256Hash": "200b7618afd05364c4aafb95e2070249ed87ee3f08fc4d2f1d5d04fdf1a516d9"
+    }
+  }
+}
+
+
+

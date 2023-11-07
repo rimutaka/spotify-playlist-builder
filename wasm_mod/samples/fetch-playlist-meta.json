@@ -1,0 +1,139 @@
+{
+  "data": {
+    "playlistV2": {
+      "__typename": "Playlist",
+      "revisionId": "AAAACt+GW3PASKJVZA13hcoBycrXUNsr",
+      "uri": "spotify:playlist:70Y4rw4zDsRBvyolsQATni",
+      "name": "32 Shades of Blue",
+      "description": "",
+      "ownerV2": {
+        "data": {
+          "__typename": "User",
+          "uri": "spotify:user:onebro.me",
+          "username": "onebro.me",
+          "name": "rimutaka",
+          "avatar": {
+            "sources": [
+              {
+                "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b",
+                "width": 64,
+                "height": 64
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b",
+                "width": 300,
+                "height": 300
+              }
+            ]
+          }
+        }
+      },
+      "images": {
+        "items": [
+          {
+            "extractedColors": {
+              "colorRaw": {
+                "hex": "#607098",
+                "isFallback": false
+              }
+            },
+            "sources": [
+              {
+                "url": "https://mosaic.scdn.co/640/ab67616d00001e02194ca30bf0c83c155b7ebdddab67616d00001e025705a208d7e801a18fa81cebab67616d00001e028c494f09ad5e084c1e02b82fab67616d00001e02f835419ef534c6a65f8cee7f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://mosaic.scdn.co/300/ab67616d00001e02194ca30bf0c83c155b7ebdddab67616d00001e025705a208d7e801a18fa81cebab67616d00001e028c494f09ad5e084c1e02b82fab67616d00001e02f835419ef534c6a65f8cee7f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://mosaic.scdn.co/60/ab67616d00001e02194ca30bf0c83c155b7ebdddab67616d00001e025705a208d7e801a18fa81cebab67616d00001e028c494f09ad5e084c1e02b82fab67616d00001e02f835419ef534c6a65f8cee7f",
+                "width": 60,
+                "height": 60
+              }
+            ]
+          }
+        ]
+      },
+      "collaborative": false,
+      "followers": 0,
+      "format": "",
+      "attributes": [],
+      "sharingInfo": {
+        "shareUrl": "https://open.spotify.com/playlist/70Y4rw4zDsRBvyolsQATni?si=yT3crRisSUCM0c9L-s4TbQ"
+      },
+      "content": {
+        "__typename": "PlaylistItemsPage",
+        "totalCount": 5,
+        "pagingInfo": {
+          "limit": 100
+        },
+        "items": [
+          {
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:6pH7PPXivQ9aiv8GQSzLOm",
+                "trackDuration": {
+                  "totalMilliseconds": 156893
+                }
+              }
+            }
+          },
+          {
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:1qHrF4XOI6Pliy7atNjLds",
+                "trackDuration": {
+                  "totalMilliseconds": 245880
+                }
+              }
+            }
+          },
+          {
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:1nH3hLQz058PT54UkSbK4t",
+                "trackDuration": {
+                  "totalMilliseconds": 353493
+                }
+              }
+            }
+          },
+          {
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:6Zv2VNLvldu0NmQbghXPus",
+                "trackDuration": {
+                  "totalMilliseconds": 264866
+                }
+              }
+            }
+          },
+          {
+            "itemV2": {
+              "__typename": "TrackResponseWrapper",
+              "data": {
+                "__typename": "Track",
+                "uri": "spotify:track:3iZ5twPwvFeOUQA4Deu8tP",
+                "trackDuration": {
+                  "totalMilliseconds": 190106
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "extensions": {}
+}

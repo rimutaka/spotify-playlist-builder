@@ -1,0 +1,12 @@
+
+
+https://api-partner.spotify.com/pathfinder/v1/query?operationName=fetchPlaylistMetadata&variables=%7B%22uri%22%3A%22spotify%3Aplaylist%3A70Y4rw4zDsRBvyolsQATni%22%2C%22offset%22%3A0%2C%22limit%22%3A100%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22c02b889128c5424bbcb8085fe576e516c767717f4aa7a24cfda8d3f437a1dbf0%22%7D%7D
+
+
+operationName: fetchPlaylistMetadata
+variables: %7B%22uri%22%3A%22spotify%3Aplaylist%3A70Y4rw4zDsRBvyolsQATni%22%2C%22offset%22%3A0%2C%22limit%22%3A100%7D
+extensions: %7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22c02b889128c5424bbcb8085fe576e516c767717f4aa7a24cfda8d3f437a1dbf0%22%7D%7D
+
+operationName: fetchPlaylistMetadata
+variables: {"uri":"spotify:playlist:70Y4rw4zDsRBvyolsQATni","offset":0,"limit":100}
+extensions: {"persistedQuery":{"version":1,"sha256Hash":"c02b889128c5424bbcb8085fe576e516c767717f4aa7a24cfda8d3f437a1dbf0"}}

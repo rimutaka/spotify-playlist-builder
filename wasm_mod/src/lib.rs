@@ -36,11 +36,17 @@ pub fn hello_background() {
 pub async fn rebuild_playlist(
     auth_header_value: &str,
     token_header_value: &str,
-    _playlist_id: &str,
-    _user_uri: &str,
+    playlist_id: &str,
+    user_uri: &str,
 ) {
     // TODO: add top level error handling to allow for ? in underlying code
-    client::fetch_all_albums_and_playlists(auth_header_value, token_header_value).await;
+    client::fetch_all_albums_and_playlists(
+        auth_header_value,
+        token_header_value,
+        playlist_id,
+        user_uri,
+    )
+    .await;
     // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
 
@@ -81,4 +87,3 @@ pub fn set_panic_hook() {
 //     .await
 //     .unwrap();
 // }
-

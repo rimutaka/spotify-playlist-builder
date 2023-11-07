@@ -1,0 +1,46 @@
+{
+  "data": {
+    "albumUnion": {
+      "__typename": "Album",
+      "name": "Joy Unlimited",
+      "tracks": {
+        "items": [
+          {
+            "track": {
+              "uri": "spotify:track:7lcFWApQa0PE2Dw4mT8N1I"
+            }
+          },
+          {
+            "track": {
+              "uri": "spotify:track:1L7mNK7YX1qI42V5lG7kDf"
+            }
+          },
+          {
+            "track": {
+              "uri": "spotify:track:1YbZZIJOBrfTJ56rqEBpIZ"
+            }
+          },
+          {
+            "track": {
+              "uri": "spotify:track:0PV4VX0Oy652WmCA3AstAH"
+            }
+          },
+          {
+            "track": {
+              "uri": "spotify:track:7EknPu06BycAlX2DI6tUnu"
+            }
+          },
+          {
+            "track": {
+              "uri": "spotify:track:3NpxaxQQdRLjYoU5g02iaw"
+            }
+          }
+        ],
+        "pagingInfo": {
+          "nextOffset": null
+        }
+      }
+    }
+  },
+  "extensions": {}
+}
