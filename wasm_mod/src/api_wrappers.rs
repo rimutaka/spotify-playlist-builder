@@ -119,7 +119,7 @@ pub(crate) async fn fetch_album_tracks(
         .await
     {
         // check if spotify returned any items at all
-        if items.data.album_union.tracks.items.len() == 0 {
+        if items.data.album_union.tracks.items.is_empty() {
             log!("Spotify returned empty items list");
             log!("Playable tracks in {album_id}: {}", album_tracks.len());
             return album_tracks;
@@ -286,7 +286,7 @@ pub(crate) async fn fetch_playlist_tracks(
         .await
     {
         // check if spotify returned any items at all
-        if items.data.playlist_v2.content.items.len() == 0 {
+        if items.data.playlist_v2.content.items.is_empty() {
             log!("Spotify returned empty items list");
             log!("Playable tracks in {playlist_id}: {}", tracks.len());
             return tracks;
@@ -438,7 +438,7 @@ pub(crate) async fn fetch_lib_v3_items(
     .await
     {
         // check if spotify returned any items at all
-        if items.data.me.library_v3.items.len() == 0 {
+        if items.data.me.library_v3.items.is_empty() {
             log!("Spotify returned empty items list");
             log!("Total {filter}: {}", all_lib_v3_items.len());
             return all_lib_v3_items;

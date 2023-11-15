@@ -48,9 +48,9 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         .filter_map(|v| {
             let v = v.replace(constants::ID_PREFIX_PLAYLIST, "");
             if v == target_playlist_id {
-                return None;
+                None
             } else {
-                return Some(v);
+                Some(v)
             }
         })
         .collect::<Vec<String>>();
@@ -198,7 +198,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     let target_playlist_tracks = fetch_playlist_tracks(
         auth_header_value,
         token_header_value,
-        &target_playlist_id,
+        target_playlist_id,
         1000,
     )
     .await;
@@ -213,7 +213,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     // remove duplicates
     let duplicate_tracks = target_playlist_tracks
         .intersection(&selected_tracks)
-        .map(|v| v.clone())
+        .cloned()
         .collect::<Vec<String>>();
     log!(
         "Removing {} selected tracks already in the target playlist",
@@ -223,16 +223,13 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         selected_tracks.remove(&duplicate_track);
     }
 
-    let selected_tracks = selected_tracks
-        .into_iter()
-        .map(|v| v)
-        .collect::<Vec<String>>();
+    let selected_tracks = selected_tracks.into_iter().collect::<Vec<String>>();
 
     // add selected tracks to the back of the current playlist
     add_tracks_to_playlist(
         auth_header_value,
         token_header_value,
-        &target_playlist_id,
+        target_playlist_id,
         selected_tracks,
     )
     .await;
