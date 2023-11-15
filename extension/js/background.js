@@ -33,22 +33,10 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
 
     if (authHeaderValue && tokenHeaderValue && !fetching) {
         fetching = true;
-       // await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
-        fetching = false;
-    }
-});
-
-export async function  btnAdd() {
-    console.log("btnAdd");
-    const playlistId = await getPlaylistIdFromCurrentTabUrl();
-
-    if (authHeaderValue && tokenHeaderValue && !fetching) {
-        fetching = true;
         await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
         fetching = false;
     }
-}
-
+});
 
 // Gets Spotify request headers from request details to extract creds
 async function captureSessionToken(details) {
