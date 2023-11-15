@@ -15,6 +15,7 @@
             "32": "assets/toolbar_icon_19.png",
             "38": "assets/toolbar_icon_38.png"
         },
+        "default_popup": "popup.html",
         "show_matches": [
             "*://open.spotify.com/playlist/*"
         ]

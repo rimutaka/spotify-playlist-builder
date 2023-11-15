@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html {
+      min-height: 5em;
+      min-width: 10em;
+      background: rgb(173, 169, 218);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    button {
+      text-wrap: nowrap
+    }
+
+    .log {
+      display: none;
+    }
+  </style>
+  <script type="module" src="popup.js">
+  </script>
+</head>
+
+<body>
+  <h3>Spotify Playlist Builder</h3>
+  <p><small>Build a playlist with a random selection from your liked tracks, albums and playlists.</small></p>
+  <p><small>Bug reports: max@onebro.me</small></p>
+  <ul>
+    <li><button id="btn_add">Add 500 tracks</button></li>
+  </ul>
+  <div class="log">
+    <h5>Activity log</h5>
+    <p><small id="log"></small></p>
+  </div>
+</body>
+
+</html>

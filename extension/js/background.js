@@ -25,10 +25,21 @@ function onError(error) {
     console.error(`B/g error: ${error}`);
 }
 
-// Toolbar button handler
+// Popup button handler
 // Fetches the data from Spotify using the creds extracted earlier
-chrome.action.onClicked.addListener(async () => {
-    console.log("Toolbar button clicked");
+chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
+    console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
+    const playlistId = await getPlaylistIdFromCurrentTabUrl();
+
+    if (authHeaderValue && tokenHeaderValue && !fetching) {
+        fetching = true;
+       // await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
+        fetching = false;
+    }
+});
+
+export async function  btnAdd() {
+    console.log("btnAdd");
     const playlistId = await getPlaylistIdFromCurrentTabUrl();
 
     if (authHeaderValue && tokenHeaderValue && !fetching) {
@@ -36,7 +47,7 @@ chrome.action.onClicked.addListener(async () => {
         await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
         fetching = false;
     }
-});
+}
 
 
 // Gets Spotify request headers from request details to extract creds
@@ -82,7 +93,7 @@ async function captureUserDetailsListener(details) {
     // https://stackoverflow.com/questions/40888038/chrome-extension-how-to-remove-a-listener-on-chrome-webrequest-onbeforerequest
     chrome.webRequest.onBeforeSendHeaders.removeListener(captureUserDetailsListener)
     console.log("captureUserDetailsListener listener removed")
-    
+
     // loop through all headers and grab the two we need
     // https://developer.mozilla.org/en-US/docs/Web/API/Headers
     const headers = new Headers();
