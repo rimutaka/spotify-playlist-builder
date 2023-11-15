@@ -2,8 +2,6 @@ use std::fmt::Debug;
 
 // use std::time::Duration;
 use crate::{constants::log, models::Payload, Result, RetryAfter};
-use serde_wasm_bindgen;
-use urlencoding;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::JsFuture;
 use web_sys::{Request, RequestInit, RequestMode, Response, WorkerGlobalScope};
@@ -54,7 +52,7 @@ where
     log!("{url}");
 
     // create the request
-    let request = match Request::new_with_str_and_init(&url, &opts) {
+    let request = match Request::new_with_str_and_init(url, &opts) {
         Ok(v) => v,
         Err(e) => {
             log!("Spotify request creation failed");
@@ -157,7 +155,7 @@ where
         }
     };
 
-    return Ok(playlist);
+    Ok(playlist)
 }
 
 /// Returns `https://api-partner.spotify.com/pathfinder/v1/query`.
@@ -200,15 +198,10 @@ where
     ]
     .concat();
 
-    let url = &[
-        url,
-        "&extensions=",
-        &urlencoding::encode(&persisted_query).to_string(),
-    ]
-    .concat();
+    let url = &[url, "&extensions=", &urlencoding::encode(&persisted_query)].concat();
 
     log!("URL:");
     log!("{url}");
 
-    return Ok(url.to_owned());
+    Ok(url.to_owned())
 }
