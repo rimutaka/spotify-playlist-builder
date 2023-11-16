@@ -488,9 +488,9 @@ pub(crate) async fn fetch_lib_v3_items(
         };
 
         // for debugging
-        if variables.offset > 50 {
-            break;
-        }
+        // if variables.offset > 50 {
+        //     break;
+        // }
     }
 
     log!("Total {filter}: {}", all_lib_v3_items.len());
@@ -559,6 +559,9 @@ pub(crate) async fn add_tracks_to_playlist(
                 }
             };
             log!("Added {} tracks", idx + 1);
+
+            // clear for the next lot
+            payload.variables.uris = Vec::new();
         }
     }
     log!("All tracks added");

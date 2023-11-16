@@ -20,7 +20,7 @@ pub struct OwnerV2 {
 }
 
 // list of tracks ------------------------------------------
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Default)]
 pub struct Playability {
     pub playable: bool,
 }
@@ -29,6 +29,7 @@ pub struct Playability {
 pub struct ItemV2Data {
     /// E.g. `spotify:track:0tpZIPW5LXXtg6YgKr4q48`
     pub uri: Option<String>,
+    #[serde(default)]
     pub playability: Playability,
 }
 

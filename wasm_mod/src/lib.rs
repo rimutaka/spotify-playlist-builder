@@ -23,7 +23,7 @@ extern "C" {
 // Will be called in content.js
 #[wasm_bindgen]
 pub fn hello_content() {
-    alert("Hello from the content script!");
+    // alert("Hello from the content script!");
 }
 
 // Will be called in background.js
