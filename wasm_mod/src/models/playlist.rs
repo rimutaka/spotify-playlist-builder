@@ -28,7 +28,7 @@ pub struct Playability {
 #[derive(Debug, Deserialize)]
 pub struct ItemV2Data {
     /// E.g. `spotify:track:0tpZIPW5LXXtg6YgKr4q48`
-    pub uri: String,
+    pub uri: Option<String>,
     pub playability: Playability,
 }
 

@@ -17,9 +17,42 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     target_playlist_id: &str,
     user_uri: &str,
 ) {
-    log!("fetch_all_albums entered");
+    log!("fetch_all_albums_and_playlists entered");
 
-    log!("User: {user_uri}");
+    log!("User: {user_uri}, target playlist: {target_playlist_id}");
+
+    // get details of the target playlist - tracks and the owner to see if we can add tracks to it
+    // it used to be possible to add tracks to collaborative playlists, but I can't find how it's done now
+    // spotify sucks.
+    let (target_playlist_tracks, owner_uri) = match fetch_playlist_tracks(
+        auth_header_value,
+        token_header_value,
+        target_playlist_id,
+        1000,
+    )
+    .await
+    {
+        Some(v) => (v.tracks, v.owner_uri),
+        None => {
+            // cannot proceed if the target playlist does not exist
+            log!("Cannot fetch target playlist details from Spotify");
+            return;
+        }
+    };
+
+    // check if the playlis is owned by the current user
+    if user_uri != owner_uri {
+        log!("Playlist owner mismatch: {owner_uri}/{user_uri}");
+        return;
+    }
+
+    let target_playlist_tracks = target_playlist_tracks
+        .into_iter()
+        .collect::<HashSet<String>>();
+    log!(
+        "Found {} tracks in the target playlist",
+        target_playlist_tracks.len()
+    );
 
     // collect all album IDs
     let all_albums = fetch_lib_v3_items(auth_header_value, token_header_value, "Albums").await;
@@ -127,13 +160,21 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     // to make it a more representative sample. Large playlists may dominate and skew the results.
     for playlist_id in all_playlists {
         // get album tracks, shuffle and add top N tracks to the selected list
-        let mut tracks = fetch_playlist_tracks(
+        let (mut tracks, owner_uri) = match fetch_playlist_tracks(
             auth_header_value,
             token_header_value,
             &playlist_id,
             constants::MAX_TRACKS_PER_PLAYLIST,
         )
-        .await;
+        .await
+        {
+            Some(v) => (v.tracks, v.owner_uri),
+            None => {
+                // cannot proceed if the target playlist does not exist
+                log!("Cannot fetch playlist details from Spotify");
+                return;
+            }
+        };
 
         if tracks.is_empty() {
             log!("Empty playlist {playlist_id}");
@@ -141,7 +182,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         } else if tracks.len() <= constants::MIN_TRACKS_PER_ALBUM {
             // the playlist is too small and all tracks should be added
             log!(
-                "Sel: {}, stash: {}, adding all {} tracks from playlist {playlist_id}",
+                "Sel: {}, stash: {}, adding all {} tracks from playlist {playlist_id}, owner: {owner_uri}",
                 selected_tracks.len(),
                 unselected_tracks.len(),
                 tracks.len(),
@@ -164,7 +205,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
                 .map(|v| unselected_tracks.insert(v))
                 .collect();
             log!(
-                "Sel: {}, stash: {}, added {} tracks from playlist {playlist_id}",
+                "Sel: {}, stash: {}, added {} tracks from playlist {playlist_id}, owner: {owner_uri}",
                 selected_tracks.len(),
                 unselected_tracks.len(),
                 constants::MIN_TRACKS_PER_ALBUM,
@@ -193,24 +234,8 @@ pub(crate) async fn fetch_all_albums_and_playlists(
             .join("\n")
     );
 
-    // fetch all tracks from the target playlist to avoid duplication
-    // TODO: do it earlier in the code and take into account how many we need to collect
-    let target_playlist_tracks = fetch_playlist_tracks(
-        auth_header_value,
-        token_header_value,
-        target_playlist_id,
-        1000,
-    )
-    .await;
-    let target_playlist_tracks = target_playlist_tracks
-        .into_iter()
-        .collect::<HashSet<String>>();
-    log!(
-        "Found {} tracks in the target playlist",
-        target_playlist_tracks.len()
-    );
-
-    // remove duplicates
+    // remove duplicates already present in the target playlist
+    // TODO: this does not work because playlist tracks are capped and this list doesn't have them all
     let duplicate_tracks = target_playlist_tracks
         .intersection(&selected_tracks)
         .cloned()

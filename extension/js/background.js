@@ -31,6 +31,13 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
     const playlistId = await getPlaylistIdFromCurrentTabUrl();
 
+    // check if we have the user ID 
+    // it should only fail if the extension was reloaded while the page was open
+    if (!userUri) {
+        console.error("Missing user details. Reload the page to update.");
+        return;
+    }
+
     if (authHeaderValue && tokenHeaderValue && !fetching) {
         fetching = true;
         await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
@@ -101,9 +108,7 @@ async function captureUserDetailsListener(details) {
     // {"display_name":"rimutaka","external_urls":{"spotify":"https://open.spotify.com/user/onebro.me"},"href":"https://api.spotify.com/v1/users/onebro.me","id":"onebro.me","images":[{"url":"https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b","height":64,"width":64},{"url":"https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b","height":300,"width":300}],"type":"user","uri":"spotify:user:onebro.me","followers":{"href":null,"total":0},"country":"NZ","product":"premium","explicit_content":{"filter_enabled":false,"filter_locked":false},"email":"max@onebro.me","birthdate":"1979-05-01","policies":{"opt_in_trial_premium_only_market":false}}
     userUri = respJson.uri;
     userID = respJson.id;
-    console.log("User URI / ID")
-    console.log(userUri)
-    console.log(userID)
+    console.log(`User URI: ${userUri}, ID: ${userID}`)
 }
 
 

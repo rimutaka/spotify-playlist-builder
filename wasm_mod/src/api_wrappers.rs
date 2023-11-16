@@ -173,13 +173,19 @@ pub(crate) async fn fetch_album_tracks(
     album_tracks
 }
 
+/// Contains the list of tracks and the owner ID of the playlist
+pub(crate) struct PlaylistTracks {
+    pub tracks: Vec<String>,
+    pub owner_uri: String,
+}
+
 /// Returns IDs of all playlist tracks.
 pub(crate) async fn fetch_playlist_tracks(
     auth_header_value: &str,
     token_header_value: &str,
     playlist_id: &str,
     max_number_of_tracks: usize,
-) -> Vec<String> {
+) -> Option<PlaylistTracks> {
     log!("fetch_playlist_tracks for: {playlist_id}");
 
     // request examples
@@ -200,7 +206,9 @@ pub(crate) async fn fetch_playlist_tracks(
         constants::persistent_queries::FETCH_PLAYLIST,
     ) {
         Ok(v) => v,
-        Err(_) => return Vec::new(),
+        Err(_) => {
+            return None;
+        }
     };
 
     // get the list of album tracks from Spotify
@@ -214,14 +222,17 @@ pub(crate) async fn fetch_playlist_tracks(
     {
         Ok(v) => v,
         Err(e) if matches!(e, RetryAfter::Never) => {
-            return Vec::new();
+            return None;
         }
         Err(_) => {
             unimplemented!("Retries are not implemented");
         }
     };
 
-    // log!("{:?}", lib_v3_items);
+    log!("{:?}", tracks.data.playlist_v2.owner_v2);
+
+    // get the owner ID
+    let owner_uri = tracks.data.playlist_v2.owner_v2.data.uri;
 
     // get the number of lib_v3_items and calculate the number of pages that can be downloaded
     let total_track_count = tracks.data.playlist_v2.content.total_count;
@@ -231,7 +242,7 @@ pub(crate) async fn fetch_playlist_tracks(
     } else {
         total_pages
     };
-    log!("Tracks: {total_track_count}, pages: {total_pages}");
+    log!("Tracks: {total_track_count}, pages: {total_pages}, owner: {owner_uri}");
 
     // a collection of all albums from all pages
     let mut tracks = tracks
@@ -243,10 +254,15 @@ pub(crate) async fn fetch_playlist_tracks(
         .filter_map(|v| {
             // if the track is playable and is actually a track, then it should be included
             // it may be possible to have other items other than tracks in a playlist (not sure)
-            if v.item_v2.data.playability.playable
-                && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK)
-            {
-                Some(v.item_v2.data.uri.replace(constants::ID_PREFIX_TRACK, ""))
+            // items of type NotFound have an empty data structure
+            if let Some(uri) = v.item_v2.data.uri {
+                if v.item_v2.data.playability.playable
+                    && uri.starts_with(constants::ID_PREFIX_TRACK)
+                {
+                    Some(uri.replace(constants::ID_PREFIX_TRACK, ""))
+                } else {
+                    None
+                }
             } else {
                 None
             }
@@ -256,7 +272,7 @@ pub(crate) async fn fetch_playlist_tracks(
     // check if there are any more pages to fetch
     if total_track_count <= constants::ITEMS_PER_PAGE {
         log!("Playable tracks in {playlist_id}: {}", tracks.len());
-        return tracks;
+        return Some(PlaylistTracks { tracks, owner_uri });
     }
 
     // allocate enough space for all tracks since it is known in advance
@@ -270,7 +286,7 @@ pub(crate) async fn fetch_playlist_tracks(
         constants::persistent_queries::FETCH_PLAYLIST,
     ) {
         Ok(v) => v,
-        Err(_) => return Vec::new(),
+        Err(_) => return None,
     };
 
     // fetch the rest of the track pages in a loop
@@ -289,7 +305,7 @@ pub(crate) async fn fetch_playlist_tracks(
         if items.data.playlist_v2.content.items.is_empty() {
             log!("Spotify returned empty items list");
             log!("Playable tracks in {playlist_id}: {}", tracks.len());
-            return tracks;
+            return Some(PlaylistTracks { tracks, owner_uri });
         }
 
         let mut items = items
@@ -299,10 +315,14 @@ pub(crate) async fn fetch_playlist_tracks(
             .items
             .into_iter()
             .filter_map(|v| {
-                if v.item_v2.data.playability.playable
-                    && v.item_v2.data.uri.starts_with(constants::ID_PREFIX_TRACK)
-                {
-                    Some(v.item_v2.data.uri.replace(constants::ID_PREFIX_TRACK, ""))
+                if let Some(uri) = v.item_v2.data.uri {
+                    if v.item_v2.data.playability.playable
+                        && uri.starts_with(constants::ID_PREFIX_TRACK)
+                    {
+                        Some(uri.replace(constants::ID_PREFIX_TRACK, ""))
+                    } else {
+                        None
+                    }
                 } else {
                     None
                 }
@@ -319,7 +339,7 @@ pub(crate) async fn fetch_playlist_tracks(
             constants::persistent_queries::FETCH_PLAYLIST,
         ) {
             Ok(v) => v,
-            Err(_) => return Vec::new(),
+            Err(_) => return None,
         };
 
         // protect against very large playlists
@@ -339,7 +359,8 @@ pub(crate) async fn fetch_playlist_tracks(
     }
 
     log!("Playable tracks in {playlist_id}: {}", tracks.len());
-    tracks
+
+    Some(PlaylistTracks { tracks, owner_uri })
 }
 
 /// Returns IDs of either albums or playlists.
@@ -509,6 +530,8 @@ pub(crate) async fn add_tracks_to_playlist(
     };
 
     // add tracks in lots of 50s
+    // TODO: this loop is completely faulty and has to be redesigned
+    // it repeats the same tracks over and over
     for (idx, track) in tracks_to_add.iter().enumerate() {
         // add the track to the list
         payload
