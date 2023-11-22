@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.create({ url: "https://github.com/rimutaka/spotify-playlist-builder/issues" });
   });
 
+  btn = document.getElementById("btn_info");
+  btn.addEventListener("click", async () => {
+    console.log("btn_info button clicked");
+    chrome.tabs.create({ url: "https://github.com/rimutaka/spotify-playlist-builder/#readme" });
+  });
+
   // add tracks button
   btn = document.getElementById("btn_add");
   btn.addEventListener("click", async () => {

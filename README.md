@@ -1,14 +1,28 @@
-# Chrome plugin for generating a random playlist from your library tracks, albums and playlists 
+# Chrome extension for generating a random playlist from your library tracks, albums and playlists 
 
-Spotify used to have a play button inside My Library. It would play all the tracks from anything that was in the library, including albums and playlists.
+Spotify removed Play button inside _My Library_. It is no longer possible to shuffle and play all the tracks from My Library, including albums and playlists.
 
-This feature is only available for Liked Songs.
+This extension builds a playlist out of random tracks found in your library. It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
-This plugin rebuilds a playlist of your choosing with random tracks from not just Like Songs, but also Albums and Playlists you liked.
+* Install the extension
+* Log into spotify
+* Create a new playlist
+* Click on the extension button in the toolbar menu to add tracks
 
-It is an early prototype and is not intended for use anyone other than me, the developer - it's just too early.
+The extension adds random tracks to the current playlist in the background. You can close the Spotify tab or navigate away from the playlist.
 
-## How it works
+There is no progress or completion notification from the extension - reload the playlist to see if enough tracks have been added.
+
+### Feedback and bug reports
+
+This project is under active development may not always. Open an issue if you run into problems or have any kind of feedback.
+
+### Privacy policy
+
+This extension does not collect any information about the user or user activities.  
+The only site it communicates with is Spotify.
+
+## Under the hood
 
 The plugin intercepts the session token from Spotify requests and impersonates the Spotify client to:
 * read the contents of the user library
@@ -16,7 +30,7 @@ The plugin intercepts the session token from Spotify requests and impersonates t
 
 It does not transmit any of your data to any third party. All requests go to Spotify.
 
-Most of the work is done by the WASM module built in Rust.
+Most of the work is done by [a WASM module](wasm_mod) built in Rust.
 
 ## Attributions
 

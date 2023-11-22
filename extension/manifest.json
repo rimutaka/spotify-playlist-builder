@@ -1,21 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "Make Random Playlist",
+    "name": "Spotify Playlist Builder",
     "short_name": "Spotty",
-    "description": "Generates a playlist from songs in the user's library",
-    "version": "1.0.0",
+    "description": "Generate a random playlist from everything stored in My Library, including tracks, albums and other playlists.",
+    "version": "0.3.0",
     "author": "@rimutaka",
     "minimum_chrome_version": "110",
     "offline_enabled": false,
     "action": {
-        "default_title": "Replace all tracks with random selection from your library",
+        "default_title": "Adds a random selection from My Library to a playlist. Activates on a new Spotify playlist page.",
         "default_icon": {
             "19": "assets/toolbar_icon_19.png",
             "16": "assets/toolbar_icon_19.png",
             "32": "assets/toolbar_icon_19.png",
             "38": "assets/toolbar_icon_38.png"
         },
-        "default_popup": "popup.html",
+        "default_popup": "js/popup.html",
         "show_matches": [
             "*://open.spotify.com/playlist/*"
         ]
@@ -28,12 +28,7 @@
         "service_worker": "js/background.js"
     },
     "permissions": [
-        "tabs",
-        "activeTab",
-        "alarms",
         "webRequest",
-        "cookies",
-        "scripting",
         "declarativeContent"
     ],
     "host_permissions": [
