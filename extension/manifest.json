@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Spotify Playlist Builder",
     "short_name": "Spotty",
-    "description": "Generate a random playlist from everything stored in My Library, including tracks, albums and other playlists.",
+    "description": "Generate a random playlist from everything stored in My Library, including liked tracks, albums and playlists.",
     "version": "0.3.0",
     "author": "@rimutaka",
     "minimum_chrome_version": "110",
