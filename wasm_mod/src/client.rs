@@ -7,6 +7,7 @@ use crate::{
     },
     constants,
     constants::log,
+    report_error, report_progress,
 };
 use rand::seq::SliceRandom;
 
@@ -43,6 +44,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     // check if the playlis is owned by the current user
     if user_uri != owner_uri {
         log!("Playlist owner mismatch: {owner_uri}/{user_uri}");
+        report_error("Cannot add tracks to someone else's playlist. Try again with a playlist you created yourself.");
         return;
     }
 
@@ -250,6 +252,15 @@ pub(crate) async fn fetch_all_albums_and_playlists(
 
     let selected_tracks = selected_tracks.into_iter().collect::<Vec<String>>();
 
+    // report the progress back to the user before writing to the playlist
+    let msg = [
+        "Adding ",
+        &selected_tracks.len().to_string(),
+        "tracks to this playlist",
+    ]
+    .concat();
+    report_progress(&msg);
+
     // add selected tracks to the back of the current playlist
     add_tracks_to_playlist(
         auth_header_value,
@@ -258,5 +269,4 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         selected_tracks,
     )
     .await;
-    //
 }

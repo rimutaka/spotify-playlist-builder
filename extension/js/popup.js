@@ -29,3 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
     await chrome.runtime.sendMessage({ action: "btn_add" });
   });
 });
+
+// listens for msgs from the b/g script to update creds
+chrome.runtime.onMessage.addListener((message, sender) => {
+  console.log("Msg in popup")
+  console.log(JSON.stringify(message), JSON.stringify(sender));
+}
+);

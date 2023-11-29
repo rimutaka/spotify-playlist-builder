@@ -50,6 +50,16 @@ pub async fn rebuild_playlist(
     // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
 }
 
+#[wasm_bindgen(module = "/src/progress.js")]
+extern "C" {
+    pub fn report_progress(msg: &str);
+}
+
+#[wasm_bindgen(module = "/src/progress.js")]
+extern "C" {
+    pub fn report_error(msg: &str);
+}
+
 /// All error handling in this crate is based on either retrying a request after some time
 /// or exiting gracefully.
 #[derive(Debug, Clone)]

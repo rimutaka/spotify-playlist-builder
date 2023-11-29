@@ -9,7 +9,7 @@ console.log("Background started v16:42");
 let authHeaderValue = ""; // creds
 let tokenHeaderValue = ""; // creds
 let userUri = ""; // user ID
-let userID = ""; // user ID
+let userDetailsRequestHeaders = new Headers();
 
 // a temp flag to stop multiple fetches
 let fetching = false;
@@ -31,8 +31,18 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
     const playlistId = await getPlaylistIdFromCurrentTabUrl();
 
-    // check if we have the user ID 
-    // it should only fail if the extension was reloaded while the page was open
+    // user ID is loaded first time the extension is invoked
+    if (!userUri) {
+        try {
+            await fetchUserDetails()
+        }
+        catch {
+            console.error("Error while fetching user details from Spotify. Reload the page to update.");
+            return;
+        }
+    };
+
+    // cannot proceed without userUri 
     if (!userUri) {
         console.error("Missing user details. Reload the page to update.");
         return;
@@ -70,67 +80,78 @@ async function captureSessionToken(details) {
 chrome.webRequest.onBeforeSendHeaders.addListener(captureSessionToken, { urls: ['https://api-partner.spotify.com/pathfinder/v1/query*'] }, ["requestHeaders"])
 
 
-// Spoofs Spotify user details request to extract user ID
-// It intercepts the original requests and sends a duplicate at the same time
+// Captures headers of Spotify user details request to extract user ID later when we need it
+// It intercepts the original requests and stores the headers for a later replay
 // because I could not find an easy way of capturing the response content of the original request.
-// Spotify will get 2 identical requests very close together.
 chrome.webRequest.onBeforeSendHeaders.addListener(
-    captureUserDetailsListener,
-    { urls: ['https://api.spotify.com/v1/me'] },
+    captureSpotifyHeaders,
+    { urls: ['https://api-partner.spotify.com/pathfinder/v1/query?operationName=profileAndAccountAttributes*'] },
     ["requestHeaders"]);
 
 // Requests user details from Spotify to extract user ID
-async function captureUserDetailsListener(details) {
-    console.log("captureUserDetailsListener fired")
-    // console.log(details)
-    // console.log(details.tabId)
+async function captureSpotifyHeaders(requestDetails) {
+    console.log("captureSpotifyHeaders fired")
 
     // https://stackoverflow.com/questions/40888038/chrome-extension-how-to-remove-a-listener-on-chrome-webrequest-onbeforerequest
-    chrome.webRequest.onBeforeSendHeaders.removeListener(captureUserDetailsListener)
-    console.log("captureUserDetailsListener listener removed")
+    chrome.webRequest.onBeforeSendHeaders.removeListener(captureSpotifyHeaders)
+    console.log("captureSpotifyHeaders listener removed")
 
     // loop through all headers and grab the two we need
     // https://developer.mozilla.org/en-US/docs/Web/API/Headers
-    const headers = new Headers();
-    for (const header of details.requestHeaders) {
-        headers.append(header.name, header.value)
+    for (const header of requestDetails.requestHeaders) {
+        userDetailsRequestHeaders.set(header.name, header.value)
     }
+}
+
+// Requests user details from Spotify to extract user ID
+async function fetchUserDetails() {
+    console.log("captureUserDetailsListener fired")
 
     // https://javascript.plainenglish.io/fetch-data-in-chrome-extension-v3-2b73719ffc0e
-    const resp = await fetch('https://api.spotify.com/v1/me', {
+    const resp = await fetch('https://api-partner.spotify.com/pathfinder/v1/query?operationName=profileAndAccountAttributes&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22d6989ae82c66a7fa0b3e40775552e08fa6856b77af1b71863fdd7f2cffb5d4d4%22%7D%7D', {
         method: 'GET',
-        headers: headers,
+        headers: userDetailsRequestHeaders,
     });
 
     // store the creds in the session vars
     const respJson = await resp.json();
     // console.log(JSON.stringify(respJson));
-    // {"display_name":"rimutaka","external_urls":{"spotify":"https://open.spotify.com/user/onebro.me"},"href":"https://api.spotify.com/v1/users/onebro.me","id":"onebro.me","images":[{"url":"https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b","height":64,"width":64},{"url":"https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b","height":300,"width":300}],"type":"user","uri":"spotify:user:onebro.me","followers":{"href":null,"total":0},"country":"NZ","product":"premium","explicit_content":{"filter_enabled":false,"filter_locked":false},"email":"max@onebro.me","birthdate":"1979-05-01","policies":{"opt_in_trial_premium_only_market":false}}
-    userUri = respJson.uri;
-    userID = respJson.id;
-    console.log(`User URI: ${userUri}, ID: ${userID}`)
+    /*
+        {
+            "data": {
+                "me": {
+                    "profile": {
+                        "uri": "spotify:user:onebro.me",
+                        "username": "onebro.me",
+                        "name": "rimutaka",
+                        "avatar": {
+                            "sources": [
+                                {
+                                    "url": "https://i.scdn.co/image/ab67757000003b82cfd0d586af121bdac41f2c7b"
+                                },
+                                {
+                                    "url": "https://i.scdn.co/image/ab6775700000ee85cfd0d586af121bdac41f2c7b"
+                                }
+                            ]
+                        }
+                    },
+                    "account": {
+                        "attributes": {
+                            "dsaModeEnabled": false,
+                            "dsaModeAvailable": true,
+                            "optInTrialPremiumOnlyMarket": false
+                        }
+                    }
+                }
+            },
+            "extensions": {}
+        }
+    */
+    userUri = respJson?.data?.me?.profile?.uri;
+    console.log(`User URI: ${userUri}`)
 }
 
-
-// might need this later to grab user IDs
-// chrome.cookies.get({ url: 'https://open.spotify.com', name: 'sp_t' },
-//   function (cookie) {
-//     if (cookie) {
-//       console.log(cookie.value);
-//     }
-//     else {
-//       console.log('Can\'t get cookie! Check the name!');
-//     }
-//   });
-
-// might need this later to communicate with the content script
-// chrome.tabs
-//     .sendMessage(details.tabId, {
-//         authHeaderValue: authHeaderValue,
-//         tokenHeaderValue: tokenHeaderValue,
-//     })
-//     .catch(onError);
-
+// Performs the extension and UI initialization on install, which is when the extension is activated by the browser
 // Uplifted from https://developer.chrome.com/docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
 // requires declarativeContent permission
 chrome.runtime.onInstalled.addListener(() => {
