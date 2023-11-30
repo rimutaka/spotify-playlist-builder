@@ -4,6 +4,7 @@ mod api_wrappers;
 mod constants;
 mod models;
 
+use constants::log;
 use wasm_bindgen::prelude::*;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
@@ -33,31 +34,38 @@ pub fn hello_background() {
 }
 
 #[wasm_bindgen]
-pub async fn rebuild_playlist(
+pub async fn add_random_tracks(
     auth_header_value: &str,
     token_header_value: &str,
     playlist_id: &str,
     user_uri: &str,
 ) {
-    // TODO: add top level error handling to allow for ? in underlying code
-    client::fetch_all_albums_and_playlists(
+    // log the result for debugging and send and copy
+    // of the same message to whatever frontend is listening
+    // via JS sendMessage
+    match client::generate_random_playlist(
         auth_header_value,
         token_header_value,
         playlist_id,
         user_uri,
     )
-    .await;
-    // utils::fetch_playlist(auth_header_value, token_header_value, playlist_id, user_uri).await;
+    .await
+    {
+        Ok(v) => {
+            log!("{v}");
+            report_progress(&v);
+        }
+
+        Err(v) => {
+            log!("{v}");
+            report_progress(&v);
+        }
+    };
 }
 
 #[wasm_bindgen(module = "/src/progress.js")]
 extern "C" {
     pub fn report_progress(msg: &str);
-}
-
-#[wasm_bindgen(module = "/src/progress.js")]
-extern "C" {
-    pub fn report_error(msg: &str);
 }
 
 /// All error handling in this crate is based on either retrying a request after some time

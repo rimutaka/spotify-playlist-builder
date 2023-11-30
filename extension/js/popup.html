@@ -21,8 +21,16 @@
       text-wrap: nowrap
     }
 
-    .log {
+    .log:has(> summary:empty) {
       display: none;
+    }
+
+    .log p {
+      font-size: xx-small;
+    }
+
+    summary {
+      cursor: pointer;
     }
   </style>
   <script type="module" src="popup.js">
@@ -36,10 +44,9 @@
     <li><button id="btn_add">Add 500 tracks to this playlist</button></li>
   </ul>
   <p><small><a id="btn_info" href="https://github.com/rimutaka/spotify-playlist-builder/#readme">More info</a>&nbsp;&nbsp;<a id="btn_contact" href="https://github.com/rimutaka/spotify-playlist-builder/issues">Bug reports</a></small></p>
-  <div class="log">
-    <h5>Activity log</h5>
-    <p><small id="log"></small></p>
-  </div>
+  <details class="log" id="log">
+    <summary id="log-summary" title="Click to see the full log"></summary>
+  </details>
 </body>
 
 </html>

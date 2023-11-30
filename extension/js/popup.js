@@ -31,8 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // listens for msgs from the b/g script to update creds
-chrome.runtime.onMessage.addListener((message, sender) => {
-  console.log("Msg in popup")
-  console.log(JSON.stringify(message), JSON.stringify(sender));
+chrome.runtime.onMessage.addListener((msg, sender) => {
+
+  const log = document.getElementById("log");
+
+  const lastMsg = document.getElementById("log-summary").innerText;
+  if (lastMsg) {
+    const p = document.createElement("p");
+    p.innerText = lastMsg;
+
+    log.insertBefore(p, log.firstChild);
+  }
+
+  document.getElementById("log-summary").innerText = msg;
 }
 );

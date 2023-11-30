@@ -62,7 +62,7 @@ where
         }
     };
 
-    log!("Request created");
+    // log!("Request created");
 
     // add headers
     let _ = request.headers().set("Accept", "application/json");
@@ -74,7 +74,7 @@ where
         let _ = request.headers().set("content-type", "application/json");
     }
 
-    log!("Headers set");
+    // log!("Headers set");
 
     // WorkerGlobalScope object is needed to perform fetch
     let worker_global_scope = match js_sys::global().dyn_into::<WorkerGlobalScope>() {
@@ -129,7 +129,7 @@ where
         }
     };
 
-    log!("HTTP request completed");
+    // log!("HTTP request completed");
 
     // Unwrap the response and handle the error
     let resp = match resp {

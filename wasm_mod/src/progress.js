@@ -4,12 +4,18 @@
 
 // from content to popup: https://www.reddit.com/r/chrome_extensions/comments/sjfl02/chrome_extension_v3_sending_data_from_content_to/
 
-export function report_progress(msg) {
-  console.log(`Progress: ${msg}`)
-  chrome.runtime.sendMessage(msg);
+// a placeholder for .then onSuccess
+function handleResponse(message) {
+  // console.log(`Send OK: ${JSON.stringify(message)}`);
 }
 
-export function report_error(msg) {
-  console.error(`Error in WASM: ${msg}`)
-  chrome.runtime.sendMessage(msg)
+// a placeholder for .then onError
+function handleError(error) {
+  // console.log(`Send error: ${error}`);
+}
+
+// Sends a message to the popup
+export function report_progress(msg) {
+  // console.log(`Progress: ${msg}`)
+  chrome.runtime.sendMessage(msg).then(handleResponse, handleError);
 }

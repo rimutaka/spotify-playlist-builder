@@ -1,4 +1,4 @@
-import { report_progress, report_error } from './snippets/wasm_mod-bc4ca452742d1bb1/src/progress.js';
+import { report_progress } from './snippets/wasm_mod-bc4ca452742d1bb1/src/progress.js';
 
 let wasm;
 
@@ -283,7 +283,7 @@ export function hello_background() {
 * @param {string} user_uri
 * @returns {Promise<void>}
 */
-export function rebuild_playlist(auth_header_value, token_header_value, playlist_id, user_uri) {
+export function add_random_tracks(auth_header_value, token_header_value, playlist_id, user_uri) {
     const ptr0 = passStringToWasm0(auth_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len0 = WASM_VECTOR_LEN;
     const ptr1 = passStringToWasm0(token_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
@@ -292,7 +292,7 @@ export function rebuild_playlist(auth_header_value, token_header_value, playlist
     const len2 = WASM_VECTOR_LEN;
     const ptr3 = passStringToWasm0(user_uri, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len3 = WASM_VECTOR_LEN;
-    const ret = wasm.rebuild_playlist(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
+    const ret = wasm.add_random_tracks(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
     return takeObject(ret);
 }
 
@@ -303,7 +303,7 @@ function handleError(f, args) {
         wasm.__wbindgen_exn_store(addHeapObject(e));
     }
 }
-function __wbg_adapter_116(arg0, arg1, arg2, arg3) {
+function __wbg_adapter_114(arg0, arg1, arg2, arg3) {
     _assertNum(arg0);
     _assertNum(arg1);
     wasm.wasm_bindgen__convert__closures__invoke2_mut__h5282370fbb531e54(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
@@ -400,9 +400,6 @@ function __wbg_get_imports() {
     }, arguments) };
     imports.wbg.__wbg_reportprogress_631745a2bb962786 = function() { return logError(function (arg0, arg1) {
         report_progress(getStringFromWasm0(arg0, arg1));
-    }, arguments) };
-    imports.wbg.__wbg_reporterror_84ee1a9c3a54c6b0 = function() { return logError(function (arg0, arg1) {
-        report_error(getStringFromWasm0(arg0, arg1));
     }, arguments) };
     imports.wbg.__wbindgen_number_get = function(arg0, arg1) {
         const obj = getObject(arg1);
@@ -589,7 +586,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_116(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_114(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -707,7 +704,7 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2987 = function() { return logError(function (arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper2965 = function() { return logError(function (arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 151, __wbg_adapter_44);
         return addHeapObject(ret);
     }, arguments) };

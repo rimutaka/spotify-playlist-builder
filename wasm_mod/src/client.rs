@@ -7,24 +7,26 @@ use crate::{
     },
     constants,
     constants::log,
-    report_error, report_progress,
+    report_progress,
 };
 use rand::seq::SliceRandom;
 
-/// Fetches IDs of all albums and playlists
-pub(crate) async fn fetch_all_albums_and_playlists(
+/// Generates a random playlist of a predefined size out of everything stored in the user library.
+pub(crate) async fn generate_random_playlist(
     auth_header_value: &str,
     token_header_value: &str,
     target_playlist_id: &str,
     user_uri: &str,
-) {
-    log!("fetch_all_albums_and_playlists entered");
+) -> Result<String, String> {
+    report_progress("Eclectic work started");
+    report_progress("Fetching details of the target playlist");
 
     log!("User: {user_uri}, target playlist: {target_playlist_id}");
 
     // get details of the target playlist - tracks and the owner to see if we can add tracks to it
     // it used to be possible to add tracks to collaborative playlists, but I can't find how it's done now
     // spotify sucks.
+    // TODO: retrieve playlist name for logging
     let (target_playlist_tracks, owner_uri) = match fetch_playlist_tracks(
         auth_header_value,
         token_header_value,
@@ -36,25 +38,29 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         Some(v) => (v.tracks, v.owner_uri),
         None => {
             // cannot proceed if the target playlist does not exist
-            log!("Cannot fetch target playlist details from Spotify");
-            return;
+            return Err("Cannot fetch target playlist details from Spotify".to_owned());
         }
     };
+
+    report_progress("Target playlist details fetched");
 
     // check if the playlis is owned by the current user
     if user_uri != owner_uri {
         log!("Playlist owner mismatch: {owner_uri}/{user_uri}");
-        report_error("Cannot add tracks to someone else's playlist. Try again with a playlist you created yourself.");
-        return;
+        return Err("Cannot add tracks to someone else's playlist. Try again with a playlist you created yourself.".to_owned());
     }
+
+    report_progress("Fetching target playlist tracks");
 
     let target_playlist_tracks = target_playlist_tracks
         .into_iter()
         .collect::<HashSet<String>>();
-    log!(
+    report_progress(&format!(
         "Found {} tracks in the target playlist",
         target_playlist_tracks.len()
-    );
+    ));
+
+    report_progress("Fetching list of albums in My Library");
 
     // collect all album IDs
     let all_albums = fetch_lib_v3_items(auth_header_value, token_header_value, "Albums").await;
@@ -65,7 +71,9 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         .map(|v| v.replace(constants::ID_PREFIX_ALBUM, ""))
         .collect::<Vec<String>>();
 
-    log!("{}", all_albums.join("\n"));
+    // log!("{}", all_albums.join("\n"));
+    report_progress(&format!("Found {} albums in the library", all_albums.len()));
+    report_progress("Fetching list of playlists in My Library");
 
     // repeat the same for playlists - collect all playlist IDs
 
@@ -90,7 +98,11 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         })
         .collect::<Vec<String>>();
 
-    log!("{}", all_playlists.join("\n"));
+    // log!("{}", all_playlists.join("\n"));
+    report_progress(&format!(
+        "Found {} playlists in the library",
+        all_playlists.len()
+    ));
 
     // randomize the list of albums and playlists
     let mut rng = rand::thread_rng();
@@ -104,6 +116,7 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     let mut unselected_tracks: HashSet<String> = HashSet::new();
 
     // go thru all albums
+    report_progress("Selecting random album tracks");
     for album_id in all_albums {
         // get album tracks, shuffle and add top N tracks to the selected list
         let mut album_tracks =
@@ -157,9 +170,15 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         unselected_tracks.len(),
     );
 
+    let selected_album_tracks_count = selected_tracks.len();
+    report_progress(&format!(
+        "Selected {selected_album_tracks_count} tracks from albums"
+    ));
+
     // go thru all playlists
-    // TODO: merge this with the album loop, but I do not know how to do it in terms of priorities and what to pick from where in what order
+    // TODO: merge this with the album loop, but I do not know how to do it in terms of track priorities and what to pick from where in what order
     // to make it a more representative sample. Large playlists may dominate and skew the results.
+    report_progress("Selecting random playlist tracks");
     for playlist_id in all_playlists {
         // get album tracks, shuffle and add top N tracks to the selected list
         let (mut tracks, owner_uri) = match fetch_playlist_tracks(
@@ -172,9 +191,9 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         {
             Some(v) => (v.tracks, v.owner_uri),
             None => {
-                // cannot proceed if the target playlist does not exist
-                log!("Cannot fetch playlist details from Spotify");
-                return;
+                // ignore the failure - not critical
+                // TODO: add a counter
+                continue;
             }
         };
 
@@ -226,15 +245,20 @@ pub(crate) async fn fetch_all_albums_and_playlists(
         unselected_tracks.len()
     );
 
-    log!("Selected tracks:");
-    log!(
-        "{}",
-        selected_tracks
-            .clone()
-            .into_iter()
-            .collect::<Vec<String>>()
-            .join("\n")
-    );
+    let selected_playlist_tracks_count = selected_tracks.len() - selected_album_tracks_count;
+    report_progress(&format!(
+        "Selected {selected_playlist_tracks_count} tracks from playlists"
+    ));
+
+    // log!("Selected tracks:");
+    // log!(
+    //     "{}",
+    //     selected_tracks
+    //         .clone()
+    //         .into_iter()
+    //         .collect::<Vec<String>>()
+    //         .join("\n")
+    // );
 
     // remove duplicates already present in the target playlist
     // TODO: this does not work because playlist tracks are capped and this list doesn't have them all
@@ -256,17 +280,19 @@ pub(crate) async fn fetch_all_albums_and_playlists(
     let msg = [
         "Adding ",
         &selected_tracks.len().to_string(),
-        "tracks to this playlist",
+        "tracks to the target playlist",
     ]
     .concat();
     report_progress(&msg);
 
     // add selected tracks to the back of the current playlist
-    add_tracks_to_playlist(
+    let tracks_added = add_tracks_to_playlist(
         auth_header_value,
         token_header_value,
         target_playlist_id,
         selected_tracks,
     )
     .await;
+
+    Ok(format!("Done: added {tracks_added} tracks"))
 }

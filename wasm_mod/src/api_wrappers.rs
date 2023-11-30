@@ -497,17 +497,23 @@ pub(crate) async fn fetch_lib_v3_items(
     all_lib_v3_items
 }
 
-/// Returns IDs of all playlist tracks.
+/// Adds the specified list of tracks to the playlist and reports on its progress.
+/// Failed additions are logged, but do not stop processing. Does not panic.  
+/// Returns the number of tracks added.
 pub(crate) async fn add_tracks_to_playlist(
     auth_header_value: &str,
     token_header_value: &str,
     playlist_id: &str,
     tracks_to_add: Vec<String>,
-) {
+) -> usize {
     log!(
         "add_tracks_to_playlist for: {playlist_id}, tracks: {}",
         tracks_to_add.len()
     );
+
+    // total counters for logging and returning the result
+    let mut tracks_added: usize = 0;
+    let mut tracks_missed: usize = 0;
 
     // request examples
     // POST / https://api-partner.spotify.com/pathfinder/v1/query
@@ -552,17 +558,21 @@ pub(crate) async fn add_tracks_to_playlist(
             {
                 Ok(v) => v,
                 Err(e) if matches!(e, RetryAfter::Never) => {
-                    return;
+                    tracks_missed += payload.variables.uris.len();
+                    continue;
                 }
                 Err(_) => {
                     unimplemented!("Retries are not implemented");
                 }
             };
             log!("Added {} tracks", idx + 1);
+            tracks_added += payload.variables.uris.len();
 
             // clear for the next lot
             payload.variables.uris = Vec::new();
         }
     }
-    log!("All tracks added");
+    log!("All tracks added: {tracks_added}, missed: {tracks_missed}");
+
+    tracks_added
 }

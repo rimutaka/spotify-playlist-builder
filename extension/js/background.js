@@ -1,6 +1,6 @@
 // A static import is required in b/g scripts because they are executed in their own env
 // not connected to the content scripts where wasm is loaded automatically
-import initWasmModule, { hello_background, rebuild_playlist } from './wasm/wasm_mod.js';
+import initWasmModule, { hello_background, add_random_tracks } from './wasm/wasm_mod.js';
 
 console.log("Background started v16:42");
 
@@ -21,14 +21,28 @@ let fetching = false;
     hello_background();
 })();
 
-function onError(error) {
-    console.error(`B/g error: ${error}`);
+// A placeholder for OnSuccess in .then
+function handleResponse(message) {
+    // console.log(`Send OK: ${JSON.stringify(message)}`);
+}
+
+// A placeholder for OnError in .then
+function handleError(error) {
+    // console.log(`Send error: ${error}`);
 }
 
 // Popup button handler
 // Fetches the data from Spotify using the creds extracted earlier
 chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
+
+    // only one wasm should be running at a time
+    // TODO: disable the button
+    if (fetching) {
+        chrome.runtime.sendMessage("Already running. Restart the browser if stuck on this message.").then(handleResponse, handleError);
+        return;
+    }
+
     const playlistId = await getPlaylistIdFromCurrentTabUrl();
 
     // user ID is loaded first time the extension is invoked
@@ -37,20 +51,21 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
             await fetchUserDetails()
         }
         catch {
-            console.error("Error while fetching user details from Spotify. Reload the page to update.");
+            chrome.runtime.sendMessage("Error while fetching user details from Spotify. Reload the page and try again.").then(handleResponse, handleError);
             return;
         }
     };
 
     // cannot proceed without userUri 
     if (!userUri) {
-        console.error("Missing user details. Reload the page to update.");
+        chrome.runtime.sendMessage("Missing user details. Reload the page and try again.").then(handleResponse, handleError);
         return;
     }
 
+    // call the WASM code
     if (authHeaderValue && tokenHeaderValue && !fetching) {
         fetching = true;
-        await rebuild_playlist(authHeaderValue, tokenHeaderValue, playlistId, userUri)
+        await add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri)
         fetching = false;
     }
 });
@@ -187,6 +202,7 @@ async function getPlaylistIdFromCurrentTabUrl() {
     // console.log(JSON.stringify(tab));
 
     if (!tab || !tab.url) {
+        chrome.runtime.sendMessage("Cannot get playlist tab URL. Reload the page and try again.").then(handleResponse, handleError);
         console.log("Empty active tab URL")
         return undefined
     }
