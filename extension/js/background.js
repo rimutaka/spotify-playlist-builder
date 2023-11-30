@@ -22,13 +22,13 @@ let fetching = false;
 })();
 
 // A placeholder for OnSuccess in .then
-function handleResponse(message) {
+function onSuccess(message) {
     // console.log(`Send OK: ${JSON.stringify(message)}`);
 }
 
 // A placeholder for OnError in .then
-function handleError(error) {
-    // console.log(`Send error: ${error}`);
+function onError(error) {
+    console.error(`Promise error: ${error}`);
 }
 
 // Popup button handler
@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // only one wasm should be running at a time
     // TODO: disable the button
     if (fetching) {
-        chrome.runtime.sendMessage("Already running. Restart the browser if stuck on this message.").then(handleResponse, handleError);
+        chrome.runtime.sendMessage("Already running. Restart the browser if stuck on this message.").then(onSuccess, onError);
         return;
     }
 
@@ -51,22 +51,38 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
             await fetchUserDetails()
         }
         catch {
-            chrome.runtime.sendMessage("Error while fetching user details from Spotify. Reload the page and try again.").then(handleResponse, handleError);
+            chrome.runtime.sendMessage("Error while fetching user details from Spotify. Reload the page and try again.").then(onSuccess, onError);
             return;
         }
     };
 
     // cannot proceed without userUri 
     if (!userUri) {
-        chrome.runtime.sendMessage("Missing user details. Reload the page and try again.").then(handleResponse, handleError);
+        chrome.runtime.sendMessage("Missing user details. Reload the page and try again.").then(onSuccess, onError);
         return;
     }
 
     // call the WASM code
     if (authHeaderValue && tokenHeaderValue && !fetching) {
+
+        // semaphore to indicate an active WASM process 
         fetching = true;
+
+        // change the toolbar icon
+        chrome.action.setBadgeText(
+            { text: "..." }
+        ).then(onSuccess, onError)
+
+        // call WASM
         await add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri)
+
+        // reset the semaphore
         fetching = false;
+
+        // reset toolbar icon
+        chrome.action.setBadgeText(
+            { text: "" }
+        ).then(onSuccess, onError)
     }
 });
 
@@ -202,7 +218,7 @@ async function getPlaylistIdFromCurrentTabUrl() {
     // console.log(JSON.stringify(tab));
 
     if (!tab || !tab.url) {
-        chrome.runtime.sendMessage("Cannot get playlist tab URL. Reload the page and try again.").then(handleResponse, handleError);
+        chrome.runtime.sendMessage("Cannot get playlist tab URL. Reload the page and try again.").then(onSuccess, onError);
         console.log("Empty active tab URL")
         return undefined
     }
