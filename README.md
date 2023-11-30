@@ -1,21 +1,21 @@
 # Chrome extension for generating a random playlist from your library tracks, albums and playlists 
 
-Spotify removed Play button inside _My Library_. It is no longer possible to shuffle and play all the tracks from My Library, including albums and playlists.
+This extension builds a Spotify playlist out of random tracks found in _My Library_ to let you listen to everything you have in there on shuffle.  
 
-This extension builds a playlist out of random tracks found in your library. It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
+It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
 * Install the extension
-* Log into spotify
+* Log into Spotify
 * Create a new playlist
 * Click on the extension button in the toolbar menu to add tracks
 
-The extension adds random tracks to the current playlist in the background. You can close the Spotify tab or navigate away from the playlist.
+Once the extension is running, you can close the Spotify tab or navigate away from the playlist. It will continue creating a shuffled sample of your library in the background. 
 
-There is no progress or completion notification from the extension - reload the playlist to see if enough tracks have been added.
+The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress.
 
 ### Feedback and bug reports
 
-This project is under active development may not always. Open an issue if you run into problems or have any kind of feedback.
+This project is under active development. Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builder/issues) if you run into problems or have any kind of feedback.
 
 ### Privacy policy
 
@@ -36,4 +36,4 @@ Most of the work is done by [a WASM module](wasm_mod) built in Rust.
 
 The extension stub was taken from https://github.com/theberrigan/rust-wasm-chrome-ext by https://github.com/theberrigan.
 
-The toolbar icon is based on something by https://rawpixel.com
+The toolbar icon is based on a vector image by https://rawpixel.com.

@@ -2,7 +2,7 @@
 // not connected to the content scripts where wasm is loaded automatically
 import initWasmModule, { hello_background, add_random_tracks } from './wasm/wasm_mod.js';
 
-console.log("Background started v16:42");
+console.log("Background script started");
 
 // values extracted from headers and spotify responses
 // for passing onto WASM

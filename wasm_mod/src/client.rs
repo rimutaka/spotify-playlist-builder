@@ -60,7 +60,7 @@ pub(crate) async fn generate_random_playlist(
         target_playlist_tracks.len()
     ));
 
-    report_progress("Fetching list of albums in My Library");
+    report_progress("Fetching list of albums from My Library");
 
     // collect all album IDs
     let all_albums = fetch_lib_v3_items(auth_header_value, token_header_value, "Albums").await;
@@ -73,7 +73,7 @@ pub(crate) async fn generate_random_playlist(
 
     // log!("{}", all_albums.join("\n"));
     report_progress(&format!("Found {} albums in the library", all_albums.len()));
-    report_progress("Fetching list of playlists in My Library");
+    report_progress("Fetching list of playlists from My Library");
 
     // repeat the same for playlists - collect all playlist IDs
 
