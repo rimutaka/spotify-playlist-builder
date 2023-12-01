@@ -12,7 +12,7 @@ function onError(error) {
 
 // Popups cannot have any inline scripts with our security policies.
 // Click handlers should be added when the popup is opened.
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
   // console.log("Toolbar button clicked");
 
   // contact us / feedback link
@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }, onError)
 
+  // hide the help message about opening the extension on a playlist page if it is a playlist page
+  if (await isPlaylist()) {
+    document.getElementById("otherPage").style.display = "none"
+  }
+  else {
+    // it is not a playlist page - disable the button
+    btn.disabled = true;
+  }
+
 });
 
 // listens for msgs from WASM
@@ -71,3 +80,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   document.getElementById("log-summary").innerText = msg;
 }
 );
+
+// Returns true if the current tab URL contains /playlist/ part
+async function isPlaylist() {
+
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // console.log(JSON.stringify(tab));
+
+  if (!tab || !tab.url) {
+    document.getElementById("log-summary").innerText = "Cannot get playlist tab URL. Reload the page and try again.";
+    console.log("Empty active tab URL")
+    return false
+  }
+
+  return tab.url.includes("/playlist/")
+}

@@ -62,7 +62,8 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
         try {
             await fetchUserDetails()
         }
-        catch {
+        catch (e) {
+            console.error(e);
             chrome.runtime.sendMessage("Error while fetching user details from Spotify. Reload the page and try again.").then(onSuccess, onError);
             return;
         }
@@ -197,32 +198,6 @@ async function fetchUserDetails() {
     userUri = respJson?.data?.me?.profile?.uri;
     console.log(`User URI: ${userUri}`)
 }
-
-// Performs the extension and UI initialization on install, which is when the extension is activated by the browser
-// Uplifted from https://developer.chrome.com/docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
-// requires declarativeContent permission
-chrome.runtime.onInstalled.addListener(() => {
-    // Page actions are disabled by default and enabled on select tabs
-    chrome.action.disable();
-
-    // Clear all rules to ensure only our expected rules are set
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-        // Declare a rule to enable the action on example.com pages
-        let playlistPageRule = {
-            conditions: [
-                new chrome.declarativeContent.PageStateMatcher({
-                    pageUrl: { hostSuffix: '.spotify.com', pathContains: 'playlist' },
-                })
-            ],
-            actions: [new chrome.declarativeContent.ShowAction()],
-        };
-
-        // Finally, apply our new array of rules
-        let rules = [playlistPageRule];
-        chrome.declarativeContent.onPageChanged.addRules(rules);
-        console.log("Button rule added")
-    });
-});
 
 // Returns the playlist ID or undefined.
 // The playlist is at the end of the URL
