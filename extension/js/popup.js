@@ -87,11 +87,5 @@ async function isPlaylist() {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   // console.log(JSON.stringify(tab));
 
-  if (!tab || !tab.url) {
-    document.getElementById("log-summary").innerText = "Cannot get playlist tab URL. Reload the page and try again.";
-    console.log("Empty active tab URL")
-    return false
-  }
-
-  return tab.url.includes("/playlist/")
+  return tab?.url?.includes("/playlist/")
 }

@@ -28,6 +28,11 @@ function onSuccess(message) {
 
 // A placeholder for OnError in .then
 function onError(error) {
+    // console.error(`Promise error: ${error}`);
+}
+
+// A placeholder for OnError in .then
+function onErrorWithLog(error) {
     console.error(`Promise error: ${error}`);
 }
 
@@ -99,7 +104,7 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
 function toggleToolbarBadge() {
     chrome.action.setBadgeText(
         { text: (fetching) ? "..." : "" }
-    ).then(onSuccess, onError)
+    ).then(onSuccess, onErrorWithLog)
     chrome.runtime.sendMessage(fetching).then(onSuccess, onError);
 }
 
