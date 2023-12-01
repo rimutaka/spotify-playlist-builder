@@ -9,7 +9,7 @@ console.log("Background script started");
 let authHeaderValue = ""; // creds
 let tokenHeaderValue = ""; // creds
 let userUri = ""; // user ID
-let userDetailsRequestHeaders = new Headers();
+let userDetailsRequestHeaders = new Headers(); // a copy of Spotify headers to impersonate the user
 
 // a temp flag to stop multiple fetches
 let fetching = false;
@@ -34,7 +34,19 @@ function onError(error) {
 // Popup button handler
 // Fetches the data from Spotify using the creds extracted earlier
 chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
-    console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
+    // console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
+
+    // check what kind of message it is and either log it or act on it
+    if (request?.action == "btn_add") {
+        // this is a check for the main action - let the code run its course after the completion of this if-block
+        console.log(`User clicked btn_add`);
+    }
+    else {
+        // this is an unexpected option - something is off and there is a bug
+        console.error(`Unexpected popup.html message - it's a bug`);
+        console.error(JSON.stringify(request));
+        return;
+    }
 
     // only one wasm should be running at a time
     // TODO: disable the button
@@ -65,26 +77,30 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // call the WASM code
     if (authHeaderValue && tokenHeaderValue && !fetching) {
 
-        // semaphore to indicate an active WASM process 
+        // indicate an active WASM process 
         fetching = true;
 
-        // change the toolbar icon
-        chrome.action.setBadgeText(
-            { text: "..." }
-        ).then(onSuccess, onError)
+        toggleToolbarBadge();
 
         // call WASM
-        await add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri)
-
-        // reset the semaphore
-        fetching = false;
-
-        // reset toolbar icon
-        chrome.action.setBadgeText(
-            { text: "" }
-        ).then(onSuccess, onError)
+        add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri).catch((e) => {
+            console.error(e);
+            chrome.runtime.sendMessage(JSON.stringify(e)).then(onSuccess, onError);
+        }).finally(() => {
+            // reset WASM, log to inactive and drop toolbar icon badge
+            fetching = false;
+            toggleToolbarBadge();
+        })
     }
 });
+
+/// Sets the badge as per fetching var and notifies the popup about the status change
+function toggleToolbarBadge() {
+    chrome.action.setBadgeText(
+        { text: (fetching) ? "..." : "" }
+    ).then(onSuccess, onError)
+    chrome.runtime.sendMessage(fetching).then(onSuccess, onError);
+}
 
 // Gets Spotify request headers from request details to extract creds
 async function captureSessionToken(details) {
