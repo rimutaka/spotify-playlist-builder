@@ -11,7 +11,33 @@ It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
 Once the extension is running, you can close the Spotify tab or navigate away from the playlist. It will continue creating a shuffled sample of your library in the background. 
 
-The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress.
+The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress. More information is logged into the browser console by WASM and JS scripts.
+
+### Screenshots
+
+Activate the extension
+
+![extension menu](media/screen-chrome-ext-menu.png)
+
+It will only work on a page with a Spotify playlist
+
+![spotify homepage](media/screen-spotify-homepage.png)
+
+Create a new playlist or open a playlist you created earlier and already added tracks to.
+New tracks are added at the end of the playlist.
+
+![target playlist](media/screen-spotify-playlist.png)
+
+A simple progress log is displayed while the tracks are being added.
+Keep the popup window open if you want to watch the updates.
+
+The little badge with `...` over the toolbar button appears while the background script is running. 
+
+![progress log](media/screen-spotify-progress-log.png)
+
+Refresh the page to see newly added tracks.
+
+![playlist done](media/screen-spotify-playlist-done.png)
 
 ### Feedback and bug reports
 
