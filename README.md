@@ -6,7 +6,7 @@ It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
 ### Get started
 
-* Install the extension
+* Install the extension ([Chrome Webstore](https://chromewebstore.google.com/detail/kmbnbjbfpnchgmmkbeidpllpamcahljn/))
 * Log into Spotify
 * Create a new playlist
 * Click on the extension button in the toolbar menu to add tracks
