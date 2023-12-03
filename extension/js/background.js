@@ -109,52 +109,55 @@ function toggleToolbarBadge() {
 }
 
 // Gets Spotify request headers from request details to extract creds
-async function captureSessionToken(details) {
+async function captureSessionToken(requestDetails) {
 
     console.log("captureSessionToken fired")
     // console.log(details)
     // console.log(details.tabId)
 
+    // local copies in case the headers are empty or incomplete
+    // which is unlikely to happen - why would Spotify send an invalid request to itself?
+    const headers = new Headers();
+    let auth = "";
+    let token = "";
+
     // loop through all headers and grab the two we need
-    for (const header of details.requestHeaders) {
+    // https://developer.mozilla.org/en-US/docs/Web/API/Headers
+    for (const header of requestDetails.requestHeaders) {
+        headers.set(header.name, header.value)
         if (header.name == 'authorization') {
-            authHeaderValue = header.value
+            auth = header.value
             // console.log(authHeaderValue)
         }
 
         if (header.name == 'client-token') {
-            tokenHeaderValue = header.value
+            token = header.value
             // console.log(tokenHeaderValue)
         }
     }
+
+    if (auth && token) {
+        authHeaderValue = auth;
+        tokenHeaderValue = token
+        userDetailsRequestHeaders = headers;
+        // console.log(`Tokens captured: ${authHeaderValue} / ${tokenHeaderValue}`)
+        // console.log(requestDetails.requestHeaders)
+    }
+    else {
+        // console.log(`Tokens missing: ${auth} / ${token} / ${requestDetails.requestHeaders}`)
+    }
+
+    // for (const header of userDetailsRequestHeaders) {
+    //     console.log(`${header[0]}: ${header[1]}`)
+    // }
 }
 
 // A Spotify request interceptor to capture user creds
 chrome.webRequest.onBeforeSendHeaders.addListener(captureSessionToken, { urls: ['https://api-partner.spotify.com/pathfinder/v1/query*'] }, ["requestHeaders"])
 
 
-// Captures headers of Spotify user details request to extract user ID later when we need it
-// It intercepts the original requests and stores the headers for a later replay
-// because I could not find an easy way of capturing the response content of the original request.
-chrome.webRequest.onBeforeSendHeaders.addListener(
-    captureSpotifyHeaders,
-    { urls: ['https://api-partner.spotify.com/pathfinder/v1/query?operationName=profileAndAccountAttributes*'] },
-    ["requestHeaders"]);
 
-// Requests user details from Spotify to extract user ID
-async function captureSpotifyHeaders(requestDetails) {
-    console.log("captureSpotifyHeaders fired")
 
-    // https://stackoverflow.com/questions/40888038/chrome-extension-how-to-remove-a-listener-on-chrome-webrequest-onbeforerequest
-    chrome.webRequest.onBeforeSendHeaders.removeListener(captureSpotifyHeaders)
-    console.log("captureSpotifyHeaders listener removed")
-
-    // loop through all headers and grab the two we need
-    // https://developer.mozilla.org/en-US/docs/Web/API/Headers
-    for (const header of requestDetails.requestHeaders) {
-        userDetailsRequestHeaders.set(header.name, header.value)
-    }
-}
 
 // Requests user details from Spotify to extract user ID
 async function fetchUserDetails() {
