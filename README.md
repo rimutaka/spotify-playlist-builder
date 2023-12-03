@@ -1,8 +1,10 @@
-# Chrome extension for generating a random playlist from your library tracks, albums and playlists 
+# Chrome extension for generating random playlists from your library tracks, albums and playlists 
 
-This extension builds a Spotify playlist out of random tracks found in _My Library_ to let you listen to everything you have in there on shuffle.  
+This extension builds a Spotify playlist out of a random selection of tracks found in _My Library_ to let you listen to everything you have in there on shuffle.  
 
 It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
+
+### Get started
 
 * Install the extension
 * Log into Spotify
@@ -11,7 +13,7 @@ It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
 Once the extension is running, you can close the Spotify tab or navigate away from the playlist. It will continue creating a shuffled sample of your library in the background. 
 
-The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress. More information is logged into the browser console by WASM and JS scripts.
+The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress. More information is logged into the browser console by WASM and JS scripts. No logs are stored or transmitted anywhere.
 
 ### Screenshots
 
@@ -19,7 +21,7 @@ Activate the extension
 
 ![extension menu](media/screen-chrome-ext-menu.png)
 
-It will only work on a page with a Spotify playlist
+It works only on a page with a Spotify playlist
 
 ![spotify homepage](media/screen-spotify-homepage.png)
 
@@ -41,7 +43,7 @@ Refresh the page to see newly added tracks.
 
 ### Feedback and bug reports
 
-This project is under active development. Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builder/issues) if you run into problems or have any kind of feedback.
+Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builder/issues) if you run into problems or have any kind of feedback.
 
 ### Privacy policy
 
