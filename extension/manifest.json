@@ -28,8 +28,7 @@
         "service_worker": "js/background.js"
     },
     "permissions": [
-        "webRequest",
-        "declarativeContent"
+        "webRequest"
     ],
     "host_permissions": [
         "*://*.spotify.com/*",
