@@ -1,10 +1,10 @@
 use std::fmt::Debug;
 
 // use std::time::Duration;
-use crate::{constants::log, models::Payload, Result, RetryAfter};
+use crate::{constants::log, models::Payload, BrowserRuntime, Result, RetryAfter};
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::JsFuture;
-use web_sys::{Request, RequestInit, RequestMode, Response, WorkerGlobalScope};
+use web_sys::{Request, RequestInit, RequestMode, Response};
 
 /// Prepares and executes an HTTP request to spotify.
 /// ## Types
@@ -19,6 +19,7 @@ pub(super) async fn execute_http_request<R, P>(
     token_header_value: &str,
     url: &str,
     payload: Option<&Payload<P>>,
+    runtime: &BrowserRuntime,
 ) -> Result<R>
 where
     R: for<'de> serde::Deserialize<'de>,
@@ -76,19 +77,16 @@ where
 
     // log!("Headers set");
 
-    // WorkerGlobalScope object is needed to perform fetch
-    let worker_global_scope = match js_sys::global().dyn_into::<WorkerGlobalScope>() {
-        Ok(v) => v,
-        Err(e) => {
-            log!("WorkerGlobalScope unavailable");
-            log!("{:?}", e);
-            // TODO: may be worth a retry
-            return Err(RetryAfter::Never);
-        }
+    // both window and globalscope have the same interface, but they are separate types so Rust has
+    // to have separate paths for them  
+    // the output is the same type for both
+    let resp_value = match runtime {
+        BrowserRuntime::ChromeWorker(v) => JsFuture::from(v.fetch_with_request(&request)).await,
+        BrowserRuntime::FireFoxWindow(v) => JsFuture::from(v.fetch_with_request(&request)).await,
     };
 
-    // execute the fetch promise using Rust's JsFuture
-    let resp_value = match JsFuture::from(worker_global_scope.fetch_with_request(&request)).await {
+    // unwrap the response
+    let resp_value = match resp_value {
         Ok(v) => v,
         Err(e) => {
             log!("Spotify request failed");

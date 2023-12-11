@@ -11,3 +11,17 @@ wasm-pack build wasm_mod --dev --no-typescript --out-dir "../extension/js/wasm" 
 echo Removing trash files...
 rm -f extension/js/wasm/.gitignore
 rm -f extension/js/wasm/package.json
+
+## create chrome package and exclude manifest for firefox
+## see ReadMe for more info on manifest config
+## subshell call with cd is required to avoid placing /extension/ folder as the root
+rm -f chrome.zip && \
+(cd extension && zip -rq ../chrome.zip . -x manifest_ff.json -x manifest.json) && \
+printf "@ manifest_cr.json\n@=manifest.json\n" | zipnote -w chrome.zip && \
+echo Chrome package: chrome.zip
+
+## create firefox package, exclude chrome manifest and rename FF manifest to its default file name
+rm -f firefox.zip && \
+(cd extension && zip -rq ../firefox.zip . -x manifest_cr.json -x manifest.json) && \
+printf "@ manifest_ff.json\n@=manifest.json\n" | zipnote -w firefox.zip && \
+echo Firefox package: firefox.zip

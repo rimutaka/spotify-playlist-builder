@@ -60,6 +60,23 @@ It does not transmit any of your data to any third party. All requests go to Spo
 
 Most of the work is done by [a WASM module](wasm_mod) built in Rust.
 
+### Manifests
+
+Firefox and Chrome have incompatible manifest specs and have to be kept separately.
+
+* manifest.json - either CR or FF for local debugging, not included in the Git repo
+* manifest_ff.json - for Firefox
+* manifest_cr.json - for Chrome
+
+_build.sh_ script includes the right manifest file in the right package and excludes the others.
+
+Debugging extensions locally requires a manual step to rename or clone either _manifest_ff.json_ or _manifest_cr.json_ into _manifest.json_:
+- rename the target manifest file into _manifest.json_
+- load a temporary extension locally for debugging (requires that _manifest.json_ to be present)
+- rename _manifest.json_ back into the target manifest file before packaging the extension
+- _build.sh_ script prints an error if you forget to rename _manifest.json_ back
+
+
 ## Attributions
 
 The extension stub was taken from https://github.com/theberrigan/rust-wasm-chrome-ext by https://github.com/theberrigan.

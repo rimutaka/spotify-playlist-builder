@@ -1,0 +1,63 @@
+{
+    "manifest_version": 3,
+    "name": "Spotify Playlist Builder",
+    "short_name": "Spotty",
+    "description": "Generate a random playlist from everything stored in My Library, including liked tracks, albums and playlists.",
+    "version": "0.3.1",
+    "author": "@rimutaka",
+    "action": {
+        "default_title": "Adds a random selection from My Library to a playlist. Activates on a new Spotify playlist page.",
+        "default_icon": {
+            "19": "assets/toolbar_icon_19.png",
+            "16": "assets/toolbar_icon_19.png",
+            "32": "assets/toolbar_icon_19.png",
+            "38": "assets/toolbar_icon_38.png"
+        },
+        "default_popup": "js/popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    },
+    "background": {
+        "type": "module",
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "permissions": [
+        "webRequest"
+    ],
+    "host_permissions": [
+        "*://*.spotify.com/*",
+        "*://*.spotify.com/*"
+    ],
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "all_frames": false,
+            "matches": [
+                "*://open.spotify.com/playlist/*"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "resources": [
+                "js/wasm/wasm_mod.js",
+                "js/wasm/wasm_mod_bg.wasm"
+            ]
+        }
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{aed20410-8c19-4833-aa70-42223e29c363}",
+            "strict_min_version": "112.0"
+        }
+    }
+}

@@ -6,7 +6,7 @@ use crate::{
         IgnoredData, Payload, PayloadExtensions, PersistedQuery, VariablesAddTracksToPlaylist,
         VariablesAlbumOrPlaylistTracks, VariablesV3Items,
     },
-    RetryAfter,
+    BrowserRuntime, RetryAfter,
 };
 
 mod utils;
@@ -18,6 +18,7 @@ pub(crate) async fn fetch_album_tracks(
     token_header_value: &str,
     album_id: &str,
     max_number_of_tracks: usize,
+    runtime: &BrowserRuntime,
 ) -> Vec<String> {
     log!("fetch_album_tracks for: {album_id}");
 
@@ -46,7 +47,7 @@ pub(crate) async fn fetch_album_tracks(
     let album_tracks = match execute_http_request::<
         models::album::AlbumTracksRoot,
         Option<IgnoredData>,
-    >(auth_header_value, token_header_value, &url, None)
+    >(auth_header_value, token_header_value, &url, None, runtime)
     .await
     {
         Ok(v) => v,
@@ -115,6 +116,7 @@ pub(crate) async fn fetch_album_tracks(
             token_header_value,
             &url,
             None,
+            runtime,
         )
         .await
     {
@@ -185,6 +187,7 @@ pub(crate) async fn fetch_playlist_tracks(
     token_header_value: &str,
     playlist_id: &str,
     max_number_of_tracks: usize,
+    runtime: &BrowserRuntime,
 ) -> Option<PlaylistTracks> {
     log!("fetch_playlist_tracks for: {playlist_id}");
 
@@ -217,6 +220,7 @@ pub(crate) async fn fetch_playlist_tracks(
         token_header_value,
         &url,
         None,
+        runtime,
     )
     .await
     {
@@ -298,6 +302,7 @@ pub(crate) async fn fetch_playlist_tracks(
             token_header_value,
             &url,
             None,
+            runtime,
         )
         .await
     {
@@ -370,6 +375,7 @@ pub(crate) async fn fetch_lib_v3_items(
     auth_header_value: &str,
     token_header_value: &str,
     filter: &str,
+    runtime: &BrowserRuntime,
 ) -> Vec<String> {
     log!("fetch_lib_v3_items entered, filter: {filter}");
 
@@ -395,7 +401,7 @@ pub(crate) async fn fetch_lib_v3_items(
     let lib_v3_items = match execute_http_request::<
         models::albums_playlists::LibV3ItemsRoot,
         Option<IgnoredData>,
-    >(auth_header_value, token_header_value, &url, None)
+    >(auth_header_value, token_header_value, &url, None, runtime)
     .await
     {
         Ok(v) => v,
@@ -455,7 +461,7 @@ pub(crate) async fn fetch_lib_v3_items(
     while let Ok(items) = execute_http_request::<
         models::albums_playlists::LibV3ItemsRoot,
         Option<IgnoredData>,
-    >(auth_header_value, token_header_value, &url, None)
+    >(auth_header_value, token_header_value, &url, None, runtime)
     .await
     {
         // check if spotify returned any items at all
@@ -505,6 +511,7 @@ pub(crate) async fn add_tracks_to_playlist(
     token_header_value: &str,
     playlist_id: &str,
     tracks_to_add: Vec<String>,
+    runtime: &BrowserRuntime,
 ) -> usize {
     log!(
         "add_tracks_to_playlist for: {playlist_id}, tracks: {}",
@@ -553,6 +560,7 @@ pub(crate) async fn add_tracks_to_playlist(
                 token_header_value,
                 BUILD_POST_URL,
                 Some(&payload),
+                runtime,
             )
             .await
             {

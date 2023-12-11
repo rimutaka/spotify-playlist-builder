@@ -1,3 +1,4 @@
+use crate::BrowserRuntime;
 use std::collections::HashSet;
 
 // use std::time::Duration;
@@ -17,6 +18,7 @@ pub(crate) async fn generate_random_playlist(
     token_header_value: &str,
     target_playlist_id: &str,
     user_uri: &str,
+    runtime: &BrowserRuntime,
 ) -> Result<String, String> {
     report_progress("Eclectic work started");
     report_progress("Fetching details of the target playlist");
@@ -32,6 +34,7 @@ pub(crate) async fn generate_random_playlist(
         token_header_value,
         target_playlist_id,
         1000,
+        runtime,
     )
     .await
     {
@@ -63,7 +66,8 @@ pub(crate) async fn generate_random_playlist(
     report_progress("Fetching list of albums from My Library");
 
     // collect all album IDs
-    let all_albums = fetch_lib_v3_items(auth_header_value, token_header_value, "Albums").await;
+    let all_albums =
+        fetch_lib_v3_items(auth_header_value, token_header_value, "Albums", runtime).await;
 
     // remove the repetitive prefix
     let mut all_albums = all_albums
@@ -83,7 +87,7 @@ pub(crate) async fn generate_random_playlist(
     // variables: {"filters":["Playlists"],"order":null,"textFilter":"","features":["LIKED_SONGS","YOUR_EPISODES"],"limit":50,"offset":6,"flatten":false,"expandedFolders":[],"folderUri":null,"includeFoldersWhenFlattening":true,"withCuration":false}
 
     let all_playlists =
-        fetch_lib_v3_items(auth_header_value, token_header_value, "Playlists").await;
+        fetch_lib_v3_items(auth_header_value, token_header_value, "Playlists", runtime).await;
 
     // remove the repetitive prefix and exclude the current playlist
     let mut all_playlists = all_playlists
@@ -119,8 +123,14 @@ pub(crate) async fn generate_random_playlist(
     report_progress("Selecting random album tracks");
     for album_id in all_albums {
         // get album tracks, shuffle and add top N tracks to the selected list
-        let mut album_tracks =
-            fetch_album_tracks(auth_header_value, token_header_value, &album_id, 50).await;
+        let mut album_tracks = fetch_album_tracks(
+            auth_header_value,
+            token_header_value,
+            &album_id,
+            50,
+            runtime,
+        )
+        .await;
 
         if album_tracks.is_empty() {
             log!("Empty album {album_id}");
@@ -186,6 +196,7 @@ pub(crate) async fn generate_random_playlist(
             token_header_value,
             &playlist_id,
             constants::MAX_TRACKS_PER_PLAYLIST,
+            runtime,
         )
         .await
         {
@@ -291,6 +302,7 @@ pub(crate) async fn generate_random_playlist(
         token_header_value,
         target_playlist_id,
         selected_tracks,
+        runtime,
     )
     .await;
 
