@@ -84,7 +84,7 @@ _build.sh_ script includes the right manifest file in the right package and excl
 - click on _Permissions_ tab
 - click on the toggles to enable the permissions
 
-Firefox resets the permissions when the extension is uninstalled, but remembers them if you refresh/reload it.
+Firefox resets the permissions when the extension is uninstalled, but remembers them if you refresh/reload it. See https://extensionworkshop.com/documentation/develop/test-permission-requests/ for more details.
 
 
 ## Attributions
