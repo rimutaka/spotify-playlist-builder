@@ -28,20 +28,7 @@
         "webRequest"
     ],
     "host_permissions": [
-        "*://*.spotify.com/*",
         "*://*.spotify.com/*"
-    ],
-    "content_scripts": [
-        {
-            "run_at": "document_end",
-            "all_frames": false,
-            "matches": [
-                "*://open.spotify.com/playlist/*"
-            ],
-            "js": [
-                "js/content.js"
-            ]
-        }
     ],
     "web_accessible_resources": [
         {

@@ -27,10 +27,10 @@ extern "C" {
     fn log(s: &str);
 }
 
-// Will be called in background.js
+// A dummy to demonstrate that WASM is callable from background.js
 #[wasm_bindgen]
-pub fn hello_background() {
-    log("Hello from the background script!");
+pub fn hello_wasm() {
+    log("Hello from WASM!");
 }
 
 #[wasm_bindgen]

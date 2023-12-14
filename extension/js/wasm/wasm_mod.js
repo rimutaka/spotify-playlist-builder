@@ -266,8 +266,8 @@ function __wbg_adapter_44(arg0, arg1, arg2) {
 
 /**
 */
-export function hello_background() {
-    wasm.hello_background();
+export function hello_wasm() {
+    wasm.hello_wasm();
 }
 
 /**
