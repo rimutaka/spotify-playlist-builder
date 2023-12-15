@@ -21,18 +21,20 @@ pub(crate) enum BrowserRuntime {
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
+/// Makes JS `console.log` available in Rust
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace=console)]
     fn log(s: &str);
 }
 
-// A dummy to demonstrate that WASM is callable from background.js
+/// A demo function to test if WASM is callable from background.js
 #[wasm_bindgen]
 pub fn hello_wasm() {
     log("Hello from WASM!");
 }
 
+/// The main entry point callable from `background.js`.
 #[wasm_bindgen]
 pub async fn add_random_tracks(
     auth_header_value: &str,
@@ -76,6 +78,8 @@ pub async fn add_random_tracks(
     };
 }
 
+/// This is a proxy for report_progress() in progress.js
+/// to send messages to other js scripts.
 #[wasm_bindgen(module = "/src/progress.js")]
 extern "C" {
     pub fn report_progress(msg: &str);

@@ -14,8 +14,15 @@ function handleError(error) {
   // console.log(`Send error: ${error}`);
 }
 
-// Sends a message to the popup
+// Sends a message to the popup.
+// There is nothing in the sending part that says who the recipient is,
+// but we know that it's the popup who may be listening and be interested in
+// these messages. Others may be listening as well.
+//
+// This function is imported into lib.rs
 export function report_progress(msg) {
   // console.log(`Progress: ${msg}`)
+  // we have to handle errors gracefully because if the sending fails,
+  // it brings down the entire thread and the WASM dies
   chrome.runtime.sendMessage(msg).then(handleResponse, handleError);
 }

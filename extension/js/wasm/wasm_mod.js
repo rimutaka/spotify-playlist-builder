@@ -265,12 +265,14 @@ function __wbg_adapter_44(arg0, arg1, arg2) {
 }
 
 /**
+* A demo function to test if WASM is callable from background.js
 */
 export function hello_wasm() {
     wasm.hello_wasm();
 }
 
 /**
+* The main entry point callable from `background.js`.
 * @param {string} auth_header_value
 * @param {string} token_header_value
 * @param {string} playlist_id
