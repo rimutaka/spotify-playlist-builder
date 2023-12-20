@@ -4,7 +4,7 @@ This extension builds a Spotify playlist out of a random selection of tracks fou
 
 It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
-**If you are looking at this repo to understand how a Rust/WASM extension may be built, see [Book.md](./Book.md) file. **
+**If you are looking at this repo to understand how a Rust/WASM extension may be built, see [Book.md](./Book.md) file.**
 
 ### Get started
 
