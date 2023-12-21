@@ -359,7 +359,7 @@ Network requests and responses from _background.js_ and WASM appear in the backg
 
 ## Cross-browser compatibility
 
-Most of the extension code works in both, Firefox and Chrome. There are a few small differences that have to be kept separate: _manifest_ and _global context_.
+Most of the extension code works in both, Firefox and Chrome. There are a few small differences that have to be kept separate: _manifest_, _global context_ and _host_permissions_.
 
 ### manifest.json
 
@@ -398,6 +398,23 @@ __Firefox__
 
 
 See `get_runtime()` function in [lib.rs](wasm_mod/src/lib.rs) for more implementation details. Also, see [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) and [WorkerGlobalScope](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope) docs on MDN.
+
+### Host permissions
+
+Both Chrome and Firefox have this entry in the manifest:
+```json
+"host_permissions": [
+    "*://*.spotify.com/*"
+]
+```
+
+The format is the same, but Chrome grants this permission on install and Firefox treats it as an optional permission that has to be requested at runtime.
+
+The extension code handles this discrepancy gracefully at the cost of some complexity. More info:
+
+* the implementation of `btn_add` _click_ listener in [popup.js](extension/js/popup.js) has detailed comments
+* MDN docs: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request
+* Firefox strange behavior: https://stackoverflow.com/questions/47723297/firefox-extension-api-permissions-request-may-only-be-called-from-a-user-input
 
 
 ## Listing WASM extensions in Google and Mozilla addon stores

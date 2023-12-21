@@ -3,6 +3,7 @@
 import initWasmModule, { hello_wasm, add_random_tracks } from './wasm/wasm_mod.js';
 
 console.log("Background script started");
+// console.log(await chrome.permissions.getAll());
 
 // values extracted from headers and spotify responses
 // for passing onto WASM
@@ -160,6 +161,14 @@ chrome.webRequest.onBeforeSendHeaders.addListener(captureSessionToken, { urls: [
 // Requests user details from Spotify to extract user ID
 async function fetchUserDetails() {
     console.log("fetchUserDetails fired")
+
+    if (!authHeaderValue) {
+        // this happens in FF when the permission was just granted and the processing kicked off
+        // but it takes some time to get the tokens
+        // there is probably a more elegant solution than asking the user to reload
+        console.log("Missing auth token for user details request");
+        return;
+    }
 
     // https://javascript.plainenglish.io/fetch-data-in-chrome-extension-v3-2b73719ffc0e
     const resp = await fetch('https://api-partner.spotify.com/pathfinder/v1/query?operationName=profileAndAccountAttributes&variables=%7B%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22d6989ae82c66a7fa0b3e40775552e08fa6856b77af1b71863fdd7f2cffb5d4d4%22%7D%7D', {
