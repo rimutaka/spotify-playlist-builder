@@ -4,11 +4,11 @@ This extension builds a Spotify playlist out of a random selection of tracks fou
 
 It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 
-**If you are looking at this repo to understand how a Rust/WASM extension may be built, see [Book.md](./Book.md) file.**
+**Extension developers:** see [Book.md](./Book.md) for a deep dive into Rust/WASM in browser extensions.
 
 ### Get started
 
-* Install the extension ([Chrome Webstore](https://chromewebstore.google.com/detail/spotify-playlist-builder/kmbnbjbfpnchgmmkbeidpllpamcahljn))
+* Install the extension ([Chrome Webstore](https://chromewebstore.google.com/detail/spotify-playlist-builder/kmbnbjbfpnchgmmkbeidpllpamcahljn) / [Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/spotify-playlist-builder-addon/))
 * Log into Spotify
 * Create a new playlist
 * Click on the extension button in the toolbar menu to add tracks
@@ -52,41 +52,18 @@ Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builde
 This extension does not collect any information about the user or user activities.  
 The only site it communicates with is Spotify.
 
+
 ## Under the hood
 
 The plugin intercepts the session token from Spotify requests and impersonates the Spotify client to:
 * read the contents of the user library
-* add random tracks to the current playlist
+* add random tracks from your library to the current playlist
 
-It does not transmit any of your data to any third party. All requests go to Spotify.
+It does not transmit any of your data to any third party. All requests go to Spotify only.
 
 Most of the work is done by [a WASM module](wasm_mod) built in Rust.
 
-### Manifests
-
-Firefox and Chrome have incompatible manifest specs and have to be kept separately.
-
-* manifest.json - either CR or FF for local debugging, not included in the Git repo
-* manifest_ff.json - for Firefox
-* manifest_cr.json - for Chrome
-
-_build.sh_ script includes the right manifest file in the right package and excludes the others.
-
-**Debugging extensions locally** requires a manual step to rename or clone either _manifest_ff.json_ or _manifest_cr.json_ into _manifest.json_:
-- rename the target manifest file into _manifest.json_
-- load a temporary extension locally for debugging (requires that _manifest.json_ to be present)
-- rename _manifest.json_ back into the target manifest file before packaging the extension
-- _build.sh_ script prints an error if you forget to rename _manifest.json_ back
-
-**Debugging in Firefox** requires a manual step of adding permissions after the installation:
-
-- load the temporary addon locally ([about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox))
-- open [about:addons](about:addons) and click on the newly installed extension entry in the list of all your extensions
-- Firefox will open the extension details page
-- click on _Permissions_ tab
-- click on the toggles to enable the permissions
-
-Firefox resets the permissions when the extension is uninstalled, but remembers them if you refresh/reload it. See https://extensionworkshop.com/documentation/develop/test-permission-requests/ for more details.
+[Book.md](./Book.md) contains a detailed tutorial about creating a browser extension with Rust/WASM.
 
 
 ## Attributions
