@@ -3,7 +3,7 @@
     "name": "Spotify Playlist Builder",
     "short_name": "Spotty",
     "description": "Generate a random playlist from everything stored in My Library, including liked tracks, albums and playlists.",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "author": "@rimutaka",
     "action": {
         "default_title": "Adds a random selection from My Library to a playlist. Activates on a new Spotify playlist page.",
