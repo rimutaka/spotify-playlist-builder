@@ -41,6 +41,7 @@ pub async fn add_random_tracks(
     token_header_value: &str,
     playlist_id: &str,
     user_uri: &str,
+    number_of_tracks_to_add: Option<u32>,
 ) {
     // try to init the browser runtime, but there is nothing we can do if it's missing
     // if it does, there is either a bug or something changed in the browser implementation
@@ -54,6 +55,20 @@ pub async fn add_random_tracks(
         }
     };
 
+    // the number of tracks comes from a dropdown and may potentially be invalid
+    let number_of_tracks_to_add: usize = match number_of_tracks_to_add {
+        Some(v) => match v.try_into() {
+            Ok(v) => v,
+            Err(e) => {
+                report_progress(&format!(
+                    "Cannot convert number_of_tracks_to_add. It's a bug. {number_of_tracks_to_add:?}, {e:?}"
+                ));
+                return;
+            }
+        },
+        None => constants::DEFAULT_PLAYLIST_SIZE,
+    };
+
     // log the result for debugging and send and copy
     // of the same message to whatever frontend is listening
     // via JS sendMessage
@@ -62,6 +77,7 @@ pub async fn add_random_tracks(
         token_header_value,
         playlist_id,
         user_uri,
+        number_of_tracks_to_add,
         &runtime,
     )
     .await

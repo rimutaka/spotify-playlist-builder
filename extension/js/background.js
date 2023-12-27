@@ -42,13 +42,20 @@ function onErrorWithLog(error) {
 chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     // console.log(`Popup message received: ${JSON.stringify(request)}, ${JSON.stringify(sender)}`);
 
-    // check what kind of message it is and either log it or act on it
+    // check what kind of message it is - act on it or log it if the msg cannot be understood
+    let numberOfTracksToAdd = 500; // default value
     if (request?.action == "btn_add") {
+        numberOfTracksToAdd = Number(request?.qty); // Number() cast is required because WASM wrapper asserts types and expects a number for Rust's u32
         // this is a check for the main action - let the code run its course after the completion of this if-block
-        console.log(`User clicked btn_add`);
+        console.log(`User clicked btn_add / tracks to add: ${numberOfTracksToAdd}`);
+        // this check is probably redundant, but since there is no automated testing we'd better tell users what's happening
+        if (!numberOfTracksToAdd) {
+            chrome.runtime.sendMessage("Missing how many tracks to add param. It's a bug.").then(onSuccess, onError);
+            return;
+        }
     }
     else {
-        // this is an unexpected option - something is off and there is a bug
+        // this is an unexpected option - something is off or there is a bug
         console.error(`Unexpected popup.html message - it's a bug`);
         console.error(JSON.stringify(request));
         return;
@@ -89,8 +96,13 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
 
         toggleToolbarBadge();
 
+        // remove the listener because there will be a lot of requests from WASM
+        // it makes no sense to intercept them for token extraction
+        // there is a small chance the token changes while WASM is running
+        chrome.webRequest.onBeforeSendHeaders.removeListener(captureSessionToken);
+
         // call WASM
-        add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri)
+        add_random_tracks(authHeaderValue, tokenHeaderValue, playlistId, userUri, numberOfTracksToAdd)
             .catch((e) => {
                 console.error(e);
                 chrome.runtime.sendMessage(JSON.stringify(e)).then(onSuccess, onError);
@@ -98,12 +110,16 @@ chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
             .finally(() => {
                 // reset WASM, log to inactive and drop toolbar icon badge
                 fetching = false;
+                // restore the listener to capture any token changes in between WASM runs
+                chrome.webRequest.onBeforeSendHeaders.addListener(captureSessionToken, { urls: ['https://api-partner.spotify.com/pathfinder/v1/query*'] }, ["requestHeaders"])
+                // restore the toolbar badge that signals to the popup that WASM is no longer running
                 toggleToolbarBadge();
             })
     }
 });
 
 /// Sets the badge as per fetching var and notifies the popup about the status change
+/// When the popup window is loaded, it checks if the badge is set and presumes that the WASM script is running
 function toggleToolbarBadge() {
     chrome.action.setBadgeText(
         { text: (fetching) ? "..." : "" }

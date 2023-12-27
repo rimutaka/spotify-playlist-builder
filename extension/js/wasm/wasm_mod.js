@@ -277,9 +277,10 @@ export function hello_wasm() {
 * @param {string} token_header_value
 * @param {string} playlist_id
 * @param {string} user_uri
+* @param {number | undefined} number_of_tracks_to_add
 * @returns {Promise<void>}
 */
-export function add_random_tracks(auth_header_value, token_header_value, playlist_id, user_uri) {
+export function add_random_tracks(auth_header_value, token_header_value, playlist_id, user_uri, number_of_tracks_to_add) {
     const ptr0 = passStringToWasm0(auth_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len0 = WASM_VECTOR_LEN;
     const ptr1 = passStringToWasm0(token_header_value, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
@@ -288,7 +289,10 @@ export function add_random_tracks(auth_header_value, token_header_value, playlis
     const len2 = WASM_VECTOR_LEN;
     const ptr3 = passStringToWasm0(user_uri, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len3 = WASM_VECTOR_LEN;
-    const ret = wasm.add_random_tracks(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
+    if (!isLikeNone(number_of_tracks_to_add)) {
+        _assertNum(number_of_tracks_to_add);
+    }
+    const ret = wasm.add_random_tracks(ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3, !isLikeNone(number_of_tracks_to_add), isLikeNone(number_of_tracks_to_add) ? 0 : number_of_tracks_to_add);
     return takeObject(ret);
 }
 
@@ -715,8 +719,8 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper2979 = function() { return logError(function (arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 151, __wbg_adapter_44);
+    imports.wbg.__wbindgen_closure_wrapper2988 = function() { return logError(function (arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 154, __wbg_adapter_44);
         return addHeapObject(ret);
     }, arguments) };
 

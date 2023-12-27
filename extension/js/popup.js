@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       // console.log("Permission decided");
       if (await chrome.permissions.contains(permissions)) {
         // console.log("Permission granted");
-        await chrome.runtime.sendMessage({ action: "btn_add" });
+        await chrome.runtime.sendMessage({ action: "btn_add", qty: document.getElementById("tracks_qty").value });
         document.getElementById("btn_add").disabled = true;
       }
       else {

@@ -18,6 +18,7 @@ pub(crate) async fn generate_random_playlist(
     token_header_value: &str,
     target_playlist_id: &str,
     user_uri: &str,
+    number_of_tracks_to_add: usize,
     runtime: &BrowserRuntime,
 ) -> Result<String, String> {
     report_progress("Eclectic work started");
@@ -72,6 +73,7 @@ pub(crate) async fn generate_random_playlist(
     // remove the repetitive prefix
     let mut all_albums = all_albums
         .into_iter()
+        // .take(5) // uncomment for debugging to limit the number of albums
         .map(|v| v.replace(constants::ID_PREFIX_ALBUM, ""))
         .collect::<Vec<String>>();
 
@@ -117,10 +119,13 @@ pub(crate) async fn generate_random_playlist(
     let mut selected_tracks: HashSet<String> = HashSet::new();
 
     // a list of tracks per that were not selected
-    let mut unselected_tracks: HashSet<String> = HashSet::new();
+    let mut stashed_tracks: HashSet<String> = HashSet::new();
 
     // go thru all albums
-    report_progress("Selecting random album tracks");
+    report_progress(&format!(
+        "Selecting random tracks from {} albums",
+        all_albums.len()
+    ));
     for album_id in all_albums {
         // get album tracks, shuffle and add top N tracks to the selected list
         let mut album_tracks = fetch_album_tracks(
@@ -140,7 +145,7 @@ pub(crate) async fn generate_random_playlist(
             log!(
                 "Sel: {}, stash: {}, adding all {} tracks from album {album_id}",
                 selected_tracks.len(),
-                unselected_tracks.len(),
+                stashed_tracks.len(),
                 album_tracks.len(),
             );
             let _: Vec<_> = album_tracks
@@ -158,18 +163,18 @@ pub(crate) async fn generate_random_playlist(
             // stash the remaining tracks
             let _: Vec<_> = album_tracks
                 .into_iter()
-                .map(|v| unselected_tracks.insert(v))
+                .map(|v| stashed_tracks.insert(v))
                 .collect();
             log!(
                 "Sel: {}, stash: {}, added {} tracks from album {album_id}",
                 selected_tracks.len(),
-                unselected_tracks.len(),
+                stashed_tracks.len(),
                 constants::MIN_TRACKS_PER_ALBUM,
             );
         }
 
         // exit if there are enough tracks for the playlist
-        if selected_tracks.len() >= constants::TARGET_PLAYLIST_SIZE {
+        if selected_tracks.len() >= number_of_tracks_to_add {
             break;
         }
     }
@@ -177,7 +182,7 @@ pub(crate) async fn generate_random_playlist(
     log!(
         "Selected tracks: {}, stash tracks: {}",
         selected_tracks.len(),
-        unselected_tracks.len(),
+        stashed_tracks.len(),
     );
 
     let selected_album_tracks_count = selected_tracks.len();
@@ -216,7 +221,7 @@ pub(crate) async fn generate_random_playlist(
             log!(
                 "Sel: {}, stash: {}, adding all {} tracks from playlist {playlist_id}, owner: {owner_uri}",
                 selected_tracks.len(),
-                unselected_tracks.len(),
+                stashed_tracks.len(),
                 tracks.len(),
             );
             let _: Vec<_> = tracks
@@ -234,18 +239,18 @@ pub(crate) async fn generate_random_playlist(
             // stash the remaining tracks
             let _: Vec<_> = tracks
                 .into_iter()
-                .map(|v| unselected_tracks.insert(v))
+                .map(|v| stashed_tracks.insert(v))
                 .collect();
             log!(
                 "Sel: {}, stash: {}, added {} tracks from playlist {playlist_id}, owner: {owner_uri}",
                 selected_tracks.len(),
-                unselected_tracks.len(),
+                stashed_tracks.len(),
                 constants::MIN_TRACKS_PER_ALBUM,
             );
         }
 
         // exit if there are enough tracks for the playlist
-        if selected_tracks.len() >= constants::TARGET_PLAYLIST_SIZE {
+        if selected_tracks.len() >= number_of_tracks_to_add {
             break;
         }
     }
@@ -253,9 +258,10 @@ pub(crate) async fn generate_random_playlist(
     log!(
         "Selected tracks: {}, stashed tracks: {}",
         selected_tracks.len(),
-        unselected_tracks.len()
+        stashed_tracks.len()
     );
 
+    // figure out how many tracks were added from playlists for reporting
     let selected_playlist_tracks_count = selected_tracks.len() - selected_album_tracks_count;
     report_progress(&format!(
         "Selected {selected_playlist_tracks_count} tracks from playlists"
@@ -271,8 +277,22 @@ pub(crate) async fn generate_random_playlist(
     //         .join("\n")
     // );
 
+    // add tracks from the stash if the selected list is not long enough
+    if selected_tracks.len() < number_of_tracks_to_add {
+        let number_to_add_from_stash = number_of_tracks_to_add - selected_tracks.len();
+        log!("Adding {number_to_add_from_stash} from stash");
+        for stashed_track in stashed_tracks.into_iter().take(number_to_add_from_stash) {
+            selected_tracks.insert(stashed_track);
+        }
+    }
+
+    log!(
+        "Selected tracks after adding from stash: {}",
+        selected_tracks.len(),
+    );
+
     // remove duplicates already present in the target playlist
-    // TODO: this does not work because playlist tracks are capped and this list doesn't have them all
+    // TODO: this does not work because we get only a few tracks from a playlist and this list doesn't have them all
     let duplicate_tracks = target_playlist_tracks
         .intersection(&selected_tracks)
         .cloned()

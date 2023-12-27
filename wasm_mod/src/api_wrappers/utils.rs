@@ -25,7 +25,7 @@ where
     R: for<'de> serde::Deserialize<'de>,
     P: serde::Serialize,
 {
-    log!("execute_get_request entered");
+    // log!("execute_get_request entered");
     // set request params
     let mut opts = RequestInit::new();
     opts.mode(RequestMode::Cors);
@@ -50,7 +50,7 @@ where
         }
     }
 
-    log!("{url}");
+    // log!("{url}");
 
     // create the request
     let request = match Request::new_with_str_and_init(url, &opts) {
@@ -90,6 +90,7 @@ where
         Ok(v) => v,
         Err(e) => {
             log!("Spotify request failed");
+            log!("{url}");
             log!("{:?}", e);
             // TODO: may be worth a retry
             return Err(RetryAfter::Never);
@@ -99,6 +100,7 @@ where
     // exit if the response is not of the expected type
     if !resp_value.is_instance_of::<Response>() {
         log!("Spotify response in not Response");
+        log!("{url}");
         log!("{:?}", resp_value);
         // TODO: may be worth a retry
         return Err(RetryAfter::Never);
@@ -109,6 +111,7 @@ where
         Ok(v) => v,
         Err(e) => {
             log!("Cannot typecast response to Response");
+            log!("{url}");
             log!("{:?}", e);
             // TODO: may be worth a retry
             return Err(RetryAfter::Never);
@@ -121,6 +124,7 @@ where
         Ok(v) => JsFuture::from(v).await,
         Err(e) => {
             log!("Cannot convert Promise to Future");
+            log!("{url}");
             log!("{:?}", e);
             // TODO: may be worth a retry
             return Err(RetryAfter::Never);
@@ -134,6 +138,7 @@ where
         Ok(v) => v,
         Err(e) => {
             log!("Spotify request failed");
+            log!("{url}");
             log!("{:?}", e);
             // TODO: may be worth a retry
             return Err(RetryAfter::Never);
@@ -148,6 +153,7 @@ where
         Ok(v) => v,
         Err(e) => {
             log!("Cannot deser spotify response into rust struct");
+            log!("{url}");
             log!("{:?}", e);
             return Err(RetryAfter::Never);
         }
@@ -198,8 +204,8 @@ where
 
     let url = &[url, "&extensions=", &urlencoding::encode(&persisted_query)].concat();
 
-    log!("URL:");
-    log!("{url}");
+    // log!("URL:");
+    // log!("{url}");
 
     Ok(url.to_owned())
 }

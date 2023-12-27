@@ -12,8 +12,8 @@ pub(crate) const MIN_TRACKS_PER_ALBUM: usize = 3;
 // Not sure where the balance is. TODO.
 pub(crate) const MAX_TRACKS_PER_PLAYLIST: usize = 50;
 
-/// How many tracks should be included in the playlist we are building
-pub(crate) const TARGET_PLAYLIST_SIZE: usize = 500;
+/// How many tracks should be included in the playlist we are building by default
+pub(crate) const DEFAULT_PLAYLIST_SIZE: usize = 500;
 
 pub(crate) const ID_PREFIX_ALBUM: &str = "spotify:album:";
 pub(crate) const ID_PREFIX_PLAYLIST: &str = "spotify:playlist:";

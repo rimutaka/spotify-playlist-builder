@@ -552,10 +552,12 @@ pub(crate) async fn add_tracks_to_playlist(
             .uris
             .push([constants::ID_PREFIX_TRACK, track].concat());
 
-        // send the request if the list is big enough to be split in chunks or if it's the end of the tracks
-        if idx == 50 || idx == tracks_to_add.len() - 1 {
+        // send the request to spotify for what is in the payload now 
+        // if the list is longer than a certain size or if it's the last pass
+        // Spotify seems to be OK with 500 tracks at a time
+        if idx % 99 == 0 || idx == tracks_to_add.len() - 1 {
             // ignore the response payload for now
-            let _ = match execute_http_request::<models::IgnoredData, _>(
+            match execute_http_request::<models::IgnoredData, _>(
                 auth_header_value,
                 token_header_value,
                 BUILD_POST_URL,
@@ -564,20 +566,24 @@ pub(crate) async fn add_tracks_to_playlist(
             )
             .await
             {
-                Ok(v) => v,
+                Ok(_) => {
+                    log!("Added {} tracks", idx + 1);
+                    tracks_added += payload.variables.uris.len();
+                    // clear for the next lot of tracks
+                    payload.variables.uris.clear();
+                }
                 Err(e) if matches!(e, RetryAfter::Never) => {
+                    log!("Failed to add {} tracks", idx + 1);
                     tracks_missed += payload.variables.uris.len();
+                    // clear the list to make room for the next lot of tracks
+                    // it may build up until the request is too large if we don't clear it
+                    payload.variables.uris.clear();
                     continue;
                 }
                 Err(_) => {
                     unimplemented!("Retries are not implemented");
                 }
             };
-            log!("Added {} tracks", idx + 1);
-            tracks_added += payload.variables.uris.len();
-
-            // clear for the next lot
-            payload.variables.uris = Vec::new();
         }
     }
     log!("All tracks added: {tracks_added}, missed: {tracks_missed}");
