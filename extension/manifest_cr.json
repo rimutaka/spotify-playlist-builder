@@ -10,9 +10,9 @@
     "action": {
         "default_title": "Adds a random selection from My Library to a playlist. Activates on a new Spotify playlist page.",
         "default_icon": {
+            "16": "assets/toolbar_icon_16.png",
             "19": "assets/toolbar_icon_19.png",
-            "16": "assets/toolbar_icon_19.png",
-            "32": "assets/toolbar_icon_19.png",
+            "32": "assets/toolbar_icon_32.png",
             "38": "assets/toolbar_icon_38.png"
         },
         "default_popup": "js/popup.html",

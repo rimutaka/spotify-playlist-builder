@@ -13,29 +13,30 @@ It picks tracks from Liked Songs, Liked Albums and Liked Playlists.
 * Create a new playlist
 * Click on the extension button in the toolbar menu to add tracks
 
-Once the extension is running, you can close the Spotify tab or navigate away from the playlist. It will continue creating a shuffled sample of your library in the background. 
-
-The extension popup window receives updates from the background script working on the task. Keep it open to watch the progress. More information is logged into the browser console by WASM and JS scripts. No logs are stored or transmitted anywhere.
 
 ### Screenshots
+
+Install the extension from [Chrome Webstore](https://chromewebstore.google.com/detail/spotify-playlist-builder/kmbnbjbfpnchgmmkbeidpllpamcahljn). Firefox users, install from [Mozilla Webstore](https://addons.mozilla.org/en-US/firefox/addon/spotify-playlist-builder-addon/).
+
+![chrome install page](media/screen-chrome-webstore.png)
 
 Activate the extension
 
 ![extension menu](media/screen-chrome-ext-menu.png)
 
-It works only on a page with a Spotify playlist
+The extension works only on a page with a Spotify playlist. Opening it on any other page disables the _Go_ button.
 
 ![spotify homepage](media/screen-spotify-homepage.png)
 
-Create a new playlist or open a playlist you created earlier and already added tracks to.
-New tracks are added at the end of the playlist.
+Create a new playlist or open a playlist you created earlier.
+New tracks are added at the end of the playlist if it already has some tracks in it.
 
 ![target playlist](media/screen-spotify-playlist.png)
 
 A simple progress log is displayed while the tracks are being added.
 Keep the popup window open if you want to watch the updates.
 
-The little badge with `...` over the toolbar button appears while the background script is running. 
+The little badge with `...` over the toolbar button appears while the background script is running. The extension will continue running if you navigate away from the playlist page or close the window.
 
 ![progress log](media/screen-spotify-progress-log.png)
 
@@ -45,7 +46,7 @@ Refresh the page to see newly added tracks.
 
 ### Feedback and bug reports
 
-Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builder/issues) if you run into problems or have any kind of feedback.
+Feel free to [open an issue](https://github.com/rimutaka/spotify-playlist-builder/issues) if you run into problems or have any feedback.
 
 ### Privacy policy
 
@@ -63,7 +64,7 @@ It does not transmit any of your data to any third party. All requests go to Spo
 
 Most of the work is done by [a WASM module](wasm_mod) built in Rust.
 
-[Book.md](./Book.md) contains a detailed tutorial about creating a browser extension with Rust/WASM.
+[Book.md](./Book.md) explains the inner workings of this extension to help you create your first browser extension with Rust/WASM.
 
 
 ## Attributions
