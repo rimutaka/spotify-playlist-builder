@@ -1,8 +1,12 @@
 # How to build a cross-browser extension with Rust and WASM
 
-This document explains the inner workings of this extension for Rust programmers interested in building cross-browser extensions with WASM.
+This post explains the inner workings of a Chrome extension built with Rust and compiled into WASM.
 
-What you will learn:
+**Target audience:** Rust programmers interested in building cross-browser extensions with WASM.
+
+**About the extension:** [Github](https://github.com/rimutaka/spotify-playlist-builder), [Chrome Webstore](https://chromewebstore.google.com/detail/spotify-playlist-builder/kmbnbjbfpnchgmmkbeidpllpamcahljn), [Mozilla Webstore](https://addons.mozilla.org/en-US/firefox/addon/spotify-playlist-builder-addon/)
+
+**What you will learn:**
 
 * toolchain 
 * architecture of the extension
@@ -12,7 +16,7 @@ What you will learn:
 * making it work for Chrome and Firefox
 * listing in Google and Mozilla addon stores
 
-This guide expects you to be a proficient Rust and web coder, but not necessarily familiar with how extensions work.
+You will get the best value for your time if you [look at the source code](https://github.com/rimutaka/spotify-playlist-builder) and read this post side by side.
 
 ## Toolchain
 
